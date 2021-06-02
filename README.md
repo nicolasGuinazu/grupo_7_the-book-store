@@ -19,5 +19,5 @@ https://bookshop.org/ distribución del contenido.
 Pablo Camarotta: 32 años, soy de Buenos Aires. Emprendedor.
 Marcos Cardoso: Tengo 32 años, soy ingeniero en informática.
 Nicolás Guiñazu
-Sebastián Sultano
+Sebastián Sultano: 24 años. marplatense
 María Pía Trebucq: Soy de Cba, tengo 34 años y trabajo en la UNC.
