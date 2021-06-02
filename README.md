@@ -16,7 +16,7 @@ https://www.bookdepository.com estética, colores. Outlet de libros. Lista de de
 https://bookshop.org/ distribución del contenido.
 
 - Integrantes del grupo
-Pablo Camarotta
+Pablo Camarotta: 32 años, soy de Buenos Aires. Emprendedor.
 Marcos Cardoso: Tengo 32 años, soy ingeniero en informática.
 Nicolás Guiñazu
 Sebastián Sultano
