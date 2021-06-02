@@ -23,3 +23,7 @@ Marcos Cardoso: Tengo 32 años, soy ingeniero en informática.
 Nicolás Guiñazu
 Sebastián Sultano: 24 años. marplatense
 María Pía Trebucq: Soy de Cba, tengo 34 años y trabajo en la UNC.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1f2499ae28c1fbe0cbff1b9fcdcde07773d2f133
