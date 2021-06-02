@@ -17,7 +17,7 @@ https://bookshop.org/ distribución del contenido.
 
 - Integrantes del grupo
 Pablo Camarotta
-Marcos Cardoso:
+Marcos Cardoso: Tengo 32 años, soy ingeniero en informática.
 Nicolás Guiñazu
 Sebastián Sultano
 María Pía Trebucq
