@@ -17,7 +17,7 @@ https://bookshop.org/ distribución del contenido.
 
 - Integrantes del grupo
 Pablo Camarotta
-Marcos Cardoso: Tengo 32 años, soy ingeniero en informática.
+Marcos Cardoso: Tengo 32 años, soy Ingeniero en Informática. Hace 10 años que trabajo con la tecnología SAP y me anoté al curso con la intención de diversificar un poco mis conocimientos.
 Nicolás Guiñazu
 Sebastián Sultano
 María Pía Trebucq
