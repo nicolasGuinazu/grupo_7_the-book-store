@@ -20,4 +20,4 @@ Pablo Camarotta
 Marcos Cardoso: Tengo 32 años, soy ingeniero en informática.
 Nicolás Guiñazu
 Sebastián Sultano
-María Pía Trebucq
+María Pía Trebucq: Soy de Cba, tengo 34 años y trabajo en la UNC.
