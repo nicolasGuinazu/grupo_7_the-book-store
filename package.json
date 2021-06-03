@@ -1,0 +1,24 @@
+{
+  "name": "grupo_7_the-book-store",
+  "version": "1.0.0",
+  "description": "- Temática del sitio\r Venta de libros de gran variedad de géneros, incluyendo libros usados, merchandising relacionado y también una sección “Digital” orientada a la venta de E-Readers e E-books.\r El sitio además ofrecerá talleres, cursos y charlas.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon my_file.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasGuinazu/grupo_7_the-book-store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolasGuinazu/grupo_7_the-book-store/issues"
+  },
+  "homepage": "https://github.com/nicolasGuinazu/grupo_7_the-book-store#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
