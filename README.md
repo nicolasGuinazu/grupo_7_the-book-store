@@ -18,6 +18,6 @@ https://bookshop.org/ distribución del contenido.
 - Integrantes del grupo
 Marcos Cardoso: Tengo 32 años, soy Ingeniero en Informática. Hace 10 años que trabajo con la tecnología SAP y me anoté al curso con la intención de diversificar un poco mis conocimientos.
 Pablo Camarotta: 32 años, soy de Buenos Aires. Emprendedor.
-Nicolás Guiñazu
+Nicolás Guiñazu:29 años, marplatense, estudiante de tecnicatura en programacion.
 Sebastián Sultano: 24 años. marplatense
 María Pía Trebucq: Soy de Cba, tengo 34 años y trabajo en la UNC.
