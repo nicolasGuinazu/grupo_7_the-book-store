@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/index.html'))
 })
 
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, '/views/registerForm.html'))
+})
+
 app.listen(port, () => {
   console.log(`http://localhost:${port}`)
 })
