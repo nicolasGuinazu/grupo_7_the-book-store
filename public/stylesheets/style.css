@@ -1,3 +1,52 @@
 *{
-    background-color:skyblue;
+    background-color:slategray;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.card{
+    background-color:#ffff;
+    width: 50%;
+    margin: auto;
+    height:50%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.boton-register{
+    padding: 4px;
+    padding: 3px;
+    background-color:#cccc;
+    color: rgb(235, 5, 5);
+    text-align: center;
+    margin-top:20%;
+    cursor: pointer;
+}
+.boton-register:hover{
+    background-color: red;
+    color: white;
+}
+.input-register{
+    font-size: 0.5rem;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: black;
+    background-color: #ffff
+}
+
+.card i{
+    margin-top: 5px;
+    background-color: #ffff;
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.titulo-register{
+    margin-left: 25%;
+    margin-top:5%;
+    margin-bottom:3%;
 }
