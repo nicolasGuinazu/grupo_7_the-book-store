@@ -1,7 +1,8 @@
 *{
-    background-color:slategray;
+    background-color:rgba(204, 204, 204, 0.082);
     margin: auto;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .card{
@@ -14,6 +15,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 3px;
+    min-width: 200px;
 }
 
 .boton-register{
@@ -23,14 +25,13 @@
     color: rgb(235, 5, 5);
     text-align: center;
     margin-top:20%;
-    cursor: pointer;
 }
 .boton-register:hover{
     background-color: red;
     color: white;
 }
 .input-register{
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     outline: 0;
     border-width: 0 0 1px;
     border-color: black;
@@ -45,8 +46,113 @@
     padding: 5px;
 }
 
+.card div{
+    background-color: white;
+}
+
 .titulo-register{
-    margin-left: 25%;
+    text-align: center;
     margin-top:5%;
     margin-bottom:3%;
+
+}
+
+.footer{
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2rem; 
+    border: 1px solid black;
+    display: flex;
+    list-style: none;
+    font-size: 0.7rem;
+    justify-content: space-between;
+    background-color: rgb(165, 165, 165);
+}
+
+.footer li{
+    border-right: 0.1px solid black;
+    padding: 2px;
+    color: black;
+}
+
+.footer a{
+    text-decoration: none;
+}
+
+.footer a li{
+    background-color:rgb(165, 165, 165);
+}
+
+.social-media{
+    text-decoration: none;
+}
+.social-media .insta{
+
+    color: rgb(132, 36, 221)
+}
+
+.social-media .face{
+
+    color: rgba(29, 29, 255, 0.959)
+}
+.social-media .twi{
+
+    color: rgb(36, 150, 243)
+}
+
+.social-media .coment{
+
+    color: rgb(7, 207, 7)
+}
+@media(min-width:1200px){
+    .card{
+        margin:auto;
+        align-items: flex-end;
+        width: 30%;
+        
+    }
+    .card i{
+
+        background-color: #ffff;
+        text-align: center;
+        font-size: 40px;
+        padding: 2px;
+        
+    }
+    .boton-register{
+        font-size: 1rem;
+        padding: 4px;
+        padding: 3px;
+        background-color:#cccc;
+        color: rgb(235, 5, 5);
+        text-align: center;
+        margin-top:20%;
+        cursor: pointer;
+    }
+    .input-register{
+        font-size: 1rem;
+    }
+    .input-register:focus{
+        border-color: green;
+        color:green;
+    }
+    .footer{
+        border: 2px solid black;
+    }
+    .footer li{
+        font-size: 1rem;
+        padding: 5px;
+        color: black;
+        border-right:none;
+    }
+    
+    .footer a{
+        text-decoration: none;
+    }
+    .footer a li:hover{
+        color: white; 
+        transition-delay:0.3s;
+    }
 }
