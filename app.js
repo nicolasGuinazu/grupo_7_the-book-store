@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/index.html'))
 })
 
+app.get('/descripcion-del-producto', (req, res) => {
+  res.sendFile(path.join(__dirname, '/views/descripcion-producto.html'))
+})
+
 app.listen(port, () => {
   console.log(`http://localhost:${port}`)
 })
