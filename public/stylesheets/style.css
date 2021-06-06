@@ -156,3 +156,56 @@
         transition-delay:0.3s;
     }
 }
+/* HEAD Y BODY */
+.main-header {
+    padding: 20px;
+}
+.div main-navbar {
+    display: flex;
+}
+.logoTBS {
+    width: 120px;
+}
+
+.copy-header {
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainNav {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.banner {
+    width: 100%;
+}
+
+.search {
+    width: 40%;
+}
+.ofertalibro {
+    display: flex;
+    margin: 10px;
+}
+
+.nombre-libro {
+    font-size: 12px;
+}
+.autor-libro{
+    font-size: 11px;
+}
+.price {
+    font-size: 10px;
+}
