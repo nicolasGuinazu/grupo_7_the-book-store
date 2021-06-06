@@ -1,0 +1,1 @@
+Acá tenemos que agregar una descripción de la retrospectiva del sprint 1
