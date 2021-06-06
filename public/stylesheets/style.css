@@ -2,9 +2,11 @@
     background-color:rgba(204, 204, 204, 0.082);
     margin: auto;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: roboto, sans-serif;
 }
-
+.carrito {
+    color:#2D45ED;
+}
 .card{
     background-color:#ffff;
     width: 50%;
@@ -186,6 +188,7 @@
     margin: 10px;
     padding: 10px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .banner {
