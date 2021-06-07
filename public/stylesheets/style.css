@@ -212,3 +212,146 @@
 .price {
     font-size: 10px;
 }
+
+/*                           DETALLE DEL PRODUCTO */
+.main-detalle-producto {
+    width: 97%;
+    background-color: #efefef;
+    text-align: center;
+    margin-top: 2vw;
+}
+.producto {
+    display: flex;
+    flex-direction: column;
+}
+.producto-principal {
+    padding: 4vw 6vw;
+}
+.datos-producto h3 {
+    font-size: 1.8rem;
+    padding: 15px;
+}
+.datos-producto h4 {
+    font-size: 1.4rem;
+}
+.datos-producto h2 {
+    font-size: 2rem;
+    padding: 15px;
+}
+.cantidad-carrito-favs {
+    display: flex;
+    justify-content: center;
+    margin: 10px 30px;
+}
+.cantidad-producto {
+    display: flex;
+}
+.cantidad-producto .numero {   
+    border: 1px solid #CCCCCC;
+    line-height: 28px;
+    padding-top: 7px;
+    margin: 0 2px;
+    width: 28px;
+    box-shadow: 0 0 3px #dddddd inset;
+}
+.cantidad-producto .flecha {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #CCCCCC;
+}
+.agregar-al-carrito {
+    font-size: 90%;
+    padding: 10px 20px;
+    border: 1px solid #CCCCCC;
+}
+.agregar-a-favoritos {
+    font-size: 90%;
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+}
+.beneficios {
+    display: flex;
+    margin: 15px;
+    padding: 15px 0;
+    border-top-style: inset;
+    border-top-width: 1px;
+}
+.beneficios p {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 5px;
+}
+.beneficios .linea-vertical {
+    width: 1px;
+    background-color: #828282;
+    height: 100%;
+    float: left; 
+}
+.sinopsis{
+    border: solid 1px #828282;
+}
+.sinopsis h4 {
+    text-align: left;
+    border-bottom: solid 1px #828282;
+    margin-left: 5px;
+    padding: 6px 0;
+}
+.sinopsis p {
+    text-align: justify;
+    font-size: 0.8rem;
+    padding: 10px;
+}
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#828282;
+    text-align: right;
+    margin: 10px;
+}
+.redes-sociales a {
+    width: 5%;
+    padding: 0%;
+    border: 1px;
+    margin: 7px;
+}
+.redes-sociales a i {
+    color:#828282;
+    font-size: 1.5rem;
+    padding-right: 5px;
+}
+.redes-sociales p {
+    color:#828282;
+    margin: 3px 6px 0px;
+    padding-right: 5px;
+}
+.propuestas-por-autor {
+    margin-bottom: 7px;
+}
+.propuestas-por-autor h4 {
+    text-align: left;
+    margin-left: 5px;
+    padding: 6px 0;
+    font-size: 1.5rem;
+}
+.propuestas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.propuestas article {
+    max-width: 50%;
+}
+.propuestas h3 {
+    font-size: 1.3rem;
+    padding-bottom: 3px;
+}
+.propuestas h4 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+.propuestas h2 {
+    font-size: 1.4rem;
+    padding-top: 3px;
+}
