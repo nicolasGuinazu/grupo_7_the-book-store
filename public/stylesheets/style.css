@@ -7,6 +7,10 @@
 .carrito {
     color:#2D45ED;
 }
+.carrito:hover {
+    color:rgb(17, 192, 245);
+}
+/*----------------------------------------Formulario de registro--------------------------------------------------------*/
 .card{
     background-color:#ffff;
     width: 50%;
@@ -58,7 +62,7 @@
     margin-bottom:3%;
 
 }
-
+/*-------------------------------------------------Footer-----------------------------------------------------------*/
 .footer{
     padding: 0;
     position: absolute;
@@ -108,7 +112,77 @@
 
     color: rgb(7, 207, 7)
 }
+
+/*----------------------------------------------Carrito de compras-----------------------------------------------------------*/
+.body-carrito{
+    background-color: rgb(12, 171, 177);
+}
+.carrito{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(147, 36, 238);
+}
+.carrito .item-compra{
+    display: flex;
+    height: 20vh;
+    width: 50vh;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 2px;
+    box-shadow: 10px 5px 5px rgb(180, 244, 248);
+}
+.carrito .item-compra .imagen-carrito{
+  height: 20vh;
+}
+.carrito .item-compra .imagen-carrito img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.carrito .item-compra .titulo-producto{
+    font-size: 0.6rem;
+    color: grey;
+}
+
+.carrito .item-compra .botones button{
+ border: none;
+}
+.carrito .item-compra .botones button i{
+    color: green;
+    font-size: 1rem;
+}
+.carrito .item-compra .botones .menos i{
+    color: rgb(160, 10, 10);
+}
+.carrito .item-compra .botones button i:hover{
+    color: rgb(0, 247, 0);
+}
+
+
+.carrito .item-compra .botones .menos i:hover{
+    color: rgb(255, 21, 21);
+}
+
+
+.confirmar-compra{
+    width: 40%;
+    margin-top: 5%;
+}
+.confirmar-compra button{
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: gold;
+    border:none;
+}
+.confirmar-compra button:hover{
+    background-color: rgb(206, 192, 0);
+    color: white;
+}
+/*----------------------------------------------Vista para Laptop-----------------------------------------------------------*/
 @media(min-width:1200px){
+/*----------------------------------------Formulario Registro (Laptop)------------------------------------------------------*/
     .card{
         margin:auto;
         align-items: flex-end;
@@ -140,6 +214,9 @@
         border-color: green;
         color:green;
     }
+
+/*---------------------------------------------------Footer (Laptop)------------------------------------------------------*/
+
     .footer{
         border: 2px solid black;
     }
@@ -157,6 +234,25 @@
         color: white; 
         transition-delay:0.3s;
     }
+
+    .social-media .insta:hover{
+        color:rgb(167, 113, 255);
+    }
+    .social-media .face:hover{
+
+        color:rgb(51, 102, 240);
+    }
+    .social-media .twi:hover{
+    
+        color:rgba(113, 234, 255, 0.712);
+    }
+    
+    .social-media .coment:hover{
+    
+        color:rgb(125, 255, 113);
+    }
+/*----------------------------------------------------------------------------------------------*/
+
 }
 /* HEAD Y BODY */
 .main-header {
