@@ -15,6 +15,10 @@ app.get('/descripcion-del-producto', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/detalle-producto.html'))
 })  
 
+app.get('/carrito-compra', (req, res) => {
+  res.sendFile(path.join(__dirname, '/views/carrito-compras.html'))
+})  
+
 app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, '/views/registerForm.html'))
 })
