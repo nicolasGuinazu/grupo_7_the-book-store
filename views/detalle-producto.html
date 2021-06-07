@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Document</title>
+    <title>Detalle del producto</title>
 </head>
 <body>
     <header>
@@ -22,82 +22,94 @@
                 </div>
                 <div class="datos-producto">
                     <h3>EL DÍA QUE NIETZSCHE LLORÓ</h3>
+                    <h4>Irvin D. Yalom</h4>
                     <h2>$ 1.500</h2>
                 </div> 
             </article>    
         </div>
 
         <!-- ¡¡ESTE BLOQUE TIENE QUE SER FLEX!! -->
-        <div class="cantidad-carrito-favs"> 
-            <!-- ¡¡ESTE BLOQUE TIENE QUE SER FLEX!! -->
-            <div class="cantidad-producto">
-                <imput type="text">1</imput>
-                <!-- ¡¡ESTE BLOQUE TIENE QUE SER FLEX!! -->
-                <span class="flechas">
-                    <button class="flecha">
-                        <i class="fas fa-angle-up"></i>
-                    </button>
-                    <button class="flecha">
-                        <i class="fas fa-angle-down"></i>
-                    </button>
-                </span>
+        <div class="cantidad-carrito-favs">
+            <div>
+                <div class="cantidad-producto">
+                    <imput type="text" class="numero">1</imput>
+                    <!-- ¡¡ESTE BLOQUE TIENE QUE SER FLEX!! -->
+                    <span class="flechas">
+                        <button class="flecha" type="button">
+                            <i class="fas fa-angle-up"></i>
+                        </button>
+                        <button class="flecha" type="button">
+                            <i class="fas fa-angle-down"></i>
+                        </button>
+                    </span>
+                </div>
             </div>
             <button class="agregar-al-carrito">AGREGAR AL CARRITO</button>
-            <button class="agregar a favoritos"><i class="far fa-heart agregar-a-favoritos"></i></button>
+            <button class="agregar-a-favoritos"><i class="far fa-heart"></i></button>
         </div>
         <div class="beneficios">
             <div>
                 <i class="fas fa-shipping-fast"></i>
                 <p>ENVÍO SIN COSTO
                     <br>
-                </p>A TODO EL PAÍS
+                    A TODO EL PAÍS
+                </p>
             </div>
+            <div class="linea-vertical" style="height: 45px;"></div>
             <div>
                 <i class="fas fa-store"></i>
                 <p>RETIRO EN TIENDAS
                 <br>
-                </p>EN EL DÍA
+                    EN EL DÍA
+                </p>
             </div>
+            <div class="linea-vertical" style="height: 45px;"></div>
             <div>
                 <i class="far fa-credit-card"></i>
                 <p>HASTA 6 CUOTAS
                     <br>
-                </p>SIN INTERÉS
+                    SIN INTERÉS
+                </p>
             </div>
         </div>
         <div class="sinopsis">
-            <p>
-                <h4>SINÓPSIS</h4>
-                Diciembre de 1882. La joven y deslumbrante Lou Salomé concierta una misteriosa cita con Josef Breuer, célebre médico vienés, con el objeto de salvar la vida de un tal Friedrich Nietzsche, un atormentado filósofo alemán, casi desconocido pero de brillante porvenir, que manifiesta tendencias suicidas. Breuer, influido por las novedosas teorías de su joven protegido Sigmund Freud, acepta la peligrosa estrategia que Salomé le propone -psicoanalizar a Nietzsche sin que éste se dé cuenta-, sin saber que por su parte es víctima de una intriga personal tramada por la mujer.
-El día que Nietzsche lloró es una irónica vuelta de turca en la historia de la filosofía y el psicoanálisis, y una divertida ocasión de repasar la biografía de figuras que, como Freud y Nietzsche, han configurado el rostro contemporáneo de la cultura occidental.
-            </p>
+            <h4>SINÓPSIS</h4>
+            <p>Diciembre de 1882. La joven y deslumbrante Lou Salomé concierta una misteriosa cita con Josef Breuer, célebre médico vienés, con el objeto de salvar la vida de un tal Friedrich Nietzsche, un atormentado filósofo alemán, casi desconocido pero de brillante porvenir, que manifiesta tendencias suicidas. Breuer, influido por las novedosas teorías de su joven protegido Sigmund Freud, acepta la peligrosa estrategia que Salomé le propone -psicoanalizar a Nietzsche sin que éste se dé cuenta-, sin saber que por su parte es víctima de una intriga personal tramada por la mujer.
+El día que Nietzsche lloró es una irónica vuelta de turca en la historia de la filosofía y el psicoanálisis, y una divertida ocasión de repasar la biografía de figuras que, como Freud y Nietzsche, han configurado el rostro contemporáneo de la cultura occidental.</p>
         </div>
+        <br>
         <div class="redes-sociales">
+            <p>COMPARTIR</p>
             <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
             <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
             <a class="twitter" href="#"><i class="fab fa-twitter"></i></a>
         </div>
-        <div>
+        <br>
+        <section class="propuestas-por-autor">
             <h4>DEL MISMO AUTOR</h4>
-            <article class="producto">
-               <div class="imagen-producto">
-                    <img src="/images/Libro1.jpg" width="30%">
+                <div class="propuestas">
+                    <article class="producto">
+                        <div class="imagen-producto">
+                            <img src="/images/Libro1.jpg" width="40%">
+                        </div>
+                        <div class="datos-producto">
+                            <h3>UN AÑO CON SCHONPENHAUER</h3>
+                            <h4>Irvin D. Yalom</h4>
+                            <h2>$ 1.500</h2>
+                        </div> 
+                    </article>
+                    <article class="producto">
+                        <div class="imagen-producto">
+                            <img src="/images/Libro2.jpg" width="40%">
+                        </div>
+                        <div class="datos-producto">
+                            <h3>EL ENIGMA SPINOZA</h3>
+                            <h4>Irvin D. Yalom</h4>
+                            <h2>$ 1.100</h2>
+                        </div> 
+                    </article>
                 </div>
-                <div class="datos-producto">
-                    <h3>UN AÑO CON SCHONPENHAUER</h3>
-                    <h2>$ 1.500</h2>
-                </div> 
-            </article>
-            <article class="producto">
-                <div class="imagen-producto">
-                     <img src="/images/Libro2.jpg" width="30%">
-                 </div>
-                 <div class="datos-producto">
-                     <h3>EL ENIGMA SPINOZA</h3>
-                     <h2>$ 1.100</h2>
-                 </div> 
-             </article>
-        </div>
+            </section>
     </main>
     <footer>
         igual en todas las páginas
