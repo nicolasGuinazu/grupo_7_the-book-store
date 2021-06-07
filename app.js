@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/descripcion-del-producto', (req, res) => {
-  res.sendFile(path.join(__dirname, '/views/descripcion-producto.html'))
+  res.sendFile(path.join(__dirname, '/views/detalle-producto.html'))
 })  
 
 app.get('/register', (req, res) => {
