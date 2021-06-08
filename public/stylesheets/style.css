@@ -309,26 +309,40 @@
     font-size: 10px;
 }
 
-/*                           DETALLE DEL PRODUCTO */
+
+/*                           DETALLE DEL PRODUCTO 
+
+colores
+background-color: #3E60F7;
+background-color: #A4BEFB;
+background-color: #A4F0FF;
+
+*/
 .main-detalle-producto {
     width: 97%;
-    background-color: #efefef;
     text-align: center;
     margin-top: 2vw;
 }
 .producto {
     display: flex;
     flex-direction: column;
+    padding-top: 15px;
+    box-shadow: 0px 0px 10px #646464;
 }
 .producto-principal {
     padding: 4vw 6vw;
 }
+.datos-producto {
+    width: min-content;
+    max-width: 80%;
+    box-sizing: border-box;
+}
 .datos-producto h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     padding: 15px;
 }
 .datos-producto h4 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 .datos-producto h2 {
     font-size: 2rem;
@@ -337,10 +351,15 @@
 .cantidad-carrito-favs {
     display: flex;
     justify-content: center;
-    margin: 10px 30px;
+    padding: 10px 30px;
+    margin: 5px;
 }
 .cantidad-producto {
     display: flex;
+    background-color: #ebebeb;
+}
+.cantidad-carrito-favs button {
+    background-color: #ebebeb;
 }
 .cantidad-producto .numero {   
     border: 1px solid #CCCCCC;
@@ -368,20 +387,23 @@
 .beneficios {
     display: flex;
     margin: 15px;
-    padding: 15px 0;
+    padding: 20px 0;
     border-top-style: inset;
     border-top-width: 1px;
 }
-.beneficios p {
+.beneficios .linea-vertical {
+    width: 1px;
+    color: white;
+    height: 100%;
+    float: left; 
+}
+.beneficio {
+    padding: 5px 0;
+}
+.beneficio p {
     font-size: 0.7rem;
     text-align: center;
     padding: 5px;
-}
-.beneficios .linea-vertical {
-    width: 1px;
-    background-color: #828282;
-    height: 100%;
-    float: left; 
 }
 .sinopsis{
     border: solid 1px #828282;
@@ -390,12 +412,15 @@
     text-align: left;
     border-bottom: solid 1px #828282;
     margin-left: 5px;
-    padding: 6px 0;
+    margin-right: 5px;
+    padding: 6px 0 6px 3px;
 }
 .sinopsis p {
+    background-color: #fff;
     text-align: justify;
     font-size: 0.8rem;
     padding: 10px;
+    margin: 0 3px;
 }
 .redes-sociales {
     display: flex;
@@ -425,9 +450,11 @@
     margin-bottom: 7px;
 }
 .propuestas-por-autor h4 {
+    background-color: #fff;
     text-align: left;
     margin-left: 5px;
-    padding: 6px 0;
+    margin-right: 5px;
+    padding: 10px 0 10px 3px;
     font-size: 1.5rem;
 }
 .propuestas {
@@ -437,7 +464,10 @@
     padding-top: 10px;
 }
 .propuestas article {
-    max-width: 50%;
+    padding: 15px 0;
+    max-width: 45%;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 .propuestas h3 {
     font-size: 1.3rem;
