@@ -316,8 +316,11 @@ colores
 background-color: #3E60F7;
 background-color: #A4BEFB;
 background-color: #A4F0FF;
+Rosa línea #FA78E3
 
+background-color: #3E60F7;
 */
+
 .main-detalle-producto {
     width: 97%;
     text-align: center;
@@ -326,20 +329,24 @@ background-color: #A4F0FF;
 .producto {
     display: flex;
     flex-direction: column;
+    background-color: #fff;
     padding-top: 15px;
     box-shadow: 0px 0px 10px #646464;
 }
 .producto-principal {
     padding: 4vw 6vw;
 }
+.imagen-producto {
+    display: inline-block;
+}
 .datos-producto {
-    width: min-content;
+    background-color: #fff;
     max-width: 80%;
     box-sizing: border-box;
 }
 .datos-producto h3 {
     font-size: 1.7rem;
-    padding: 15px;
+    padding: 15px 5px 0 5px;
 }
 .datos-producto h4 {
     font-size: 1.3rem;
@@ -387,13 +394,13 @@ background-color: #A4F0FF;
 .beneficios {
     display: flex;
     margin: 15px;
-    padding: 20px 0;
+    padding: 20px 5px;
     border-top-style: inset;
     border-top-width: 1px;
 }
 .beneficios .linea-vertical {
     width: 1px;
-    color: white;
+    color: black;
     height: 100%;
     float: left; 
 }
@@ -470,11 +477,11 @@ background-color: #A4F0FF;
     margin-bottom: 10px;
 }
 .propuestas h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding-bottom: 3px;
 }
 .propuestas h4 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: center;
 }
 .propuestas h2 {
