@@ -396,10 +396,11 @@ background-color: #3E60F7;
     background-color: #ebebeb;
 }
 .cantidad-carrito-favs button {
-    background-color: #ebebeb;
+    background-color: #c7c7c7;
 }
 .cantidad-producto .numero {   
-    border: 1px solid #CCCCCC;
+    border: 1px solid #c2c2c2;
+    background-color: #c7c7c7;
     line-height: 28px;
     padding-top: 7px;
     margin: 0 2px;
@@ -407,18 +408,19 @@ background-color: #3E60F7;
     box-shadow: 0 0 3px #dddddd inset;
 }
 .cantidad-producto .flecha {
+    background-color: #c7c7c7;
     display: flex;
     flex-direction: column;
-    border: 1px solid #CCCCCC;
+    border: 1px solid #c2c2c2;
 }
 .agregar-al-carrito {
     font-size: 90%;
     padding: 10px 20px;
-    border: 1px solid #CCCCCC;
+    border: 1px solid #c2c2c2;
 }
 .agregar-a-favoritos {
     font-size: 90%;
-    border: 1px solid #CCCCCC;
+    border: 1px solid #c2c2c2;
     padding: 10px;
 }
 .beneficios {
@@ -427,20 +429,21 @@ background-color: #3E60F7;
     padding: 20px 5px;
     border-top-style: inset;
     border-top-width: 1px;
+    background-color: #fff;
 }
 .beneficios .linea-vertical {
-    width: 1px;
-    color: black;
-    height: 100%;
-    float: left; 
+    border-left: 1.7px solid #828282;
+    height: 50px;
 }
 .beneficio {
     padding: 5px 0;
+    background-color: #fff;
 }
 .beneficio p {
     font-size: 0.7rem;
     text-align: center;
     padding: 5px;
+    background-color: #fff;
 }
 .sinopsis{
     border: solid 1px #828282;
