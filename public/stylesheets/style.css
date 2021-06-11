@@ -4,12 +4,7 @@
     box-sizing: border-box;
     font-family: roboto, sans-serif;
 }
-.carrito {
-    color:#2D45ED;
-}
-.carrito:hover {
-    color:rgb(17, 192, 245);
-}
+
 /*----------------------------------------Formulario de registro--------------------------------------------------------*/
 .card{
     background-color:#ffff;
@@ -63,13 +58,10 @@
 
 }
 /*-------------------------------------------------Footer-----------------------------------------------------------*/
-.footer{
+/*.pie{
     padding: 0;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     height: 2rem; 
-    border: 1px solid black;
     display: flex;
     list-style: none;
     font-size: 0.7rem;
@@ -77,19 +69,68 @@
     background-color: rgb(165, 165, 165);
 }
 
-.footer li{
+.pie li{
     border-right: 0.1px solid black;
     padding: 2px;
     color: black;
 }
 
-.footer a{
+.pie a{
     text-decoration: none;
 }
 
-.footer a li{
+.pie a li{
     background-color:rgb(165, 165, 165);
 }
+*/
+
+.footer-social-wrap{
+    text-align: center;
+}
+
+.footer-social-wrap ul{
+    display: block;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-social-wrap li {
+    display: inline-block;
+    margin: 0;
+    padding: 0 1.5rem 0;
+    font-size: 1.8rem;
+}
+
+.footer-links-content{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 14px;    
+}
+
+.footer-links{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color:black;
+    display: block;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-links ul{
+    padding-inline-start: 0px;
+}
+
+/*.social-btns{
+    display: flex;
+    justify-content: center;
+}*/
 
 .social-media{
     text-decoration: none;
@@ -117,11 +158,7 @@
 .body-carrito{
     background-color: rgb(12, 171, 177);
 }
-.carrito{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(147, 36, 238);
-}
+
 .carrito .item-compra{
     display: flex;
     height: 20vh;
@@ -216,21 +253,42 @@
     }
 
 /*---------------------------------------------------Footer (Laptop)------------------------------------------------------*/
+.footer-links-laptop{display: flex;}
+    .footer-links-laptop ul{
+        padding-top: 20px;
+        padding-bottom: 20px;        
+    }   
 
-    .footer{
+    .footer-links-laptop li{
+        display: inline-block;
+        padding-inline-start: 0px;
+        margin: 5px;
+    }
+
+    .footer-links-laptop a{
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+    
+    .copyright{
+        color: black;
+        font-size: 14px;
+    }
+    /*.pie{
         border: 2px solid black;
     }
-    .footer li{
+    .pie li{
         font-size: 1rem;
         padding: 5px;
         color: black;
         border-right:none;
     }
     
-    .footer a{
+    .pie a{
         text-decoration: none;
     }
-    .footer a li:hover{
+    .pie a li:hover{
         color: white; 
         transition-delay:0.3s;
     }
@@ -250,50 +308,97 @@
     .social-media .coment:hover{
     
         color:rgb(125, 255, 113);
-    }
+    }*/
+
 /*----------------------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER LAPTOP--------------------------------------------*/
+    .show-only-mobile{
+        display: none;
+    }
 
+    .links-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo-search-laptop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffd257;
+    }
+
+    .mainNav {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;   
+        background-color: white;  
+    }
+
+    .mainNav a{
+        text-decoration: none;
+        color: inherit;
+        background-color: white;
+    }
+
+    .mainNav i{
+        background-color: white;
+    }
+/*-------------------------------------FIN HEADER--------------------------------------------------*/
 }
-/* HEAD Y BODY */
-.main-header {
-    padding: 20px;
+
+/*-------------------------------------HEADER MOBILE--------------------------------------------------*/
+@media(max-width:1024px){
+
+    .head-laptop{
+        display: none;
+        }
+    
+    .footer-links-laptop{display: none;}
 }
-.div main-navbar {
+
+.head-mobile{
+    background-color: #ffd257;
+}
+
+.head-mobile-first{
     display: flex;
 }
+
 .logoTBS {
-    width: 120px;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
 }
 
-.copy-header {
-    font-weight: 400;
+.search {
     text-align: center;
-    display: flex;
-    justify-content: space-between;
 }
 
-.logo-search {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.mainNav {
-    display: flex;
-    margin: 10px;
-    padding: 10px;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.search  input{
+    background-color: white;
+    border-radius: 10%;
 }
 
 .banner {
     width: 100%;
 }
 
-.search {
-    width: 40%;
+.carrito {
+    color: black;
+    font-size: 1.5em;
 }
+
+
+.carrito:hover {
+    color:rgb(17, 192, 245);
+}
+
+/*----------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------MAIN----------------------------------------------------*/
 .ofertalibro {
     display: flex;
     margin: 10px;
