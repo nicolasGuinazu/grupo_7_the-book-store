@@ -435,9 +435,27 @@ div.total{
 /*----------------------------------------------------------------------------------------------*/
 
 /*--------------------------------------MAIN----------------------------------------------------*/
-.ofertalibro {
+.LibrosOfertas {
     display: flex;
-    margin: 10px;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.libro,
+.libro1,
+.libro2,
+.libro3,
+.libro4,
+.libro5 {
+    text-align: center;
+    margin: 0px;
+    width: 50%;
+
+}
+.Detalle {
+    margin: 0px;
 }
 
 .nombre-libro {
@@ -445,12 +463,27 @@ div.total{
 }
 .autor-libro{
     font-size: 11px;
+    font-weight: bolder;
 }
 .price {
     font-size: 10px;
+    font-style: italic;
+}
+.section {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    width: 100vw;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+ul {
+    padding: 0px;
 }
 
-
+@media(min-width:768px){
+    
+}
 /*                           DETALLE DEL PRODUCTO 
 
 colores
