@@ -1,0 +1,89 @@
+.body-carrito{
+    background-color: rgb(12, 171, 177);
+}
+
+.carrito .item-compra{
+    display: flex;
+    height: 20vh;
+    width: 50vh;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 2px;
+    box-shadow: 10px 5px 5px rgb(180, 244, 248);
+    margin: 10px
+}
+.carrito .item-compra .imagen-carrito{
+  height: 20vh;
+}
+.carrito .item-compra .imagen-carrito img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.carrito .item-compra .titulo-producto{
+    font-size: 0.6rem;
+    color: grey;
+}
+
+.carrito .item-compra .botones button{
+ border: none;
+ cursor: pointer;
+}
+.carrito .item-compra .botones button i{
+    color: green;
+    font-size: 1rem;
+}
+.carrito .item-compra .botones .menos i{
+    color: rgb(160, 10, 10);
+}
+.carrito .item-compra .botones button i:hover{
+    color: rgb(0, 247, 0);
+}
+
+
+.carrito .item-compra .botones .menos i:hover{
+    color: rgb(255, 21, 21);
+}
+
+
+.confirmar-compra{
+    width: 40%;
+    margin-top: 5%;
+}
+.confirmar-compra button{
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: gold;
+    border:none;
+}
+.confirmar-compra button:hover{
+    background-color: rgb(206, 192, 0);
+    color: white;
+}
+
+div.total{
+    margin-top: 1vh;
+    text-align: center;
+    color: #fff;
+}
+
+.medios-pago{
+    display: flex;
+    height: 20vh;
+    width: 50vh;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 2px;
+    box-shadow: 10px 5px 5px rgb(180, 244, 248);
+
+}
+
+.cuotas{
+    font-size: medium;
+    text-align: center;
+
+}
