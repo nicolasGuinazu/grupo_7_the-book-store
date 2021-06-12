@@ -6,6 +6,7 @@
 }
 .carrito {
     color:#2D45ED;
+    display:flex;
 }
 .carrito:hover {
     color:rgb(17, 192, 245);
@@ -188,6 +189,7 @@
     margin-top: 10px;
     border-radius: 2px;
     box-shadow: 10px 5px 5px rgb(180, 244, 248);
+    margin: 10px
 }
 .carrito .item-compra .imagen-carrito{
   height: 20vh;
@@ -245,8 +247,124 @@ div.total{
     text-align: center;
     color: #fff;
 }
+
+#cart-section .product {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+#cart-section .product:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+#cart-section .product img {
+    width: 100px;
+}
+#cart-section .text-container .nombre-libro {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+text-container {}
+
+#cart-section .text-container .price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#cart-section .text-container {
+    width: 50%;
+}
+
+.wrapper {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 92%;
+    max-width: 1100px;
+}
+
+#cart-section .text-container .autor-libro {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 10px 0;
+}
+
+#cart-main section {
+    position: relative;
+    display: block;
+    padding: 50px 0;
+}
+
+title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+}
+
+#cart-main section .container {
+    border: 1px solid black;
+    padding: 50px 0;
+}
+
+#cart-main section .container .section-title {
+    top: -20px;
+    position: absolute;
+    left: 15px;
+    padding: 10px;
+    background: #eaeaea;
+    border: 1px solid black;
+}
+
+#cart-section .total {
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+    padding: 10px;
+    color: black;
+    border: 1px solid black;
+    background: #e6e6e6;
+}
+
+.metodos-pago {
+    padding: 25px;
+    line-height: 22px;
+    border-top: 1px solid black;
+    margin-top: 30px;
+    text-align: center;
+}
 /*---------------------------------------------- Vista de Escritorio-----------------------------------------------------------*/
 @media(min-width:1200px){
+/*--------------------------------------- Carrito (Vista Escritorio)------------------------------------------------------*/
+
+    .products-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    #cart-section .product {
+        width: calc(33.3% - 20px);
+        margin-bottom: 30px;
+    }
+    
+    .metodos-pago {
+        position: absolute;
+        top: 100%;
+        border: 1px solid black;
+        padding: 10px;
+    }
+    
+    .metodos-pago p {
+        position: relative;
+        display: inline-block;
+        margin-right: 15px;
+    }
+    
+    
 /*----------------------------------------Formulario Registro (Vista Escritorio)------------------------------------------------------*/
     .card{
         margin:auto;
