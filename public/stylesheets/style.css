@@ -588,7 +588,16 @@ ul {
 }
 
 @media(min-width:768px){
-    
+    .producto-principal .producto {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    .producto-principal .datos-producto {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
 }
 /*                           DETALLE DEL PRODUCTO 
 
@@ -607,8 +616,6 @@ background-color: #3E60F7;
     margin-top: 2vw;
 }
 .producto {
-    display: flex;
-    flex-direction: column;
     background-color: #fff;
     padding-top: 15px;
     box-shadow: 0px 0px 10px #646464;
