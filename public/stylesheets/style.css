@@ -248,20 +248,20 @@ div.total{
     color: #fff;
 }
 
-#cart-section .product {
+#cart-main .product {
     display: flex;
     position: relative;
     justify-content: space-between;
 }
 
-#cart-section .product:not(:last-child) {
+#cart-main .product:not(:last-child) {
     margin-bottom: 30px;
 }
 
-#cart-section .product img {
+#cart-main .product img {
     width: 100px;
 }
-#cart-section .text-container .nombre-libro {
+#cart-main .text-container .nombre-libro {
     font-size: 14px;
     line-height: 18px;
     font-weight: bold;
@@ -269,12 +269,12 @@ div.total{
 
 text-container {}
 
-#cart-section .text-container .price {
+#cart-main .text-container .price {
     font-size: 16px;
     font-weight: bold;
 }
 
-#cart-section .text-container {
+#cart-main .text-container {
     width: 50%;
 }
 
@@ -286,7 +286,7 @@ text-container {}
     max-width: 1100px;
 }
 
-#cart-section .text-container .autor-libro {
+#cart-main .text-container .autor-libro {
     font-size: 12px;
     line-height: 14px;
     margin: 10px 0;
@@ -365,8 +365,27 @@ title {
         margin-right: 15px;
     }
     
-}
- 
+    }
+    .other-products {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .other-products .products img {
+        width: 100px;
+    }
+
+    section#other-options .wrapper .container {
+        height: 350px;
+    }
+
+
+    .comprar-buttom {
+        border: 1px solid black;
+        display: flex;
+    }
+    
 @media(min-width:1024px){
 /*----------------------------------------Formulario Registro (Vista Escritorio)------------------------------------------------------*/
     .card{
