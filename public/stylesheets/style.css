@@ -267,8 +267,6 @@ div.total{
     font-weight: bold;
 }
 
-text-container {}
-
 #cart-main .text-container .price {
     font-size: 16px;
     font-weight: bold;
@@ -614,6 +612,7 @@ background-color: #3E60F7;
     background-color: #fff;
     padding-top: 15px;
     box-shadow: 0px 0px 10px #646464;
+    border: solid 2px #4c94ba;
 }
 .producto-principal {
     padding: 4vw 6vw;
@@ -637,33 +636,21 @@ background-color: #3E60F7;
     font-size: 2rem;
     padding: 15px;
 }
-.cantidad-carrito-favs {
+.compartir-carrito-favs {
     display: flex;
     justify-content: center;
     padding: 10px 30px;
     margin: 5px;
 }
-.cantidad-producto {
-    display: flex;
-    background-color: #ebebeb;
+.compartir-carrito-favs button {
+    background-color: #3e5f8a;
+    color: white;
+    border-radius: 3px;
 }
-.cantidad-carrito-favs button {
-    background-color: #c7c7c7;
-}
-.cantidad-producto .numero {   
+.compartir {
+    font-size: 90%;
     border: 1px solid #c2c2c2;
-    background-color: #c7c7c7;
-    line-height: 28px;
-    padding-top: 7px;
-    margin: 0 2px;
-    width: 28px;
-    box-shadow: 0 0 3px #dddddd inset;
-}
-.cantidad-producto .flecha {
-    background-color: #c7c7c7;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #c2c2c2;
+    padding: 10px;
 }
 .agregar-al-carrito {
     font-size: 90%;
@@ -705,7 +692,7 @@ background-color: #3E60F7;
     border-bottom: solid 1px #828282;
     margin-left: 5px;
     margin-right: 5px;
-    padding: 6px 0 6px 3px;
+    letter-spacing: 4px;
 }
 .sinopsis p {
     background-color: #fff;
@@ -740,6 +727,9 @@ background-color: #3E60F7;
 }
 .propuestas-por-autor {
     margin-bottom: 7px;
+}
+.propuestas-por-autor .titulo-mismo-autor {
+    letter-spacing: 4px;
 }
 .propuestas-por-autor h4 {
     background-color: #fff;
