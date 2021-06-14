@@ -613,6 +613,7 @@ background-color: #3E60F7;
     padding-top: 15px;
     box-shadow: 0px 0px 10px #646464;
     border: solid 2px #4c94ba;
+    min-width: 30vw;
 }
 .producto-principal {
     padding: 4vw 6vw;
