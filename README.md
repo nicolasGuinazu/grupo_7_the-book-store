@@ -22,4 +22,4 @@ Nicolás Guiñazu:29 años, marplatense, estudiante de tecnicatura en programaci
 Sebastián Sultano: 24 años. marplatense
 María Pía Trebucq: Soy de Cba, tengo 34 años y trabajo en la UNC.
 
-- Para acceder a nuestro tablero de de Trello: https://trello.com/b/i91UXTnm/proyecto
+- Para acceder a nuestro tablero de Trello: https://trello.com/b/i91UXTnm/proyecto

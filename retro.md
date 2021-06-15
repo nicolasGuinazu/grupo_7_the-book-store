@@ -18,5 +18,7 @@ Hacer menos
 	- Utilizar la daily para resolver conflictos técnicos
 
 Dejar hacer
+    - Por el momento no hay nada que hayamos encontrado mal como para dejar de hacer. Posiblemente en los próximos sprint surja algo
 
+Reflexión Final
 Estamos muy a gusto con los resultados obtenidos en la primera iteración no solo por el material conseguido, sino también por la fuidez con la que nos desarrollamos como equipo.
