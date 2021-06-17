@@ -4,13 +4,15 @@
     box-sizing: border-box;
     font-family: roboto, sans-serif;
 }
-.carrito {
+
+/*.carrito {
     color:#2D45ED;
     display:flex;
 }
 .carrito:hover {
     color:rgb(17, 192, 245);
-}
+}*/
+
 /*----------------------------------------Formulario de registro (mobile)--------------------------------------------------------*/
 .ya-registrado{
     font-size: 0.7rem;
@@ -79,34 +81,9 @@
 
 }
 /*-------------------------------------------------Footer-----------------------------------------------------------*/
-/*.pie{
-    padding: 0;
-    width: 100%;
-    height: 2rem; 
-    display: flex;
-    list-style: none;
-    font-size: 0.7rem;
-    justify-content: space-between;
-    background-color: rgb(165, 165, 165);
-}
-
-.pie li{
-    border-right: 0.1px solid black;
-    padding: 2px;
-    color: black;
-}
-
-.pie a{
-    text-decoration: none;
-}
-
-.pie a li{
-    background-color:rgb(165, 165, 165);
-}
-*/
-
 .footer-social-wrap{
     text-align: center;
+    margin-top: 20px;
 }
 
 .footer-social-wrap ul{
@@ -123,6 +100,7 @@
     margin: 0;
     padding: 0 1.5rem 0;
     font-size: 1.8rem;
+    background-color: transparent;
 }
 
 .footer-links-content{
@@ -147,11 +125,6 @@
 .footer-links ul{
     padding-inline-start: 0px;
 }
-
-/*.social-btns{
-    display: flex;
-    justify-content: center;
-}*/
 
 .social-media{
     text-decoration: none;
@@ -462,12 +435,28 @@ title {
         justify-content: space-between;
     }
 
+    /*.links-header ul{
+        background-color: transparent;
+    }*/
+
+    .links-header li{
+        display: inline-block;
+        padding: 5px;
+        background-color: transparent;
+    }
+
+    .links-header a{
+        color: black;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
     .logo-search-laptop {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        background-color: #ffd257;
+        background-color: #ffc552;
     }
 
     .mainNav {
@@ -498,14 +487,24 @@ title {
         }
     
     .footer-links-laptop{display: none;}
+
+    .search {        
+        padding-bottom: 10px;
+    }
 }
 
 .head-mobile{
-    background-color: #ffd257;
+    background-color: #ffc552;
 }
 
 .head-mobile-first{
     display: flex;
+}
+
+.burger-button{
+    font-size: 30px;
+    border: 0;
+    background-color: transparent;
 }
 
 .logoTBS {
@@ -516,12 +515,20 @@ title {
 
 .search {
     text-align: center;
-    padding-bottom: 10px;
 }
 
 .search  input{
     background-color: white;
-    border-radius: 10%;
+    border: 0;
+    height: 30px;
+    width: 230px;
+    padding: 5px;
+}
+
+.search-button{
+    height: 30px;
+    border: 0;
+    background-color: white;
 }
 
 .banner {
@@ -530,15 +537,16 @@ title {
 
 .carrito {
     color: black;
-    font-size: 1.5em;
+    font-size: 30px;
+    background-color: transparent;
 }
 
 
-.carrito:hover {
+/*.carrito:hover {
     color:rgb(17, 192, 245);
-}
+}*/
 
-/*----------------------------------------------------------------------------------------------*/
+/*------------------------------------FIN HEADER MOBILE--------------------------------------*/
 
 /*--------------------------------------MAIN----------------------------------------------------*/
 .LibrosOfertas {
@@ -753,6 +761,87 @@ background-color: #3E60F7;
     padding-top: 3px;
 }
 
+/*********************************FORM LOGIN**************************************************/
+.card-login{
+    margin-top: 10%;
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    background-color:#ffff;
+    width: 50vw;
+    height:100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    min-width: 200px;
+}
+
+.card-login label{
+    background-color: #ffff;
+}
+
+.msg-login{
+    background-color: #ffff;
+    padding: 16px;
+}
+
+.msg-login h4{
+    background-color: #ffff;
+}
+
+.card-login button{
+    background-color: #3e5f8a;
+    font-size: 16px;
+    width: 100px;
+    height: 30px;
+}
+
+.card-login button:hover{
+    background-color: #ffc552;
+}
+
+.container-login{
+    padding: 16px;
+    background-color: #ffff;
+}
+
+.card-login input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+.container-button {
+      text-align: center;
+      background-color: #ffff;
+      margin: 10px 0 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+.container-button input{
+    background-color: #ffff;
+}
+
+.container-links-psw a{
+    background-color: #ffff;
+    text-decoration: none;
+    color: black;
+}
+
+.container-links-psw li{
+    text-align: center;
+    background-color: #ffff;
+}
+
+.container-links-psw a:active,
+.container-links-psw a:visited{
+    color: blue;
+    font-weight: bold;}
 @media(min-width:768px){
     .producto-principal .producto {
         display: flex;
