@@ -767,6 +767,9 @@ background-color: #3E60F7;
     .compartir-carrito-favs {
         visibility: hidden;
     }
+    .tablet {
+        visibility: visible;
+    }
     .propuestas article {
         max-width: 30%;
     }
