@@ -736,7 +736,7 @@ background-color: #3E60F7;
 }
 .propuestas article {
     padding: 15px 0;
-    max-width: 45%;
+    width: 45%;
     margin-top: 15px;
     margin-bottom: 10px;
 }
