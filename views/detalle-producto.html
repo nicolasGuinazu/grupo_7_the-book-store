@@ -12,28 +12,73 @@
 </head>
 <body>
     <header>
-        igual en todas las páginas
+        <div class="head-mobile show-only-mobile">
+            <div class="head-mobile-first">
+                <button class="burger-button"><i class="fas fa-bars"></i></button>
+                <img class="logoTBS" width="120" height="120" src="/images/Logo-tbs.png"
+                    alt="Logo The Book Store">
+                <a href="/carrito-compra"><i class="fas fa-shopping-cart carrito"></i></a>
+            </div>
+            <div class="search">
+                <form class="nav-search" action="" method="GET" role="search">
+                    <input type="search" id="searchbar" name="searchbar" placeholder="Buscar productos" maxlength="120">
+                    <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="head-laptop">
+            <div class=logo-search-laptop>
+                <img class="logoTBS" src="/images/Logo-tbs.png"
+                    alt="Logo The Book Store">
+                <div class="search">
+                    <input type="search" id="searchbar" name="searchbar" placeholder="Buscar productos">
+                    <button class="search-button"> <i class="fas fa-search"></i></button>
+                </div>
+                <div class="links-header">
+                    <ul type="none">                                
+                        <li><a href="#">Mis Favoritos</a></li>
+                        <li><a href="#">Iniciar</a></li>
+                        <li><a href="/register">Registrarse</a></li>
+                        <li><a href="/carrito-compra"><i class="fas fa-shopping-cart carrito"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="main-navbar-laptop">            
+                <ul class="mainNav"type="none">
+                    <li><a href="#">Libros por Categoría <i class="fas fa-sort-down"></i></a></li>                
+                    <li><a href="#">Digital <i class="fas fa-sort-down"></i></a></li>
+                    <li><a href="#">Merchandising <i class="fas fa-sort-down"></i></a></li>
+                    <li><a href="#">Ofertas <i class="fas fa-sort-down"></i></a></li>
+                    <li><a href="#">Los más Vendidos <i class="fas fa-sort-down"></i></a></li>
+                    <li><a href="#">Novedades <i class="fas fa-sort-down"></i></a></li>                
+                    <li><a href="#">Pasatiempos <i class="fas fa-sort-down"></i></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="main-detalle-producto">
         <div class="producto-principal">
             <article class="producto">
-               <div class="imagen-producto">
+                <div class="imagen-producto">
                     <img src="/images/Libro1.jpg">
                 </div>
                 <div class="datos-producto">
                     <h3>UN AÑO CON SCHOPENHAUER</h3>
                     <h4>Irvin D. Yalom</h4>
                     <h2>$ 1.500</h2>
+                    <div class="compartir-carrito-favs tablet">
+                        <button class="compartir"><i class="fas fa-share-alt"></i></button>
+                        <button class="agregar-al-carrito">AGREGAR AL CARRITO</button>
+                        <button class="agregar-a-favoritos"><i class="far fa-heart"></i></button>
+                    </div>
                 </div> 
             </article>    
         </div>
-
-        <!-- ¡¡ESTE BLOQUE TIENE QUE SER FLEX!! -->
-        <div class="compartir-carrito-favs">
-            <button class="compartir"><i class="fas fa-share-alt"></i></button>
-            <button class="agregar-al-carrito">AGREGAR AL CARRITO</button>
-            <button class="agregar-a-favoritos"><i class="far fa-heart"></i></button>
-        </div>
+            <div class="compartir-carrito-favs">
+                <button class="compartir"><i class="fas fa-share-alt"></i></button>
+                <button class="agregar-al-carrito">AGREGAR AL CARRITO</button>
+                <button class="agregar-a-favoritos"><i class="far fa-heart"></i></button>
+            </div>
         <div class="beneficios">
             <div class="beneficio">
                 <i class="fas fa-shipping-fast"></i>
@@ -133,62 +178,59 @@ El día que Nietzsche lloró es una irónica vuelta de turca en la historia de l
         </section>
     </main>
     <footer>
-        igual en todas las páginas
+        <div class="footer-social-wrap">
+            <h4>Seguinos</h4>
+            <ul class="social-btns" type="none">
+                <li>
+                    <a href="#" aria-label="Book Store Facebook" target="_blank">
+                        <img src="/images/FB-Icon.png" alt="" width="18px" height="18px">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Book Store Twitter" target="_blank">
+                        <img src="/images/TW-Icon.png" alt="" width="18px" height="18px">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Book Store Pinterest" target="_blank">
+                        <img src="/images/PI-Icon.png" alt="" width="18px" height="18px">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Book Store Instagram" target="_blank">
+                        <img src="/images/IG-Icon.png" alt="" width="18px" height="18px">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-links-content show-only-mobile">
+            <div class="footer-links">
+                <ul type="none">
+                    <li><a href="#" class="footer-sign-in-link"> Iniciar sesión/Crear cuenta</a></li>
+                    <li><a href="#"> Contacto</a></li>
+                    <li><a href="#"> Aviso Legal</a></li>
+                    <li><a href="#"> Política de privacidad</a></li>
+                    <li><a href="#"> Cookies</a></li>
+                    <li><a href="#"> Newsletter</a></li>
+                  </ul>
+            </div>
+        </div>
+        <div class="footer-links-laptop">
+            <ul type="none">          
+                <li><a href="#"> Contacto</a></li>
+                <li>|</li>
+                <li><a href="#"> Aviso Legal</a></li>
+                <li>|</li>
+                <li><a href="#"> Política de privacidad</a></li>
+                <li>|</li>
+                <li><a href="#"> Cookies</a></li>
+                <li>|</li>
+                <li><a href="#"> Newsletter</a></li>     
+                <li><input type="email" id="mail" name="mail" placeholder="ejemplo@email.com"></li>
+                <li><input type="submit" value="Suscribirse"></li>
+            </ul>
+            <p class="copyright">© 2021 The Book Store</p>
+        </div>
     </footer>
 </body>
 </html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=10">
-    
-    <title>Descripción del producto</title>
-</head>
-<body>
-    <header>
-        va a ser igual para todas
-    </header>
-    <main>
-        <div class="imagenes-productos">
-            <img href= "#">
-            <img href="#">
-            <img href="#" class="imagen-principal-producto">
-        </div>
-        <div class="product-description">
-           <span class="estrellas">
-               <i>loguito estrellitas</i>
-           </span>
-           <h1>titulo</h1>
-           <p>descripcion</p>
-           <ul>datos</ul>
-        </div>
-        <div class="botones-comprar">
-            cantidad
-            comprar
-            favs
-        </div>
-        <div>
-            <p>sinopsis</p>
-        </div>
-        <div>
-            <h2>Te pueden interesar...</h2>
-            <nav>
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </nav>
-        </div>
-    </main>
-    <footer>
-        va a ser igual para todas
-    </footer>
-</body>
-</html> -->
