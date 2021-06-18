@@ -434,9 +434,9 @@ title {
         justify-content: space-between;
     }
 
-    /*.links-header ul{
-        background-color: transparent;
-    }*/
+    .links-header ul{
+        background-color: #ffc552; 
+    }
 
     .links-header li{
         display: inline-block;
