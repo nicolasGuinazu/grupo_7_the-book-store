@@ -347,6 +347,13 @@ title {
     .comprar-buttom {
         border: 1px solid black;
         display: flex;
+        border-radius: 8ch;
+        width: 116px;
+        height: 33px;
+    }
+
+    .comprar-buttom a {
+        text-decoration: none;
     }
     
 @media(min-width:1024px){
@@ -361,7 +368,7 @@ title {
 
         background-color: #ffff;
         text-align: center;
-        font-size: 40px;
+        font-size: 40px;                                 
         padding: 2px;
         
     }
