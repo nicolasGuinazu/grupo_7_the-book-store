@@ -5,6 +5,7 @@
     font-family: roboto, sans-serif;
 }
 
+
 /*----------------------------------------Formulario de registro (mobile)--------------------------------------------------------*/
 .ya-registrado{
     font-size: 0.7rem;
@@ -471,6 +472,10 @@ title {
         background-color: #ffc552;
     }
 
+    .logo-search-laptop a{
+        background-color: transparent;
+        }
+        
     .mainNav {
         display: flex;
         padding: 10px;
@@ -511,6 +516,10 @@ title {
 
 .head-mobile-first{
     display: flex;
+}
+
+.head-mobile-first a{
+    background-color: transparent;
 }
 
 .burger-button{
