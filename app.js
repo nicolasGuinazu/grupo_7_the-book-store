@@ -7,24 +7,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) );
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/views/index.html'))
+  res.render('index')
 })
 
 app.get('/productDetail', (req, res) => {
-  res.sendFile(path.join(__dirname, '/views/productDetail.html'))
+  res.render('productDetail')
 })  
 
 app.get('/carrito-compra', (req, res) => {
-  res.sendFile(path.join(__dirname, '/views/carrito-compras.html'))
+  res.render('carrito-compras')
 })  
 
 app.get('/register', (req, res) => {
-  res.sendFile(path.join(__dirname, '/views/registerForm.html'))
+  res.render('registerForm')
 })
 
 app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, '/views/login.html'))
+  res.render('login')
 })
 
 app.listen(3000, () => {
