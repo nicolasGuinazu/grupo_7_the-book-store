@@ -1,57 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>The Book Store</title>
-</head>
+<%-include('partials/head')%>
 <body>
-    <header class="main-header">        
-        <div class="head-mobile show-only-mobile">
-            <div class="head-mobile-first">
-                <button class="burger-button"><i class="fas fa-bars"></i></button>
-                <a href="/"> <img class="logoTBS" src="/images/Logo-tbs.png" alt="Logo The Book Store"></a>
-                <a href="/carrito-compra"><i class="fas fa-shopping-cart carrito"></i></a>
-            </div>
-            <div class="search">
-                <input type="search" id="searchbar" name="searchbar" placeholder="Buscar productos">
-                <button class="search-button"> <i class="fas fa-search"></i></button>
-            </div>
-        </div>
-        <div class="head-laptop">
-            <div class=logo-search-laptop>
-                <a href="/"><img class="logoTBS" src="/images/Logo-tbs.png" alt="Logo The Book Store"></a>
-                <div class="search">
-                    <input type="search" id="searchbar" name="searchbar" placeholder="Buscar productos">
-                    <button class="search-button"> <i class="fas fa-search"></i></button>
-                </div>
-                <div class="links-header">
-                    <ul type="none">                                
-                        <li><a href="#">Mis Favoritos</a></li>
-                        <li><a href="/login">Iniciar Sesión</a></li>
-                        <li><a href="/register">Registrarse</a></li>
-                        <li><a href="/carrito-compra"><i class="fas fa-shopping-cart carrito"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <nav class="main-navbar-laptop">            
-                <ul class="mainNav"type="none">
-                    <li><a href="#">Libros por Categoría</a></li>                
-                    <li><a href="#">Digital</a></li>
-                    <li><a href="#">Merchandising</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Los más Vendidos</a></li>
-                    <li><a href="#">Novedades</a></li>                
-                    <li><a href="#">Pasatiempos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<%-include('partials/header')%>
     <img class="banner" width = "90vw" height = "" src="/images/banner.jpg" alt="IMAGEN CARRUSEL"> <br>
 <main>
     <ul type="none">
@@ -215,62 +166,6 @@
             </article>
     </section>
 </main>
-    <footer>
-        <div class="footer-social-wrap">
-            <h4>Seguinos</h4>
-            <ul class="social-btns" type="none">
-                <li>
-                    <a href="#" aria-label="Book Store Facebook" target="_blank">
-                        <img src="/images/FB-Icon.png" alt="" width="18px" height="18px">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Book Store Twitter" target="_blank">
-                        <img src="/images/TW-Icon.png" alt="" width="18px" height="18px">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Book Store Pinterest" target="_blank">
-                        <img src="/images/PI-Icon.png" alt="" width="18px" height="18px">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Book Store Instagram" target="_blank">
-                        <img src="/images/IG-Icon.png" alt="" width="18px" height="18px">
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="footer-links-content show-only-mobile">
-            <div class="footer-links">
-                <ul type="none">
-                    <li><a href="#" class="footer-sign-in-link"> Iniciar sesión/Crear cuenta</a></li>
-                    <li><a href="#"> Contacto</a></li>
-                    <li><a href="#"> Aviso Legal</a></li>
-                    <li><a href="#"> Política de privacidad</a></li>
-                    <li><a href="#"> Cookies</a></li>
-                    <li><a href="#"> Newsletter</a></li>
-                  </ul>
-            </div>
-        </div>
-        <div class="footer-links-laptop">
-            <ul type="none">          
-                <li><a href="#"> Contacto</a></li>
-                <li>|</li>
-                <li><a href="#"> Aviso Legal</a></li>
-                <li>|</li>
-                <li><a href="#"> Política de privacidad</a></li>
-                <li>|</li>
-                <li><a href="#"> Cookies</a></li>
-                <li>|</li>
-                <li><a href="#"> Newsletter</a></li>     
-                <li><input type="email" id="mail" name="mail" placeholder="ejemplo@email.com"></li>
-                <li><input type="submit" value="Suscribirse"></li>
-            </ul>
-            <p class="copyright">© 2021 The Book Store</p>
-        </div>
-        
-    </footer>
+<%-include('partials/footer')%>
 </body>
 </html>
