@@ -29,6 +29,14 @@ app.get('/login', (req, res) => {
   res.render('login')
 })
 
+app.get('/products/create',(req, res) => {
+  res.render('createProduct')
+})
+
+app.get('/products/modify',(req, res) => {
+  res.render('modifyProduct')
+})
+
 app.listen(3000, () => {
   console.log('Servidor corriendo en el puerto 3000')
 })
