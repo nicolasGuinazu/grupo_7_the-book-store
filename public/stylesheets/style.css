@@ -641,7 +641,7 @@ background-color: #3E60F7;
     padding: 15px;
 }
 .tablet {
-    visibility: hidden;
+    display: block;
 }
 .compartir-carrito-favs {
     display: flex;
@@ -842,6 +842,7 @@ background-color: #3E60F7;
 .container-links-psw a:visited{
     color: blue;
     font-weight: bold;}
+    
 @media(min-width:768px){
     .producto-principal .producto {
         display: flex;
@@ -857,7 +858,7 @@ background-color: #3E60F7;
         visibility: hidden;
     }
     .tablet {
-        visibility: visible;
+        visibility: none;
     }
     .propuestas article {
         max-width: 30%;
