@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head')%>
+<body>
+<%-include('../partials/header')%>
+    <main>
+        <div class="card-create-prod">   
+            <form action="" method="POST">  
+                <div class="msg-create-prod">
+                    <h4>Formulario de Alta de Productos</h4>
+                </div>
+                    <div class="container-create-prod">
+                        <label for="name-prod">Nombre del producto</label>
+                        <input type="text" name="name-prod" placeholder="Ingresar nombre" required>
+
+                        <label for="description">Descripción</label>
+                        <input type="textarea" name="description" placeholder="Descripción" required>
+
+                        <label for="image">Imagen</label>
+                        <input type="file" name="image" accept=".jpg, .png" required>
+
+                        <div class="container-button">
+                            <button type="submit">Crear</button>
+                        </div>
+                    </div>                
+            </form>
+        </div>
+
+    </main>
+<%-include('../partials/footer')%>
+</body>
+</html>
