@@ -14,9 +14,23 @@
                         <input type="text" name="name-prod" placeholder="Ingresar nombre" required>
 
                         <label for="description">Descripción</label>
-                        <input type="textarea" name="description" placeholder="Descripción" required>
-
+                        <textarea name="description" placeholder="Descripción" required></textarea>
+                        
+                        <label for="category">Categoría</label>
+                        <br>
+                        <select name="category">
+                            <option value="books">Libros</option>
+                            <option value="digital">Digital</option>
+                            <option value="merchandising">Merchandising</option>
+                            <option value="hobbies">Pasatiempos</option>
+                        </select>
+                        <br>
+                        <label for="price">Precio</label>
+                        <br>
+                        <input type="number" name="price" min="1" required>
+                        <br>
                         <label for="image">Imagen</label>
+                        <br>
                         <input type="file" name="image" accept=".jpg, .png" required>
 
                         <div class="container-button">

@@ -2,11 +2,13 @@ const express = require('express');
 const app = express();
 const path=require('path')
 
+/****************** PUBLIC PATH *************************/
 app.use(express.static(path.join(__dirname, 'public')));
 
 const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) );
 
+/****************** TEMPLATES ENGINE ********************/
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
@@ -34,14 +36,7 @@ const productsRouter = require('./routes/products'); // Rutas /products
 app.use('/products', productsRouter);
 
 
-/*app.get('/products/create',(req, res) => {
-  res.render('createProduct')
-})
-
-app.get('/products/modify',(req, res) => {
-  res.render('modifyProduct')
-})*/
-
+/************* INICIANDO EL SERVIDOR **************/
 app.listen(3000, () => {
   console.log('Servidor corriendo en el puerto 3000')
 })

@@ -1,1 +1,46 @@
-<h1>Edicion de Producto</h1>
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head')%>
+<body>
+<%-include('../partials/header')%>
+    <main>
+        <div class="card-create-prod">   
+            <form action="" method="POST">  
+                <div class="msg-create-prod">
+                    <h4>Formulario de Modificación de Productos</h4>
+                </div>
+                    <div class="container-create-prod">
+                        <label for="name-prod">Nombre del producto</label>
+                        <input type="text" name="name-prod" placeholder="Ingresar nombre" required>
+
+                        <label for="description">Descripción</label>
+                        <textarea name="description" placeholder="Descripción" required></textarea>
+                        
+                        <label for="category">Categoría</label>
+                        <br>
+                        <select name="category">
+                            <option value="books">Libros</option>
+                            <option value="digital">Digital</option>
+                            <option value="merchandising">Merchandising</option>
+                            <option value="hobbies">Pasatiempos</option>
+                        </select>
+                        <br>
+                        <label for="price">Precio</label>
+                        <br>
+                        <input type="number" name="price" min="1" required>
+                        <br>
+                        <label for="image">Imagen</label>
+                        <br>
+                        <input type="file" name="image" accept=".jpg, .png" required>
+
+                        <div class="container-button">
+                            <button type="submit">Modificar</button>
+                        </div>
+                    </div>                
+            </form>
+        </div>
+
+    </main>
+<%-include('../partials/footer')%>
+</body>
+</html>
