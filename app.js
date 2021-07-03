@@ -2,13 +2,17 @@ const express = require('express');
 const app = express();
 const path=require('path')
 
+/****************** PUBLIC PATH *************************/
 app.use(express.static(path.join(__dirname, 'public')));
 
 const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) );
 
+/****************** TEMPLATES ENGINE ********************/
 app.set('view engine', 'ejs');
 
+
+/****************** VISTAS SIN RUTAS Y CONTROLLER *******/
 app.get('/', (req, res) => {
   res.render('index')
 })
@@ -21,22 +25,16 @@ app.get('/carrito-compra', (req, res) => {
   res.render('carrito-compras')
 })  
 
-app.get('/register', (req, res) => {
-  res.render('registerForm')
-})
 
-app.get('/login', (req, res) => {
-  res.render('login')
-})
+/****************** RUTAS *************************/
+const productsRouter = require('./routes/products'); // Rutas /products
+app.use('/products', productsRouter);
 
-app.get('/products/create',(req, res) => {
-  res.render('createProduct')
-})
+const usersRouter = require('./routes/users'); // Rutas /users
+app.use('/users', usersRouter);
 
-app.get('/products/modify',(req, res) => {
-  res.render('modifyProduct')
-})
 
+/************* INICIANDO EL SERVIDOR **************/
 app.listen(3000, () => {
   console.log('Servidor corriendo en el puerto 3000')
 })
