@@ -11,6 +11,8 @@ app.use( express.static(publicPath) );
 /****************** TEMPLATES ENGINE ********************/
 app.set('view engine', 'ejs');
 
+
+/****************** VISTAS SIN RUTAS Y CONTROLLER *******/
 app.get('/', (req, res) => {
   res.render('index')
 })
@@ -23,17 +25,13 @@ app.get('/carrito-compra', (req, res) => {
   res.render('carrito-compras')
 })  
 
-app.get('/register', (req, res) => {
-  res.render('registerForm')
-})
-
-app.get('/login', (req, res) => {
-  res.render('login')
-})
 
 /****************** RUTAS *************************/
 const productsRouter = require('./routes/products'); // Rutas /products
 app.use('/products', productsRouter);
+
+const usersRouter = require('./routes/users'); // Rutas /users
+app.use('/users', usersRouter);
 
 
 /************* INICIANDO EL SERVIDOR **************/
