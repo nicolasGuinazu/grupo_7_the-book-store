@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head')%>
+<body>
+<%-include('../partials/header')%>
+    <main>
+        <div class="card-login">   
+            <form action="" method="POST">  
+                <div class="msg-login">
+                    <h4>Bienvenido! Ingresá tu e-mail y contraseña de The Book Store</h4>
+                </div>
+                    <div class="container-login">
+                        <label for="mail">E-mail</label>
+                        <input type="email" name="mail" placeholder="Ingrese su e-mail" required>
+
+                        <label for="psw">Contraseña</label>
+                        <input type="password" name="psw" placeholder="Ingrese contraseña" required>
+
+                        <div class="container-button">
+                            <button type="submit">Ingresar</button>
+                            <label>
+                                <input type="checkbox" name="recordar-usr"> Recordar usuario
+                            </label>
+                        </div>
+                        <div class="container-links-psw">
+                            <ul type="none">
+                                <li><a href="#">Olvidé mi contraseña</a></li>
+                                <li><a href="/users/register">Crear cuenta</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+            </form>
+        </div>
+
+    </main>
+<%-include('../partials/footer')%>
+</body>
+</html>
