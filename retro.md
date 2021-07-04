@@ -1,4 +1,36 @@
-Para realizar la retrospectiva del primer sprint seguimos el modelo "Starfish retrospective". Entendiendo la mirada evolutiva de este tipo de analisis, éstos son los aspectos más relevantes que surgieron como punto de partida en nuestro proceso de reflexión grupal:
+---------------------------------------------- SEGUNDO SPRINT ------------------------------------------------
+
+Para realizar la retrospectiva del SEGUNDO SPRINT seguimos el modelo "Starfish retrospective" tomando como referencia lo apuntado en la retrospectiva del primer sprint. 
+
+Comenzar a hacer
+    - Weekly meetings de corta duración
+
+Hacer más
+    - Definir de antemano los temas que se van a tratar en cada reunión con el fin de optimizar los encuentros
+    - Reutilizar código
+
+Continuar haciendo
+    - Tablero Trello
+	- Charlas informales para resolver dudas, sin necesidad de estar todo el equipo presente
+	- División de tareas
+    - Comunicación fluida en el equipo
+    - Reuniones para definir temas importantes
+
+Hacer menos
+    - 
+
+Dejar hacer
+    - 
+
+Reflexión Final
+Estamos muy a gusto con los resultados obtenidos en la primera iteración no solo por el material conseguido, sino también por la fuidez con la que nos desarrollamos como equipo.
+
+
+
+
+---------------------------------------------- PRIMER SPRINT ------------------------------------------------
+
+Para realizar la retrospectiva del PRIMER SPRINT seguimos el modelo "Starfish retrospective". Entendiendo la mirada evolutiva de este tipo de analisis, éstos son los aspectos más relevantes que surgieron como punto de partida en nuestro proceso de reflexión grupal:
 
 Comenzar a hacer
     - Definir de antemano los temas que se van a tratar en cada reunión con el fin de optimizar los encuentros.
