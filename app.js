@@ -17,10 +17,6 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-app.get('/productDetail', (req, res) => {
-  res.render('productDetail')
-})  
-
 app.get('/carrito-compra', (req, res) => {
   res.render('carrito-compras')
 })  

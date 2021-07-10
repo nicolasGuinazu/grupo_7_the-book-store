@@ -5,6 +5,10 @@ const controller = {
 
     modify: (req, res) =>{
         res.render('./products/modifyProduct');
+    },
+
+    detail: (req, res) =>{
+        res.render('./products/productDetail');
     }
 }
 
