@@ -12,7 +12,7 @@ router.get('/create', productsController.create);
 router.get('/modify', productsController.modify);
 
 // ************ Detalle de Producto ***********
-router.get('/detail', productsController.detail);
+router.get('/detail/:id', productsController.detail);
 
 
 module.exports = router;
