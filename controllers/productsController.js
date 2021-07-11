@@ -21,6 +21,12 @@ const controller = {
         const product = products.find( elem => elem.id == idLibro);
         
         res.render('./products/productDetail', {product});
+    },
+    destroy:(req,res)=>{
+        const idLibro = req.params.id;
+        const product = products.filter( elem => elem.id != idLibro) //nuevo array con todos los productos con id distinto al que viene
+        fs.writeFileSync(productsFilePath,JSON.stringify(product,null,2)) // el parametro 2 le da formato para poder leerlo mejor
+        res.redirect('/')
     }
 }
 
