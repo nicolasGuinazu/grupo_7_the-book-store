@@ -14,7 +14,6 @@ app.use(methodOverride('_method'));
 /****************** TEMPLATES ENGINE ********************/
 app.set('view engine', 'ejs');
 
-
 /****************** VISTAS SIN RUTAS Y CONTROLLER *******/
 app.get('/', (req, res) => {
   res.render('index')
@@ -30,6 +29,7 @@ const productsRouter = require('./routes/products'); // Rutas /products
 app.use('/products', productsRouter);
 
 const usersRouter = require('./routes/users'); // Rutas /users
+const router = require('./routes/products');
 app.use('/users', usersRouter);
 
 
