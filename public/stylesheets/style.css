@@ -1006,18 +1006,15 @@ background-color: #3E60F7;
     background-color: #ffff;
 }
 
-.msg-create-prod{
+.msg-create-prod,
+.container-create-prod{
     background-color: #ffff;
     padding: 16px;
 }
 
 .msg-create-prod h4{
     background-color: #ffff;
-}
-
-.container-create-prod{
-    padding: 16px;
-    background-color: #ffff;
+    text-align: center;
 }
 
 .card-create-prod input[type=text] {
@@ -1033,11 +1030,12 @@ background-color: #3E60F7;
     width: 140px;
     padding: 12px 20px;
     margin: 8px 0;
+    margin-left: 20px;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
-
+  
 .card-create-prod textarea {
     width: 100%;
     padding: 12px 20px;
@@ -1048,7 +1046,7 @@ background-color: #3E60F7;
   }
 
   .card-create-prod select {    
-    width: 140px;
+    width: 100%;
     padding: 10px 10px;
     margin: 8px 0;
     display: inline-block;
