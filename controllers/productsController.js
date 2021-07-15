@@ -11,7 +11,28 @@ const controller = {
     },
 
     modify: (req, res) =>{
-        res.render('./products/modifyProduct');
+        let productToEdit = products.find(element => element.id == req.params.id)
+        res.render('./products/modifyProduct', {productToEdit});
+    },
+
+    processModify: (req, res) =>{
+         let idEdit = req.params.id;
+         for (element of products) {
+             if (element.id == idEdit){
+                 element.title = req.body.title;
+                 element.author = req.body.author;
+                 element.editorial = req.body.editorial;
+                 element.gender = req.body.gender;
+                 element.synopsis = req.body.synopsis;
+                 element.image = req.body.image;
+                 element.category = req.body.category;
+                 element.price = req.body.price
+             }
+         }
+         let arrayJSON = JSON.stringify(products);
+         fs.writeFileSync(productsFilePath, arrayJSON, null, 2)
+         res.redirect("/")
+        // res.render('./products/modifyProduct');
     },
 
     detail: (req, res) =>{
