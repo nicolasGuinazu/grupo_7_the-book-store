@@ -21,6 +21,8 @@
                             <input type="text" name="editorial" placeholder="Nombre editorial" required>
 
                             <br>
+                            <label for="category">Género</label>
+                            <br>
                             <select name="gender">
                                 <option value="" selected disabled hidden>Elegir...</option>
                                 <option value="books">Libros</option>
@@ -48,9 +50,10 @@
                             <br>
 
                             <label for="synopsis">Sinopsis</label>
-                            <textarea type= "text" name="type" placeholder="Escribir sinopsis" required></textarea>
+                            <textarea type= "text" name="synopsis" placeholder="Escribir sinopsis" required></textarea>
                             
                             <label for="image">Imagen</label>
+                            <br>
                             <input type="file" name="image" accept=".jpg, .png" required>
                             <br>
                             <label for="category">Categoría</label>
@@ -61,9 +64,10 @@
                                 <option value="merchandising">Merchandising</option>
                             </select>
                             <br>
-
                             <label for="price">Precio</label>
-                            <input type="number" min="0.00" max="10000.00" step="0.01" required>
+                            <br>
+                            <input name="price" type="number" min="0.00" max="10000.00" step="0.01" required>
+                            <br>
                         </form>
                         <div class="container-button">
                             <button type="submit">Crear</button>
