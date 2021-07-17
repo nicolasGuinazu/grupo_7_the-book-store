@@ -21,6 +21,7 @@ const controller = {
 
         //Producto a crear. Obtengo los datos ingresados en el form
         const productToCreate = req.body;
+        const imageName = req.file.filename;
 
         //Armo objeto con la misma estructura que el JSON de Productos
         const objToPush = {
@@ -34,8 +35,10 @@ const controller = {
             category: productToCreate.category,
             price: productToCreate.price,
             type: "wanted",
-            image: productToCreate.image 
+            image: imageName
         }
+        
+        console.log(objToPush);
         
         //Actualizo la base de datos
         products.push(objToPush);
