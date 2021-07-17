@@ -1,3 +1,34 @@
+---------------------------------------------- TERCER SPRINT ------------------------------------------------
+
+Para realizar la retrospectiva del SEGUNDO SPRINT seguimos el modelo "Starfish retrospective" tomando como referencia lo apuntado en la retrospectiva del primer sprint. 
+
+Comenzar a hacer
+    - Daily meetings de corta duración aprovechando el grupo de WhatsApp un día específico
+
+Hacer más
+    - Tablero Trello
+    - Comunicación por el grupo de WhatsApp
+    - Definir de antemano los temas que se van a tratar en cada reunión con el fin de optimizar los encuentros
+
+Continuar haciendo
+    - Reutilizar código
+	- División de tareas
+    - Comunicación fluida en el equipo
+    - Reuniones para definir temas importantes
+    - Weekly meetings
+	- Charlas informales para resolver dudas, sin necesidad de estar todo el equipo presente
+
+Hacer menos
+    - Weekly meetings muy largas
+
+Dejar hacer
+    - 
+
+Reflexión Final:
+Como equipo estamos afianzando la relación y la dinámica de trabajo, cada uno va conociendo sus fortalezas y estamos aprendiendo a aprovecharlas para optimizar el trabajo en grupo.
+
+
+
 ---------------------------------------------- SEGUNDO SPRINT ------------------------------------------------
 
 Para realizar la retrospectiva del SEGUNDO SPRINT seguimos el modelo "Starfish retrospective" tomando como referencia lo apuntado en la retrospectiva del primer sprint. 
