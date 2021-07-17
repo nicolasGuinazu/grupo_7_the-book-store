@@ -434,6 +434,18 @@ title {
         font-size: 14px;
     }
     
+    .button-footer{
+        background-color: #3e5f8a;
+        font-size: 14px;
+        width: 85px;
+        height: 25px;
+        color: white;
+    }
+    
+    .button-footer:hover{
+        background-color: #ffc552;
+    }
+
     .copyright{
         color: black;
         font-size: 14px;
@@ -952,13 +964,10 @@ background-color: #3E60F7;
 .container-links-psw a:visited{
     color: blue;
     font-weight: bold;}
-<<<<<<< HEAD
     
-=======
 
 
 /*********************************FIN FORM LOGIN**************************************************/
->>>>>>> d16df4445ab5ccac74feb71681d767a1c22d2033
 @media(min-width:768px){
     .producto-principal .producto {
         display: flex;
@@ -980,6 +989,7 @@ background-color: #3E60F7;
         max-width: 30%;
     }
 }
+
 @media(min-width:1024px){
     .producto-principal {
     max-width: 80%;
@@ -1030,7 +1040,7 @@ background-color: #3E60F7;
     width: 140px;
     padding: 12px 20px;
     margin: 8px 0;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
