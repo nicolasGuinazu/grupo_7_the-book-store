@@ -35,7 +35,8 @@
     "isbn": "",
     "category": "books",
     "price": "10000",
-    "type": "wanted"
+    "type": "wanted",
+    "image": "Saga_Harry.png"
   },
   {
     "id": 4,
@@ -47,7 +48,8 @@
     "isbn": "",
     "category": "books",
     "price": "1500",
-    "type": "wanted"
+    "type": "wanted",
+    "image": "El Lenguaje de Programacion C.jpg"
   },
   {
     "id": 5,
@@ -59,6 +61,7 @@
     "isbn": "",
     "category": "merchandising",
     "price": "5990",
-    "type": "wanted"
+    "type": "wanted",
+    "image": "FunkoHarry122.jpg"
   }
 ]
