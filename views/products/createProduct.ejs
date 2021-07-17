@@ -5,7 +5,7 @@
 <%-include('../partials/header')%>
     <main>
         <div class="card-create-prod">   
-            <form action="" method="POST">  
+            <form action="/products/create" method="POST" enctype="multipart/form-data">  
                 <div class="msg-create-prod">
                     <h4>Formulario de Alta de Productos</h4>
                 </div>
@@ -54,7 +54,7 @@
                             
                             <label for="image">Imagen</label>
                             <br>
-                            <input type="file" name="image" accept=".jpg, .png" required>
+                            <input type="file" name="image" accept=".jpg, .png">
                             <br>
                             <label for="category">Categoría</label>
                             <br>

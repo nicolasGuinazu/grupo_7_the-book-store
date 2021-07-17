@@ -10,6 +10,36 @@ const controller = {
         res.render('./products/createProduct');
     },
 
+    store: (req, res) =>{
+
+        //Obtengo la última posición del JSON para luego obtener el último ID
+        const lastProduct = products[products.length - 1];
+
+        //Producto a crear. Obtengo los datos ingresados en el form
+        const productToCreate = req.body;
+
+        //Armo objeto con la misma estructura que el JSON de Productos
+        const objToPush = {
+            id: lastProduct.id + 1,
+            title: productToCreate.title,
+            author: productToCreate.author,
+            gender: productToCreate.gender,
+            synopsis: productToCreate.synopsis,
+            editorial: productToCreate.editorial,
+            isbn: "",
+            category: productToCreate.category,
+            price: productToCreate.price,
+            type: "wanted",
+            image: productToCreate.image 
+        }
+        
+        //Actualizo la base de datos
+        products.push(objToPush);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+
+        return  res.render('./products/createProduct');
+    },
+
     modify: (req, res) =>{
         let productToEdit = products.find(element => element.id == req.params.id)
         res.render('./products/modifyProduct', {productToEdit});

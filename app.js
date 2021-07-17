@@ -14,6 +14,7 @@ app.use( express.static(publicPath) );
 
 /****************** METHOD OVERRIDE *************************/
 app.use(methodOverride('_method'));
+
 /****************** TEMPLATES ENGINE ********************/
 app.set('view engine', 'ejs');
 
