@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include('../partials/head')%>
+<%-include('../partials/headProduct')%>
 <body>
 <%-include('../partials/header')%>
     <main class="main-detalle-producto">
@@ -9,7 +9,7 @@
         <div class="producto-principal">
             <article class="producto">
                 <div class="imagen-producto">
-                    <img src="/images/<%= element.image%>">
+                    <img src="/images/<%= element.image%>" width="100px" height="140px">
                 </div>
                 <div class="datos-producto">
                     <h3><%= element.title%></h3>
