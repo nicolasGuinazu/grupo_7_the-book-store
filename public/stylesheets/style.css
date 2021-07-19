@@ -740,6 +740,11 @@ background-color: #3E60F7;
 .producto-principal {
     padding: 4vw 6vw;
 }
+
+.producto-principal a{
+    text-decoration: none;
+}
+
 .imagen-producto {
     display: inline-block;
 }
@@ -751,13 +756,19 @@ background-color: #3E60F7;
 .datos-producto h3 {
     font-size: 1.7rem;
     padding: 15px 5px 0 5px;
+    color: black;
+    background-color: transparent;
 }
 .datos-producto h4 {
     font-size: 1.3rem;
+    color: black;
+    background-color: transparent
 }
 .datos-producto h2 {
     font-size: 2rem;
     padding: 15px;
+    color: black;
+    background-color: transparent
 }
 .tablet {
     display: block;
