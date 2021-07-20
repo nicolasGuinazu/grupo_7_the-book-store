@@ -1,28 +1,67 @@
 [
-    {
-      "id": 1,
-      "title": "Un año con ANKARA",
-      "author": "PEPE ARGENTO",
-      "synopsis": "Esta es la sinopsis 2",
-      "gender": "LoremIpsum Messi",
-      "editorial": "asdasdas 10",
-      "isbn": "0303456 la la lalalaaaa",
-      "image": "ID1_Shopenhauer.jpg",
-      "categoria": "libro",
-      "price": 500,
-      "type": "wanted"
-    },
-    {
-        "id": 2,
-        "title": "Un año con Marquitox",
-        "author": "Irvin Yalom",
-        "synopsis": "Esta es la sinopsis 2",
-        "gender": "LoremIpsum Messi",
-        "editorial": "asdasdas 10",
-        "isbn": "0303456 la la lalalaaaa",
-        "image": "ID2_Spinoza.jpg",
-        "categoria": "libro",
-        "price": 1500,
-        "type": "wanted"
-      }
-  ]
+  {
+    "id": 1,
+    "title": "Un año con Pablito",
+    "author": "jnjlo",
+    "gender": "Libros",
+    "synopsis": "PRUEBA",
+    "editorial": "jbojb",
+    "isbn": "0303456",
+    "category": "books",
+    "price": "10",
+    "type": "in-sale",
+    "image": "ID1_Shopenhauer.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Un año con Pablito",
+    "author": "PRUEBA",
+    "gender": "Esoterismo",
+    "synopsis": "PRUEBA DE CAMBIO DE SINOPSIS",
+    "editorial": "PRUEBA",
+    "isbn": "0303456",
+    "category": "books",
+    "price": "10",
+    "type": "in-sale",
+    "image": "ID2_Spinoza.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Saga Harry Potter",
+    "author": "J.K. Rowling",
+    "gender": "ficcionyliteratura",
+    "synopsis": "Saga completa de Harry Potter. Incluye los 7 libros",
+    "editorial": "Salamandra",
+    "isbn": "",
+    "category": "books",
+    "price": "10000",
+    "type": "wanted",
+    "image": "Saga_Harry.png"
+  },
+  {
+    "id": 4,
+    "title": "El lenguaje de programación C",
+    "author": "Kernighan/Ritchie",
+    "gender": "computacionsistemas",
+    "synopsis": "Aprenda los fundamentos del lenguaje de programación C.",
+    "editorial": "Pearson",
+    "isbn": "",
+    "category": "books",
+    "price": "1500",
+    "type": "wanted",
+    "image": "El Lenguaje de Programacion C.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Muñeco Funko Harry Potter",
+    "author": "Funko Pop",
+    "gender": "merchandising",
+    "synopsis": "Funko Pop! | Harry Potter - Harry Potter 122",
+    "editorial": "-",
+    "isbn": "",
+    "category": "merchandising",
+    "price": "5990",
+    "type": "wanted",
+    "image": "FunkoHarry122.jpg"
+  }
+]
