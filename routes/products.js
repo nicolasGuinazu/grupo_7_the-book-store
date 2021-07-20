@@ -28,7 +28,7 @@ router.post('/create', upload.single('image'), productsController.store);
 
 // ************ Modificar Producto ***********
 router.get('/modify/:id', productsController.modify);
-router.put('/modify/:id', productsController.processModify);
+router.put('/modify/:id',upload.single('image'), productsController.processModify);
 
 // ************ Detalle de Producto ***********
 router.get('/detail/:id', productsController.detail);
