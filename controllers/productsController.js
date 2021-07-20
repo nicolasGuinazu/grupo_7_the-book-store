@@ -61,7 +61,7 @@ const controller = {
                  element.editorial = req.body.editorial;
                  element.gender = req.body.gender;
                  element.synopsis = req.body.synopsis;
-                 element.image = req.body.image;
+                 element.image = req.file.filename;
                  element.category = req.body.category;
                  element.price = req.body.price
              }
