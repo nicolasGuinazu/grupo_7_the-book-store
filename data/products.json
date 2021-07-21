@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "title": "Un año con Nico",
+    "title": "El dia que nieztche lloro",
     "author": "Probando modify con imagen",
-    "gender": "digital",
-    "synopsis": "asfasfa",
-    "editorial": "asfsa",
+    "gender": "esoterismo",
+    "synopsis": "MMMMM",
+    "editorial": "Probando",
     "isbn": "0303456",
     "category": "books",
     "price": "111",
@@ -54,12 +54,11 @@
   {
     "id": 5,
     "title": "Muñeco Funko Harry Potter",
-    "author": "Funko Pop",
-    "gender": "merchandising",
+    "author": "Funko",
     "synopsis": "Funko Pop! | Harry Potter - Harry Potter 122",
-    "editorial": "-",
+    "editorial": "Funko",
     "isbn": "",
-    "category": "merchandising",
+    "category": "books",
     "price": "5990",
     "type": "wanted",
     "image": "FunkoHarry122.jpg"
