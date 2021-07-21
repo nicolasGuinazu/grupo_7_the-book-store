@@ -61,10 +61,10 @@
                             <input type="text" name="title" placeholder="Ingresar nombre" required value="<%= productToEdit.title %>">
 
                             <label for="author">Nombre del autor</label>
-                            <input type="text" name="author" placeholder="Ingresar nombre del autor" required>
+                            <input type="text" name="author" placeholder="Ingresar nombre del autor" required value=<%=productToEdit.author%>>
 
                             <label for="editorial">Editorial</label>
-                            <input type="text" name="editorial" placeholder="Nombre editorial" required>
+                            <input type="text" name="editorial" placeholder="Nombre editorial" required value=<%=productToEdit.author%>>
                             <br>
                             <label for="gender">Género</label>
                             <br>
@@ -95,11 +95,11 @@
                             <br>
 
                             <label for="synopsis">Sinopsis</label>
-                            <textarea type= "text" name="synopsis" placeholder="Escribir sinopsis" required></textarea>
+                            <textarea type= "text" name="synopsis" placeholder="Escribir sinopsis" required ><%=productToEdit.synopsis%></textarea>
                             <br>
                             <label for="image">Imagen</label>
                             <br>
-                            <input type="file" name="image" accept=".jpg, .png">
+                            <input type="file" name="image" accept=".jpg, .png" value=<%=productToEdit.image%>>
                             <br>
                             <label for="category">Categoría</label>
                             <br>
@@ -112,7 +112,7 @@
 
                             <label for="price">Precio</label>
                             <br>
-                            <input type="number" min="0.00" max="10000.00" step="0.01" name="price">
+                            <input type="number" min="0.00" max="10000.00" step="0.01" name="price" value=<%=productToEdit.price%>>
                             <br>
                             <div class="container-button">
                                 <button type="submit">Modificar</button>
