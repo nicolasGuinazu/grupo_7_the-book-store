@@ -1,3 +1,4 @@
+const e = require('express');
 const fs = require('fs');
 const path = require('path');
 
@@ -42,7 +43,7 @@ const controller = {
         
         //Actualizo la base de datos
         products.push(objToPush);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
 
         return  res.render('./products/createProduct');
     },
@@ -53,7 +54,16 @@ const controller = {
     },
 
     processModify: (req, res) =>{
+
          let idEdit = req.params.id;
+         let productToEdit=products.find(el=>el.id==idEdit)
+         let image;
+         if(req.file){
+            image=req.file.filename
+         }else{
+            image=productToEdit.image
+         }
+
          for (element of products) {
              if (element.id == idEdit){
                  element.title = req.body.title;
@@ -61,7 +71,7 @@ const controller = {
                  element.editorial = req.body.editorial;
                  element.gender = req.body.gender;
                  element.synopsis = req.body.synopsis;
-                 element.image = req.file.filename;
+                 element.image = image;
                  element.category = req.body.category;
                  element.price = req.body.price
              }
