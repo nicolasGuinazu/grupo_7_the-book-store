@@ -4,21 +4,24 @@
     <%-include('../partials/header')%>
     <h2 class="titulo-register">Ingresa tus datos</h2>
     <div class="card">
-            <form class="form-register">
+            <form class="form-register" method="POST" action="/users/register" enctype="multipart/form-data">
             <div>
-            <i class="fas fa-portrait"><input class="input-register" type="text" name="name" placeholder="Nombre"></i>
+            <i class="fas fa-portrait"><input class="input-register" type="text" name="first_name" placeholder="Nombre"></i>
             </div>
             <div>
             <i class="fas fa-portrait"><input class="input-register" type="text" name="lastname" placeholder="Apellido"></i>
             </div>
             <div>
-            <i class="fas fa-user-circle"><input class="input-register" type="text" name="user" placeholder="Usuario"></i>
+            <i class="fas fa-user-circle"><input class="input-register" type="text" name="user_name" placeholder="Usuario"></i>
             </div>
             <div>
             <i class="far fa-envelope"><input class="input-register" type="email" name="email" placeholder="Email"></i>
             </div>
             <div>
             <i class="fas fa-mobile-alt"><input class="input-register" type="number" name="phone" placeholder="Telefono"></i>
+            </div>
+            <div>
+            <i><input class="input-register" type="file" name="avatar" accept=".jpg, .png"></i>
             </div>
             <div>
             <i class="fas fa-lock"><input class="input-register" type="password" name="pass" placeholder="Contrasena"></i>
