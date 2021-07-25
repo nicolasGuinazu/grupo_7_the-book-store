@@ -51,20 +51,26 @@ const controller = {
     processLogin: (req, res) => {
 
         const userReq = req.body;
-
+        let error={msg:''}
         //Busca el usuario que se está logueando en la Base de Datos
         const userToLogin = users.find( elem => elem.email == userReq.mail);
 
+        if (userToLogin){
         //Verifica que la contraseña sea la misma que la registrada
         let check = bcrypt.compareSync(userReq.psw, userToLogin.password);
-        
+                
         if(check){
             res.send(userToLogin);            
         }else{
-            res.send("Le erraste al password vieja")
+            error.msg='Password incorrecto';
         }
 
         //res.send(userToLogin);
+        }else{
+            error.msg='El usuario no existe';
+            
+        }
+        return res.render('./users/login',{error})
 
 
 
