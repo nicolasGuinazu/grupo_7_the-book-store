@@ -4,6 +4,9 @@
 <body>
 <%-include('../partials/header')%>
     <main>
+        <% if (locals && locals.error) { %>
+            <p><%= error.msg %> </p>
+        <% } %>
         <div class="card-login">   
             <form action="" method="POST">  
                 <div class="msg-login">
