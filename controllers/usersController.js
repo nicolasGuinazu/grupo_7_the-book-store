@@ -7,11 +7,11 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const controller = {
     login: (req, res) =>{
-        res.render('./users/login');
+        return res.render('./users/login');
     },
 
     register: (req, res) =>{
-        res.render('./users/registerForm');
+        return res.render('./users/registerForm');
     },
 
     registerUser: (req, res) =>{
@@ -60,7 +60,8 @@ const controller = {
         let check = bcrypt.compareSync(userReq.psw, userToLogin.password);
                 
         if(check){
-            res.send(userToLogin);            
+            return res.send(userToLogin); 
+            //aca va logica para el session req.session.usuarioCreado           
         }else{
             error.msg='Password incorrecto';
         }

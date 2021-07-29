@@ -8,11 +8,11 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
     index: (req, res) => {
-        res.render('./products/indexProducts', {products});
+        return res.render('./products/indexProducts', {products});
     },
 
     create: (req, res) =>{
-        res.render('./products/createProduct');
+        return res.render('./products/createProduct');
     },
 
     store: (req, res) =>{
@@ -50,7 +50,7 @@ const controller = {
 
     modify: (req, res) =>{
         let productToEdit = products.find(element => element.id == req.params.id)
-        res.render('./products/modifyProduct', {productToEdit});
+        return res.render('./products/modifyProduct', {productToEdit});
     },
 
     processModify: (req, res) =>{
@@ -78,7 +78,7 @@ const controller = {
          }
          let arrayJSON = JSON.stringify(products);
          fs.writeFileSync(productsFilePath, arrayJSON, null, 2)
-         res.redirect("/")
+         return res.redirect("/")
         // res.render('./products/modifyProduct');
     },
 
@@ -88,13 +88,13 @@ const controller = {
 
         const product = products.find( elem => elem.id == idLibro);
         
-        res.render('./products/productDetail', {product});
+        return res.render('./products/productDetail', {product});
     },
     destroy:(req,res)=>{
         const idLibro = req.params.id;
         const product = products.filter( elem => elem.id != idLibro) //nuevo array con todos los productos con id distinto al que viene
         fs.writeFileSync(productsFilePath,JSON.stringify(product,null,2)) // el parametro 2 le da formato para poder leerlo mejor
-        res.redirect('/')
+        return res.redirect('/')
     }
 }
 
