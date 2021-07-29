@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
-const path=require('path')
-const methodOverride = require('method-override')
-
+const path=require('path');
+const methodOverride = require('method-override');
+const session=require('express-session');
+const cookieParser=require('cookie-parser');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -13,6 +14,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) );
 
+/****************** SESSION *************************/
+app.use(session({
+  secret: 'shhh secret!', 
+  resave: false,
+  saveUninitialized: false
+}));
+
+/****************** COOKIE PARSER *************************/
+app.use(cookieParser())
 /****************** METHOD OVERRIDE *************************/
 app.use(methodOverride('_method'));
 
