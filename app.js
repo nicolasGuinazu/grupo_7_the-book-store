@@ -4,7 +4,7 @@ const path=require('path');
 const methodOverride = require('method-override');
 const session=require('express-session');
 const cookieParser=require('cookie-parser');
-
+const userLoggedMiddleware=require('./middlewares/userLoggedMiddleware')
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -29,6 +29,10 @@ app.use(methodOverride('_method'));
 /****************** TEMPLATES ENGINE ********************/
 app.set('view engine', 'ejs');
 
+
+
+
+
 /****************** VISTAS SIN RUTAS Y CONTROLLER *******/
 app.get('/', (req, res) => {
   res.render('index')
@@ -47,6 +51,9 @@ const usersRouter = require('./routes/users'); // Rutas /users
 const router = require('./routes/products');
 app.use('/users', usersRouter);
 
+
+
+app.use(userLoggedMiddleware)
 
 /************* INICIANDO EL SERVIDOR **************/
 app.listen(3000, () => {
