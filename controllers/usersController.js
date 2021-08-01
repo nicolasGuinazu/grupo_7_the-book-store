@@ -61,7 +61,11 @@ const controller = {
                 
         if(check){
             req.session.loggedUser=userToLogin
-            
+            if(req.body.remember){
+                res.cookie('userEmail', req.body.mail, {
+                    maxAge: (1000 * 6) * 2
+                })
+            }
             return res.redirect('/')      
         }else{
             error.msg='Password incorrecto';
