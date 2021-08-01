@@ -26,6 +26,10 @@ router.post('/login', usersController.processLogin);
 router.get('/register',  guestMiddleware,usersController.register);
 router.post('/register', upload.single('avatar'), usersController.registerUser);
 
+// ************ User Logout ***********
+
+router.get('/logout', usersController.logout);
+
 // ************ Perfil de Usuario ***********
 
 
