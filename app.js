@@ -7,7 +7,8 @@ const cookieParser=require('cookie-parser');
 const userLoggedMiddleware=require('./middlewares/userLoggedMiddleware')
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
+/****************** COOKIE PARSER *************************/
+app.use(cookieParser())
 /****************** PUBLIC PATH *************************/
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -20,9 +21,8 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
+app.use(userLoggedMiddleware)
 
-/****************** COOKIE PARSER *************************/
-app.use(cookieParser())
 /****************** METHOD OVERRIDE *************************/
 app.use(methodOverride('_method'));
 
@@ -53,7 +53,7 @@ app.use('/users', usersRouter);
 
 
 
-app.use(userLoggedMiddleware)
+
 
 /************* INICIANDO EL SERVIDOR **************/
 app.listen(3000, () => {
