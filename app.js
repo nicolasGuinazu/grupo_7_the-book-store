@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const session=require('express-session');
 const cookieParser=require('cookie-parser');
 const userLoggedMiddleware=require('./middlewares/userLoggedMiddleware')
+const router = express.Router();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 /****************** COOKIE PARSER *************************/
@@ -30,30 +31,19 @@ app.use(methodOverride('_method'));
 app.set('view engine', 'ejs');
 
 
-
-
-
-/****************** VISTAS SIN RUTAS Y CONTROLLER *******/
-app.get('/', (req, res) => {
-  res.render('index')
-})
-
-app.get('/carrito-compra', (req, res) => {
-  res.render('carrito-compras')
-})  
-
-
 /****************** RUTAS *************************/
 const productsRouter = require('./routes/products'); // Rutas /products
 app.use('/products', productsRouter);
 
 const usersRouter = require('./routes/users'); // Rutas /users
-const router = require('./routes/products');
 app.use('/users', usersRouter);
 
+const indexRouter = require('./routes/index'); // Rutas /
+app.use('/', indexRouter);
 
-
-
+app.use(function (req, res, next) {
+  res.status(404).render('not-found')
+})
 
 /************* INICIANDO EL SERVIDOR **************/
 app.listen(3000, () => {
