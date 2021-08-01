@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
+const authMiddleware=require('../middlewares/authMiddleware')
 
 // ********** Manejo de archivos con Multer ***********
 const storage = multer.diskStorage({
@@ -22,12 +23,12 @@ const productsController = require('../controllers/productsController');
 router.get('/', productsController.index);
 
 // ************ Crear Producto ***********
-router.get('/create', productsController.create);
+router.get('/create', authMiddleware,productsController.create);
 router.post('/create', upload.single('image'), productsController.store);
 //router.post('/create', productsController.store);
 
 // ************ Modificar Producto ***********
-router.get('/modify/:id', productsController.modify);
+router.get('/modify/:id', authMiddleware,productsController.modify);
 router.put('/modify/:id',upload.single('image'), productsController.processModify);
 
 // ************ Detalle de Producto ***********
