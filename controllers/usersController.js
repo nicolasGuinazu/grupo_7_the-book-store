@@ -60,8 +60,9 @@ const controller = {
         let check = bcrypt.compareSync(userReq.psw, userToLogin.password);
                 
         if(check){
-            return res.send(userToLogin); 
-            //aca va logica para el session req.session.usuarioCreado           
+            req.session.loggedUser=userToLogin
+            
+            return res.redirect('/')      
         }else{
             error.msg='Password incorrecto';
         }
