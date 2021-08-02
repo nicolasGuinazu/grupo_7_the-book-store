@@ -84,7 +84,10 @@ const controller = {
     logout:(req,res)=>{
         res.clearCookie('userEmail');
         req.session.destroy();
-        res.redirect('/')
+        return res.redirect('/')
+    },
+    profile:(req,res)=>{
+        return res.render('./users/profile')
     }
 }
 
