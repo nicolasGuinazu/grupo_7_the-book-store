@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head')%>
+<body>
+<%-include('../partials/header')%>
+    <main>
+        
+        <div class="card-login">   
+            <% if(locals.logged) { %>    
+                <p>Hola <%= locals.loggedUser.first_name %>!</p>
+                <img src="/images/users/<%= locals.loggedUser.avatar%>" style="height: 200px;width: 200px">
+                <% } %>
+        </div>
+
+    </main>
+<%-include('../partials/footer')%>
+</body>
+</html>
