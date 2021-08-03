@@ -1,5 +1,7 @@
 /*-------------------------------------- DETALLE DEL PRODUCTO ----------------------------------------------------*/
 .main-detalle-producto {
+    display: flex;
+    flex-wrap: wrap;
     width: 97%;
     text-align: center;
     margin-top: 2vw;
