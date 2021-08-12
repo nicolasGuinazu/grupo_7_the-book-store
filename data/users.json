@@ -152,5 +152,16 @@
         "avatar": "avatar-1627169138299.png",
         "phone": "456789123",
         "user_name": "nicokpo2021"
+    },
+    {
+        "id": 15,
+        "first_name": "Marcos",
+        "last_name": "Cardoso",
+        "email": "marcos@gmail.com",
+        "password": "$2a$10$2dMw9IgVNCuU6vn62QYclOn6NM7kFLtNDEKT9IVpWcXh6sALRc.QK",
+        "rol": "user",
+        "avatar": "avatar-1628034813426.png",
+        "phone": "44854122",
+        "user_name": "marque73"
     }
 ]

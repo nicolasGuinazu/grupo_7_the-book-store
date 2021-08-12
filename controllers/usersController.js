@@ -24,7 +24,7 @@ const controller = {
        const imageName = req.file.filename;
 
        //Encriptamos la contraseña
-       let passEncriptada = bcrypt.hashSync(userToCreate.password, 10);
+       let passEncriptada = bcrypt.hashSync(userToCreate.psw, 10);
 
        //Armo objeto con la misma estructura que el JSON de Usuarios
        const userToPush = {
