@@ -935,7 +935,7 @@ background-color: #3E60F7;
     background-color: #ffff;
 }
 
-.card-login input[type=email], .card-login input[type=password], input[type=number],  input[type=text] {
+.card-login input[type=email], .card-login input[type=password], input[type=number],  input[type=text], input[type=date],input[type=file] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
