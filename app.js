@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path=require('path');
+require('dotenv').config()
 const methodOverride = require('method-override');
 const session=require('express-session');
 const cookieParser=require('cookie-parser');
