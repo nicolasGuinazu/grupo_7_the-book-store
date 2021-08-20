@@ -14,14 +14,7 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'editorials',
         timestamps: false
     };
-    const Editorial = sequelize.define(alias, cols, config)
-
-    /*  Genre.associate=function(models){
-        Genre.hasMany(models.Products,{
-            as:'products',
-            foreignKey:'genre_id'
-        })
-    } */ 
+    const Editorial = sequelize.define(alias, cols, config) 
 
     return Editorial
 }
