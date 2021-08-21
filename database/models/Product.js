@@ -47,6 +47,35 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Product = sequelize.define(alias, cols, config)
 
+   
+
+    Product.associate=function(models){
+        Product.belongsTo(models.Author,{
+            as:'author',
+            foreignKey:'idauthor',
+            timestamps: false
+        })
+    };
+
+
+    Product.associate=function(models){
+        Product.belongsTo(models.Genre,{
+            as:'genre',
+            foreignKey:'idgenre',
+            timestamps: false
+        })
+    }
+
+    Product.associate=function(models){
+        Product.belongsToMany(models.Cart,{
+            as:'carts',
+            through:'cartsProducts',
+            foreignKey:'idproduct',
+            otherKey:'idcart',
+            timestamps: false
+        })
+    }
+
     Product.associate=function(models){
         Product.belongsToMany(models.Editorial,{
             as:'editorials',
@@ -56,25 +85,6 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false
         })
     };
-
-    Product.associate=function(models){
-        Product.hasMany(models.Author,{
-            as:'authors',
-            foreignKey:'idproduct',
-            otherKey:'idauthor',
-            timestamps: false
-        })
-    };
-
-
-    Product.associate=function(models){
-        Product.hasMany(models.Genre,{
-            as:'genres',
-            foreignKey:'idproduct',
-            otherKey:'idgenre',
-            timestamps: false
-        })
-    }
 
     return Product
 }
