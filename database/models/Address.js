@@ -38,9 +38,12 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Address = sequelize.define(alias, cols, config)
 
-    /*  Adress.associate=function(models){
-       
-    } */ 
+    Adress.associate=function(models){
+        Adress.hasMany(models.Cart,{
+            as:'carts',
+            foreignKey:'idcart',
+        })
+    }
 
     return Address
 }
