@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
         last_name: {
             type: dataTypes.STRING
         },
-        nacionality: {  //typo en la db (corregir)
+        nationality: {  //typo en la db (corregir)
             type: dataTypes.STRING
         }
     };
