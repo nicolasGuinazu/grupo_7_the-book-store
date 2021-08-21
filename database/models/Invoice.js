@@ -17,9 +17,12 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Invoice = sequelize.define(alias, cols, config)
 
-    /*  Invoice.associate=function(models){
-        )
-    } */ 
+    Invoice.associate=function(models){
+        Invoice.hasMany(models.Cart,{
+            as:'carts',
+            foreignKey:'idcart',
+        })
+    }
 
     return Invoice
 }
