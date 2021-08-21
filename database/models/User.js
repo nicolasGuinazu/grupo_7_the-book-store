@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         admin: {
-            type: dataTypes.CHAR(1)  //no esta binary
+            type: dataTypes.CHAR(1)  
         },
         email: {
             type: dataTypes.VARCHAR(100)
@@ -41,9 +41,12 @@ module.exports = (sequelize, dataTypes) => {
     };
     const User = sequelize.define(alias, cols, config)
 
-    /*  User.associate=function(models){
-       
-    } */ 
+    User.associate=function(models){
+        User.hasMany(models.Cart,{
+            as:'carts',
+            foreignKey:'idcart',
+        })
+    }
 
     return User
 }
