@@ -52,6 +52,25 @@ module.exports = (sequelize, dataTypes) => {
             otherKey:'ideditorial',
             timestamps: false
         })
+    };
+
+    Product.associate=function(models){
+        Product.hasMany(models.Author,{
+            as:'authors',
+            foreignKey:'idproduct',
+            otherKey:'idauthor',
+            timestamps: false
+        })
+    };
+
+
+    Product.associate=function(models){
+        Product.hasMany(models.Genre,{
+            as:'genres',
+            foreignKey:'idproduct',
+            otherKey:'idgenre',
+            timestamps: false
+        })
     }
 
     return Product

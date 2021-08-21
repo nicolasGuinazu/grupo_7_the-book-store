@@ -16,12 +16,15 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Genre = sequelize.define(alias, cols, config)
 
-    /*  Genre.associate=function(models){
-        Genre.hasMany(models.Products,{
+
+    Genre.associate=function(models){
+        Genre.hasMany(models.Product,{
             as:'products',
-            foreignKey:'genre_id'
+            foreignKey: 'idgenre',
+            otherKey: 'idproduct',
+            timestamps: false,
         })
-    } */ 
+    } 
 
     return Genre
 }
