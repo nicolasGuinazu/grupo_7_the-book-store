@@ -27,7 +27,9 @@
                 <button class="agregar-a-favoritos"><i class="far fa-heart"></i></button>
             </div>
             <form action="/products/<%= product.id%>?_method=DELETE" method="POST">
-                <button style="background-color: red;color: white;">BORRAR PRODUCTO</button>
+                <% if (locals.loggedUser.rol=='admin') { %>
+                    <button style="background-color: red;color: white;">BORRAR PRODUCTO</button>
+                <% } %>      
             </form>
         <div class="beneficios">
             <div class="beneficio">
