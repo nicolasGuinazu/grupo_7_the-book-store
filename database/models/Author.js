@@ -28,7 +28,6 @@ module.exports = (sequelize, dataTypes) => {
         Author.hasMany(models.Product,{
             as:'products',
             foreignKey: 'idauthor',
-            otherKey: 'idproduct',
             timestamps: false,
         })
     } 
