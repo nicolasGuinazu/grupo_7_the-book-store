@@ -8,6 +8,9 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
+        name: {
+            type: dataTypes.VARCHAR(64)
+        },
         image: {
             type: dataTypes.VARCHAR(64)  
         },
