@@ -21,7 +21,6 @@ module.exports = (sequelize, dataTypes) => {
         Genre.hasMany(models.Product,{
             as:'products',
             foreignKey: 'idgenre',
-            otherKey: 'idproduct',
             timestamps: false,
         })
     } 
