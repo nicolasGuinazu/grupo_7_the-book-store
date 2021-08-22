@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
 	Cart.associate=function(models){
-        Cart.belongsTo(models.Invoice,{
+        Cart.hasOne(models.Invoice,{
             as:'invoice',
             foreignKey:'idinvoice'
         })
