@@ -1,14 +1,15 @@
-const e = require('express');
+
 const fs = require('fs');
 const path = require('path');
-
+const db = require('../database/models');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const Genres = db.Genre
 
 const controller = {
     index: (req, res) => {
-        return res.render('./products/indexProducts', {products});
+      
+        return res.render('./products/indexProducts', {products}); 
     },
 
     create: (req, res) =>{
