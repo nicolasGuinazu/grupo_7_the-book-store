@@ -17,9 +17,6 @@ module.exports = (sequelize, dataTypes) => {
         price: {
             type: dataTypes.DECIMAL(10,2)
         },
-        password: {
-            type: dataTypes.VARCHAR(100)
-        },
         synopsis: {
             type: dataTypes.VARCHAR(1000)
         },
@@ -28,18 +25,13 @@ module.exports = (sequelize, dataTypes) => {
         },
         isbn: {
             type: dataTypes.INTEGER
-        }
-        ,
+        },
         pages: {
             type: dataTypes.INTEGER
-        },
-        last_name: {
-            type: dataTypes.VARCHAR(32)
         },
         release_date: {
             type: dataTypes.DATE
         }
-        
     };
     let config = {
         tableName: 'products',
@@ -50,20 +42,18 @@ module.exports = (sequelize, dataTypes) => {
    
 
     Product.associate=function(models){
-        Product.belongsToMany(models.Author,{
+        Product.belongsTo(models.Author,{
             as:'author',
             foreignKey:'idproduct',
-            otherKey:'idauthor',
             timestamps: false
         })
     };
 
 
     Product.associate=function(models){
-        Product.belongsToMany(models.Genre,{
+        Product.belongsTo(models.Genre,{
             as:'genre',
             foreignKey:'idproduct',
-            otherKey:'idgenre',
             timestamps: false
         })
     }
