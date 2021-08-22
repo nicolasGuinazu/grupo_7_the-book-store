@@ -50,18 +50,20 @@ module.exports = (sequelize, dataTypes) => {
    
 
     Product.associate=function(models){
-        Product.belongsTo(models.Author,{
+        Product.belongsToMany(models.Author,{
             as:'author',
-            foreignKey:'idauthor',
+            foreignKey:'idproduct',
+            otherKey:'idauthor',
             timestamps: false
         })
     };
 
 
     Product.associate=function(models){
-        Product.belongsTo(models.Genre,{
+        Product.belongsToMany(models.Genre,{
             as:'genre',
-            foreignKey:'idgenre',
+            foreignKey:'idproduct',
+            otherKey:'idgenre',
             timestamps: false
         })
     }
