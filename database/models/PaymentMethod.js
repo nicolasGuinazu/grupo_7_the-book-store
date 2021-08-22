@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         payment_method: {
-            type: VARCHAR(20)
+            type: dataTypes.STRING
         }
         
     };

@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         street: {
-            type: dataTypes.VARCHAR(32) 
+            type: dataTypes.STRING
         },
         street_number: {
             type: dataTypes.INTEGER
@@ -19,16 +19,16 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         town: {
-            type: dataTypes.VARCHAR(20)
+            type: dataTypes.STRING
         },
         city: {
-            type: dataTypes.VARCHAR(20)
+            type: dataTypes.STRING
         },
         province: {
-            type: dataTypes.VARCHAR(20)
+            type: dataTypes.STRING
         },
         country: {
-            type: dataTypes.VARCHAR(20)
+            type: dataTypes.STRING
         },
        
     };
@@ -38,8 +38,8 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Address = sequelize.define(alias, cols, config)
 
-    Adress.associate=function(models){
-        Adress.hasMany(models.Cart,{
+    Address.associate=function(models){
+        Address.hasMany(models.Cart,{
             as:'carts',
             foreignKey:'idcart',
         })
