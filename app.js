@@ -33,6 +33,8 @@ app.set('view engine', 'ejs');
 
 
 /****************** RUTAS *************************/
+const testRouter=require('./routes/test')
+app.use('/test', testRouter);
 const productsRouter = require('./routes/products'); // Rutas /products
 app.use('/products', productsRouter);
 
