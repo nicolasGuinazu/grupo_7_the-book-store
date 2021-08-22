@@ -18,8 +18,8 @@ module.exports = (sequelize, dataTypes) => {
     const Invoice = sequelize.define(alias, cols, config)
 
     Invoice.associate=function(models){
-        Invoice.hasMany(models.Cart,{
-            as:'carts',
+        Invoice.belongsTo(models.Cart,{
+            as:'cart',
             foreignKey:'idcart',
         })
     }
