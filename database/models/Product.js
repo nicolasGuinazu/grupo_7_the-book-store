@@ -41,18 +41,15 @@ module.exports = (sequelize, dataTypes) => {
         Product.belongsTo(models.Author,{
             foreignKey:'author_id',
             as:'author'
-        })
-    };
-
-
-    Product.associate=function(models){
+        }),
+    
         Product.belongsTo(models.Genre,{
             as:'genre',
             foreignKey:'genre_id',
         })
+    
     }
-
-    Product.associate=function(models){
+    /* Product.associate=function(models){
         Product.belongsToMany(models.Cart,{
             as:'carts',
             through:'cartsProducts',
@@ -70,7 +67,7 @@ module.exports = (sequelize, dataTypes) => {
             otherKey:'editorial_id',
             timestamps: false
         })
-    };
+    }; */
 
     return Product
 }
