@@ -8,6 +8,7 @@ router.get('/authors', testController.authors);
 router.get('/users', testController.users)
 router.get('/products', testController.products)
 router.get('/payment-method', testController.paymentMethods)
+router.get('/editorials', testController.editorials)
 
 /* ; 
 router.get('/products', testController.index); 
