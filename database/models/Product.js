@@ -1,6 +1,4 @@
 module.exports = (sequelize, dataTypes) => {
-    
-
     let alias = 'Product';
     let cols = {
         idproduct: {
@@ -39,13 +37,10 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Product = sequelize.define(alias, cols, config)
 
-   
-
     Product.associate=function(models){
         Product.belongsTo(models.Author,{
             as:'author',
-            foreignKey:'idproduct',
-            timestamps: false
+            foreignKey:'author_id',
         })
     };
 
@@ -53,8 +48,7 @@ module.exports = (sequelize, dataTypes) => {
     Product.associate=function(models){
         Product.belongsTo(models.Genre,{
             as:'genre',
-            foreignKey:'idproduct',
-            timestamps: false
+            foreignKey:'genre_id',
         })
     }
 
