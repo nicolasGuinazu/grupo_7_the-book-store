@@ -52,6 +52,16 @@ const controller = {
   
     },
 
+    editorials: async (req, res) => {
+        try{
+            let editorials=await db.Editorial.findAll({
+                include: ['products']
+            })
+            res.send(editorials)
+        }catch(err){
+            console.log(err)
+        }
+    },
   
 }
 
