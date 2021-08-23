@@ -20,8 +20,8 @@ module.exports = (sequelize, dataTypes) => {
         Editorial.belongsToMany(models.Product,{
             as:'products',
             through:'productsEditorials',
-            foreignKey:'ideditorial',
-            otherKey:'idproduct',
+            foreignKey:'editorial_id',
+            otherKey:'product_id',
             timestamps: false
         })
     }

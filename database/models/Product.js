@@ -39,8 +39,8 @@ module.exports = (sequelize, dataTypes) => {
 
     Product.associate=function(models){
         Product.belongsTo(models.Author,{
-            as:'author',
             foreignKey:'author_id',
+            as:'author'
         })
     };
 
@@ -56,8 +56,8 @@ module.exports = (sequelize, dataTypes) => {
         Product.belongsToMany(models.Cart,{
             as:'carts',
             through:'cartsProducts',
-            foreignKey:'idproduct',
-            otherKey:'idcart',
+            foreignKey:'product_id',
+            otherKey:'cart_id',
             timestamps: false
         })
     }
@@ -66,8 +66,8 @@ module.exports = (sequelize, dataTypes) => {
         Product.belongsToMany(models.Editorial,{
             as:'editorials',
             through:'productsEditorials',
-            foreignKey:'idproduct',
-            otherKey:'ideditorial',
+            foreignKey:'product_id',
+            otherKey:'editorial_id',
             timestamps: false
         })
     };

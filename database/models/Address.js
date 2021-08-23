@@ -41,7 +41,7 @@ module.exports = (sequelize, dataTypes) => {
     Address.associate=function(models){
         Address.hasMany(models.Cart,{
             as:'carts',
-            foreignKey:'idcart',
+            foreignKey:'address_id',
         })
     }
 

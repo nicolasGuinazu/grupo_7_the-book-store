@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
     Invoice.associate=function(models){
         Invoice.belongsTo(models.Cart,{
             as:'cart',
-            foreignKey:'idcart',
+            foreignKey:'invoice_id',
         })
     }
 

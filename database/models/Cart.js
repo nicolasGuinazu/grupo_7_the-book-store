@@ -16,27 +16,27 @@ module.exports = (sequelize, dataTypes) => {
 
     Cart.associate=function(models){
         Cart.belongsTo(models.Adress,{
-            as:'adress',
-            foreignKey:'idadress'
+            as:'address',
+            foreignKey:'address_id'
         })
     }
 	Cart.associate=function(models){
         Cart.belongsTo(models.PaymentMethod,{
             as:'paymentMethod',
-            foreignKey:'idpaymentMethod'
+            foreignKey:'payment_method_id'
         })
     }
 	Cart.associate=function(models){
         Cart.hasOne(models.Invoice,{
             as:'invoice',
-            foreignKey:'idinvoice'
+            foreignKey:'invoice_id'
         })
     }
 	
 	Cart.associate=function(models){
         Cart.belongsTo(models.User,{
             as:'user',
-            foreignKey:'iduser'
+            foreignKey:'user_id'
         })
     }
 	
@@ -45,8 +45,8 @@ module.exports = (sequelize, dataTypes) => {
         Cart.belongsToMany(models.Product,{
             as:'products',
             through:'cartsProducts',
-            foreignKey:'idcart',
-            otherKey:'idproduct',
+            foreignKey:'cart_id',
+            otherKey:'product_id',
             timestamps: false
         })
     }
