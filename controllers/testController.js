@@ -33,7 +33,9 @@ const controller = {
     },
     products: async (req, res) => {
         try{
-            let products=await db.Product.findAll() //Association with alias "author" does not exist on Product
+            let products=await db.Product.findAll({
+                include:['author','genre']
+            }) //Association with alias "author" does not exist on Product
             res.send(products)
         }catch(err){
             console.log(err)
