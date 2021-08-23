@@ -27,8 +27,8 @@ module.exports = (sequelize, dataTypes) => {
     Author.associate=function(models){
         Author.hasMany(models.Product,{
             as:'products',
-            foreignKey: 'idauthor',
-            timestamps: false,
+            foreignKey:"author_id",
+        
         })
     } 
 
