@@ -3,13 +3,14 @@ const router = express.Router();
 const testController=require('../controllers/testController')
 
 
-router.get('/genres', testController.genres);
+router.get('/addresses', testController.addresses);
 router.get('/authors', testController.authors);
-router.get('/users', testController.users)
-router.get('/products', testController.products)
-router.get('/payment-method', testController.paymentMethods)
-router.get('/editorials', testController.editorials)
-router.get('/carts', testController.carts)
+router.get('/carts', testController.carts);
+router.get('/editorials', testController.editorials);
+router.get('/genres', testController.genres);
+router.get('/users', testController.users);
+router.get('/products', testController.products);
+router.get('/payment-method', testController.paymentMethods);
 
 /* ; 
 router.get('/products', testController.index); 
