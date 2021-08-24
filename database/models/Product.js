@@ -54,15 +54,15 @@ module.exports = (sequelize, dataTypes) => {
             otherKey:'cart_id',
             timestamps: false
         })
-        Product.associate=function(models){
-            Product.belongsToMany(models.Editorial,{
+    
+        Product.belongsToMany(models.Editorial,{
                 as:'editorials',
                 through:'productsEditorials',
                 foreignKey:'product_id',
                 otherKey:'editorial_id',
                 timestamps: false
             })
-    }
+    
     }
 
     return Product
