@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         amount: {
-            type: dataTypes.DECIMAL(10,2)
+            type: dataTypes.INTEGER
         }
         
     };
@@ -15,10 +15,11 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'invoices',
         timestamps: false
     };
+
     const Invoice = sequelize.define(alias, cols, config)
 
     Invoice.associate=function(models){
-        Invoice.belongsTo(models.Cart,{
+        Invoice.hasMany(models.Cart,{
             as:'cart',
             foreignKey:'invoice_id',
         })
