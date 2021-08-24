@@ -23,7 +23,7 @@ const controller = {
     carts: async (req, res) => {
         try{
             let carts=await db.Cart.findAll({
-                include: ['address', 'paymentMethod', 'user', 'products']
+                include: ['address', 'paymentMethod', 'user', 'products','invoice']
             })
             res.send(carts)
         }catch(err){
@@ -50,14 +50,14 @@ const controller = {
             console.log(err)
         }
     },
-    /*invoices: async (req, res) => {
+   invoices: async (req, res) => {
         try{
             let invoice=await db.Invoice.findAll()
             res.send(invoice)
         }catch(err){
             console.log(err)
         }    
-    },*/
+    },
     paymentMethods: async (req, res) => {
         try{
             let paymentMethod=await db.PaymentMethod.findAll()
