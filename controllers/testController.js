@@ -2,6 +2,24 @@ const db = require('../database/models');
 
 
 const controller = {
+    addresses: async (req, res) => {
+        try{
+            let address=await db.Address.findAll()
+            res.send(address)
+        }catch(err){
+            console.log(err)
+        }    
+    },
+    authors: async (req, res) => {
+        try{
+            let authors=await db.Author.findAll({
+                include: ['products']
+            })
+            res.send(authors)
+        }catch(err){
+            console.log(err)
+        }
+    },
     genres: async (req, res) => {
         try{
             let genres=await db.Genre.findAll({
@@ -37,17 +55,6 @@ const controller = {
                 include:['author','genre']
             }) //Association with alias "author" does not exist on Product
             res.send(products)
-        }catch(err){
-            console.log(err)
-        }
-  
-    },
-    authors: async (req, res) => {
-        try{
-            let authors=await db.Author.findAll({
-                include: ['products']
-            })
-            res.send(authors)
         }catch(err){
             console.log(err)
         }
