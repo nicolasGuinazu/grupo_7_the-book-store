@@ -46,15 +46,14 @@ module.exports = (sequelize, dataTypes) => {
         Product.belongsTo(models.Genre,{
             as:'genre',
             foreignKey:'genre_id',
-        })
+        }),
         Product.belongsToMany(models.Cart,{
             as:'carts',
             through:'cartsProducts',
             foreignKey:'product_id',
             otherKey:'cart_id',
             timestamps: false
-        })
-    
+        }),
         Product.belongsToMany(models.Editorial,{
                 as:'editorials',
                 through:'productsEditorials',

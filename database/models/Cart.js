@@ -15,33 +15,22 @@ module.exports = (sequelize, dataTypes) => {
     const Cart = sequelize.define(alias, cols, config)
 
     Cart.associate=function(models){
-        Cart.belongsTo(models.Adress,{
+        Cart.belongsTo(models.Address,{
             as:'address',
             foreignKey:'address_id'
-        })
-    
-	
+        }),
         Cart.belongsTo(models.PaymentMethod,{
             as:'paymentMethod',
             foreignKey:'payment_method_id'
-        })
-    
-	
+        }),
         Cart.hasOne(models.Invoice,{
             as:'invoice',
             foreignKey:'invoice_id'
-        })
-    
-	
-	
+        }),
         Cart.belongsTo(models.User,{
             as:'user',
             foreignKey:'user_id'
-        })
-    
-	
-	
-	
+        }),
         Cart.belongsToMany(models.Product,{
             as:'products',
             through:'cartsProducts',
@@ -49,7 +38,7 @@ module.exports = (sequelize, dataTypes) => {
             otherKey:'product_id',
             timestamps: false
         })
-    }
+    } 
 
     return Cart
 }
