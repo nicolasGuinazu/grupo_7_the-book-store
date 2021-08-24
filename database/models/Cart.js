@@ -19,29 +19,29 @@ module.exports = (sequelize, dataTypes) => {
             as:'address',
             foreignKey:'address_id'
         })
-    }
-	Cart.associate=function(models){
+    
+	
         Cart.belongsTo(models.PaymentMethod,{
             as:'paymentMethod',
             foreignKey:'payment_method_id'
         })
-    }
-	Cart.associate=function(models){
+    
+	
         Cart.hasOne(models.Invoice,{
             as:'invoice',
             foreignKey:'invoice_id'
         })
-    }
+    
 	
-	Cart.associate=function(models){
+	
         Cart.belongsTo(models.User,{
             as:'user',
             foreignKey:'user_id'
         })
-    }
+    
 	
 	
-	Cart.associate=function(models){
+	
         Cart.belongsToMany(models.Product,{
             as:'products',
             through:'cartsProducts',
