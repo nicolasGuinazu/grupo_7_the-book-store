@@ -8,7 +8,7 @@ router.get('/authors', testController.authors);
 router.get('/carts', testController.carts);
 router.get('/editorials', testController.editorials);
 router.get('/genres', testController.genres);
-/*router.get('/invoices', testController.invoices);*/
+router.get('/invoices', testController.invoices);
 router.get('/payment-method', testController.paymentMethods);
 router.get('/products', testController.products);
 router.get('/users', testController.users);
