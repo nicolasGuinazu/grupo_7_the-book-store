@@ -64,6 +64,17 @@ const controller = {
             console.log(err)
         }
     },
+
+    carts: async (req, res) => {
+        try{
+            let carts=await db.Cart.findAll({
+                include: ['address', 'paymentMethod', 'user', 'products']
+            })
+            res.send(carts)
+        }catch(err){
+            console.log(err)
+        }
+    },
   
 }
 
