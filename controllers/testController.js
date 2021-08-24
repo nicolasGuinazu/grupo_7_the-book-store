@@ -85,6 +85,49 @@ const controller = {
             console.log(err)
         }
     },  
+
+    //metodos para el crud
+    singleProduct: async (req, res) => {
+        try{
+            let products=await db.Product.findByPk(req.params.id,{
+                include:['author','genre']
+            }) //Association with alias "author" does not exist on Product
+            res.send(products)
+        }catch(err){
+            console.log(err)
+        }
+        
+    },
+    create: async function (req, res) {
+        try{
+           await db.Product.create(req.body);
+           return res.send('created ok')
+       }catch(err){
+           console.log(err)
+       } 
+   },
+   destroy: async function (req, res) {
+    try{
+        await db.Product.destroy({
+            where:{idproduct:req.params.id}
+        });
+        return res.send('deleted ok')
+    }catch(err){
+        console.log(err)
+    }
+},
+    processModify: async function (req, res) {
+    try{
+        await db.Product.update(req.body,{
+            where:{idproduct:req.params.id}
+        });
+        return res.send('modified ok')
+    }catch(err){
+        console.log(err)
+    }
+    
+},
+
 }
 
 module.exports = controller;
