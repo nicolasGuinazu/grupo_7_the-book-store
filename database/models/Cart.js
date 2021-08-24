@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
             as:'paymentMethod',
             foreignKey:'payment_method_id'
         }),
-        Cart.hasOne(models.Invoice,{
+        Cart.belongsTo(models.Invoice,{
             as:'invoice',
             foreignKey:'invoice_id'
         }),
