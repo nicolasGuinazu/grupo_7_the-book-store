@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head')%>
+<body>
+<%-include('../partials/header')%>
+    <main>
+        <div class="card-create-prod">   
+            <form action="/test/products/create" method="POST">  
+                <div class="msg-create-prod">
+                    <h4>Formulario de Alta de Productos</h4>
+                </div>
+                    <div class="container-create-prod">
+                        <form action="" class="inputform" method="POST">
+                            <label for="title">Nombre del producto</label>
+                            <input type="text" name="title" placeholder="Ingresar nombre" required>
+
+                            <label for="author">Nombre del autor</label>
+                            <input type="text" name="author" placeholder="Ingresar nombre del autor" required>
+
+                            <label for="editorial">Editorial</label>
+                            <input type="text" name="editorial" placeholder="Nombre editorial" required>
+
+                            <br>
+                            <label for="category">Género</label>
+                            <br>
+                            <select name="gender">
+                                <option value="" selected disabled hidden>Elegir...</option>
+                                <option value="books">Libros</option>
+                                <option value="digital">Digital</option>
+                                <option value="merchandising">Merchandising</option>
+                                <option value="Art">Arte, Arquitectura y Diseño</option>
+                                <option value="autoayuda">Autoayuda</option>
+                                <option value="ciencias">Ciencias de la Salud, Naturales y Divulgación Científica</option>
+                                <option value="computacionsistemas">Computación y Sistemas</option>
+                                <option value="derechoSociales">Derecho y Ciencias Sociales</option>
+                                <option value="linguisticaEnciclopedias">Enciclopedias, Diccionarios, Lingüística</option>
+                                <option value="esoterismo">Esoterismo</option>
+                                <option value="ficcionyliteratura">Ficción y Literatura</option>
+                                <option value="gastronomiacostumbres">Gastronomía y Costumbres</option>
+                                <option value="hogar">Hogar</option>
+                                <option value="hoteleriaturismo">Hotelería y Turismo</option>
+                                <option value="humanidades">Humanidades</option>
+                                <option value="infantiljuvenil">Infantil y Juvenil</option>
+                                <option value="exactas">Ingeniería, Técnica y Ciencias Exactas</option>
+                                <option value="juegosdeportesrecreacion">Juegos, Deportes y Recreación</option>
+                                <option value="mapasyguiasturisticas">Mapas y Guías de Turismo</option>
+                                <option value="negocioseconomicas">Negocios y Ciencias Económicas</option>
+                                <option value="hogar">Visuales</option>
+                            </select>
+                            <br>
+
+                            <label for="synopsis">Sinopsis</label>
+                            <textarea type= "text" name="synopsis" placeholder="Escribir sinopsis" required></textarea>
+                            
+                           
+                            <label for="category">Categoría</label>
+                            <br>
+                            <select name="category">
+                                <option value="books">Libros</option>
+                                <option value="digital">Digital</option>
+                                <option value="merchandising">Merchandising</option>
+                            </select>
+                            <br>
+                            <label for="price">Precio</label>
+                            <br>
+                            <input name="price" type="number" min="0.00" max="10000.00" step="0.01" required>
+                            <br>
+                        </form>
+                        <div class="container-button">
+                            <button type="submit">Crear</button>
+                        </div>
+                    </div>                
+            </form>
+        </div>
+
+    </main>
+<%-include('../partials/footer')%>
+</body>
+</html>
