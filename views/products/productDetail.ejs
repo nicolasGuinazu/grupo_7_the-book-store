@@ -11,7 +11,8 @@
                 </div>
                 <div class="datos-producto">
                     <h3><%= product.title%></h3>
-                    <h4><%= product.author%></h4>
+                    <h4><%= product.author && product.author.name%></h4>
+                    <h4><%= product.genre && product.genre.name%></h4>
                     <h2>$ <%= product.price%></h2>
                     <div class="compartir-carrito-favs tablet">
                         <button class="compartir"><i class="fas fa-share-alt"></i></button>
