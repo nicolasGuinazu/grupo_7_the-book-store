@@ -20,7 +20,7 @@
             </article>
             </a>
             <form action="/products/<%= element.id%>?_method=DELETE" method="POST">
-                <% if (locals.loggedUser.rol=='admin') { %>
+                <% if (locals.loggedUser && locals.loggedUser.rol=='admin') { %>
                     <button style="background-color: red;color: white;">BORRAR PRODUCTO</button>
                 <% } %> 
             </form>
