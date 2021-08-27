@@ -13,21 +13,26 @@
                         <form action="" class="inputform" method="POST">
                             <label for="title">Nombre del producto</label>
                             <input type="text" name="title" placeholder="Ingresar nombre" required>
-
+                            
                             <label for="author">Nombre del autor</label>
                             <input type="text" name="author" placeholder="Ingresar nombre del autor" required>
-
+                            
                             <label for="editorial">Editorial</label>
                             <input type="text" name="editorial" placeholder="Nombre editorial" required>
+
+                            <label for="isbn">ISBN</label>
+                            <br>
+                            <input name="isbn" type="number" required>
+                            <br>
+                            
+                            <label for="synopsis">Sinopsis</label>
+                            <textarea type= "text" name="synopsis" placeholder="Escribir sinopsis" required></textarea>
 
                             <br>
                             <label for="category">Género</label>
                             <br>
                             <select name="gender">
                                 <option value="" selected disabled hidden>Elegir...</option>
-                                <option value="books">Libros</option>
-                                <option value="digital">Digital</option>
-                                <option value="merchandising">Merchandising</option>
                                 <option value="Art">Arte, Arquitectura y Diseño</option>
                                 <option value="autoayuda">Autoayuda</option>
                                 <option value="ciencias">Ciencias de la Salud, Naturales y Divulgación Científica</option>
@@ -49,16 +54,11 @@
                             </select>
                             <br>
 
-                            <label for="synopsis">Sinopsis</label>
-                            <textarea type= "text" name="synopsis" placeholder="Escribir sinopsis" required></textarea>
-                            
-                           
-                            <label for="category">Categoría</label>
+                            <label for="format">Formato</label>
                             <br>
-                            <select name="category">
-                                <option value="books">Libros</option>
+                            <select name="format">
+                                <option value="printed">Impreso</option>
                                 <option value="digital">Digital</option>
-                                <option value="merchandising">Merchandising</option>
                             </select>
                             <br>
                             <label for="price">Precio</label>
