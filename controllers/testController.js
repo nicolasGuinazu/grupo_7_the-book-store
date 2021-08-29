@@ -91,7 +91,7 @@ const controller = {
         let products = await db.Product.findAll({
           include: ["author", "genre"],
         }); //Association with alias "author" does not exist on Product
-        return res.render('./products/indexProductsTest', {products}); 
+        return res.render('./products/indexProducts', {products}); 
       } catch (err) {
         console.log(err);
       }
@@ -108,11 +108,21 @@ const controller = {
     }
   },
   create: (req, res) => {
-    return res.render("./products/createProductTest");
+    return res.render("./products/createProduct");
   },
   store: async function (req, res) {
     try {
-      await db.Product.create(req.body);
+      await db.Product.create({
+        name:req.body.name,    
+        image:req.body.image,
+        price:req.body.price,
+        synopsis:req.body.synopsis,
+        format:req.body.format,
+        isbn:req.body.isbn,
+        pages:req.body.pages, 
+        release_date:req.body.release_date,
+        image:req.file.filename
+      });
       return res.redirect('/')
     } catch (err) {
       console.log(err);
@@ -134,7 +144,7 @@ const controller = {
           include: ["author", "genre"],
         }); //Association with alias "author" does not exist on Product
         if(productToEdit){
-            return res.render("./products/modifyProductTest", { productToEdit });
+            return res.render("./products/modifyProduct", { productToEdit });
         }else{
             return res.redirect('/')
         }
