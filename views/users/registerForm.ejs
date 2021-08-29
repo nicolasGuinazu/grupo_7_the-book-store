@@ -5,36 +5,34 @@
    <main>
 
     <div class="card-login">   
-        <form form class="form-register" method="POST" action="/users/register" enctype="multipart/form-data">  
+        <form form class="form-register" method="POST" action="/test/register" enctype="multipart/form-data">  
             <div class="container-register">
                 <h4>Ingresa tus datos!</h4>
             </div>
                 <div class="container-register">
-                    <label for="first_name">Nombre</label>
-                    <input type="text" name="first_name" placeholder="Ingrese su nombre" required>
-
-                    <label for="lastname">Apellido</label>
-                    <input type="text" name="lastname" placeholder="Ingrese su apellido" required>
-
-                    
-                    <label for="user_name">Nombre de usuario</label>
-                    <input type="text" name="user_name" placeholder="Ingrese su nombre de usuario" required>
-
-                    <label for="date">Fecha nacimiento</label>
-                    <input type="date" name="date" required>
-
-                    <label for="avatar">Elige tu avatar</label><br>
-                    <input class="input-register" type="file" name="avatar" accept=".jpg, .png" style="margin-bottom: 20px;"><br>
-
-                    <label for="phone">Telefono</label>
-                    <input type="number" name="phone" placeholder="Ingrese su telefono" required>
-
-
                     <label for="mail">E-mail</label>
                     <input type="email" name="email" placeholder="Ingrese su e-mail" required>
     
-                    <label for="psw">Contraseña</label>
-                    <input type="password" name="psw" placeholder="Ingrese contraseña" required>
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" placeholder="Ingrese contraseña" required>
+
+                    <label for="avatar">Elige tu avatar</label><br>
+                    <input class="input-register" type="file" name="avatar" accept=".jpg, .png" style="margin-bottom: 20px;" required><br>
+                   
+                    <label for="user_name">Nombre de usuario</label>
+                    <input type="text" name="user_name" placeholder="Ingrese su nombre de usuario" required>
+
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" placeholder="Ingrese su nombre" required>
+
+                    <label for="last_name">Apellido</label>
+                    <input type="text" name="last_name" placeholder="Ingrese su apellido" required>
+                    
+                    <label for="birth_date">Fecha nacimiento</label>
+                    <input type="date" name="birth_date" required>
+                    
+                    <label for="phone_number">Telefono</label>
+                    <input type="number" name="phone_number" placeholder="Ingrese su telefono" required>
     
                     <div class="container-button">
                         <button type="submit">Registrame</button>

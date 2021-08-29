@@ -163,5 +163,16 @@
         "avatar": "avatar-1628034813426.png",
         "phone": "44854122",
         "user_name": "marque73"
+    },
+    {
+        "id": 16,
+        "first_name": "Marcos",
+        "last_name": "Cardoso",
+        "email": "marcosland@gmail.com",
+        "password": "$2a$10$QzAM5Pp1OR8e/6vF.rgCJOfG1vC8HeBj0SIqKZhNXwRmBpbp2Jawa",
+        "rol": "user",
+        "avatar": "avatar-1630161115019.png",
+        "phone": "1165824122",
+        "user_name": "marqueso"
     }
 ]

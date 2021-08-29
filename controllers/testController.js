@@ -1,4 +1,5 @@
 const db = require("../database/models");
+const bcrypt = require('bcryptjs');
 
 const controller = {
   addresses: async (req, res) => {
@@ -153,6 +154,86 @@ const controller = {
     } catch (err) {
       console.log(err);
     }
+  },
+
+  registerView: (req, res) =>{
+    //console.log("Paso por registerView");
+    return res.render('./users/registerForm');
+},
+
+  processRegister: async function (req, res) {
+    try {
+
+      //Encrypt password
+      let cryptedPass = bcrypt.hashSync(req.body.password, 10);
+
+      let userToCreate = {
+        admin: "a",
+        email: req.body.email,
+        password: cryptedPass,
+        avatar: req.file.filename,
+        user_name: req.body.user_name,
+        name: req.body.name,
+        last_name: req.body.last_name,
+        birth_date: req.body.birth_date,
+        phone_number: req.body.phone_number
+      }
+
+      //console.log(userToCreate);
+      await db.User.create(userToCreate);
+      return  res.redirect('/users/login');
+
+    } catch (err) {
+      console.log(err);
+    }
+  }, 
+
+  login: (req, res) =>{
+    return res.render('./users/login');
+  },
+
+  processLogin: async function (req, res){
+
+    //const userReq = req.body;
+
+    let error={msg:''}
+
+    //Busca el usuario que se está logueando en la Base de Datos
+    try {
+      let userToLogin = await db.User.findOne({
+        where: {
+        email: req.body.email
+        }
+        });
+
+    //Se procesa el logueo
+      if (userToLogin){
+        //Verifica que la contraseña sea la misma que la registrada
+        let check = bcrypt.compareSync(req.body.password, userToLogin.password);
+                
+        if(check){
+            req.session.loggedUser=userToLogin
+            if(req.body.remember){
+                res.cookie('userEmail', req.body.email, {
+                    maxAge: (1000 * 6) * 2
+                })
+            }
+            return res.redirect('/')      
+        }else{
+            error.msg='Password incorrecto';
+        }
+    
+        //res.send(userToLogin);
+        }else{
+            error.msg='El usuario no existe';
+            
+        }
+        return res.render('./users/login',{error})
+        
+    } catch (err) {
+      console.log(err);      
+    }
+
   },
 };
 
