@@ -1,4 +1,139 @@
+const db = require("../database/models");
+const bcrypt = require('bcryptjs');
 
+const controller = {
+  index: async (req, res) => {
+    try {
+        let products = await db.Product.findAll({
+          include: ["author", "genre"],
+        }); //Association with alias "author" does not exist on Product
+        return res.render('./products/indexProducts', {products}); 
+      } catch (err) {
+        console.log(err);
+      }
+    
+    },
+  detail: async (req, res) => {
+    try {
+      let product = await db.Product.findByPk(req.params.id, {
+        include: ["author", "genre"],
+      }); //Association with alias "author" does not exist on Product
+      return res.render('./products/productDetail', {product});
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  create: (req, res) => {
+    return res.render("./products/createProduct");
+  },
+  store: async function (req, res) {
+    try {
+      await db.Product.create({
+        name:req.body.name,    
+        image:req.body.image,
+        price:req.body.price,
+        synopsis:req.body.synopsis,
+        format:req.body.format,
+        isbn:req.body.isbn,
+        pages:req.body.pages, 
+        release_date:req.body.release_date,
+        image:req.file.filename
+      });
+      return res.redirect('/')
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  destroy: async function (req, res) {
+    try {
+      await db.Product.destroy({
+        where: { idproduct: req.params.id },
+      });
+      return res.redirect('/');
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  modify: async(req, res) => {
+    try {
+        let productToEdit = await db.Product.findByPk(req.params.id, {
+          include: ["author", "genre"],
+        }); //Association with alias "author" does not exist on Product
+        if(productToEdit){
+            return res.render("./products/modifyProduct", { productToEdit });
+        }else{
+            return res.redirect('/')
+        }
+        
+      } catch (err) {
+        console.log(err);
+      }
+
+    
+  },
+  processModify: async function (req, res) {
+    try {
+      await db.Product.update(req.body, {
+        where: { idproduct: req.params.id },
+      });
+      return res.redirect('/')
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+};
+
+module.exports = controller;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
@@ -99,4 +234,4 @@ const controller = {
     }
 }
 
-module.exports = controller;
+module.exports = controller; */
