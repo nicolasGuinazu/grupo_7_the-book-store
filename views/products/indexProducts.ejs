@@ -7,22 +7,23 @@
         <% products.forEach(element => { %>
             
         <div class="producto-principal">
-            <a href="/products/detail/<%= element.id%>" method="GET">
+            <a href="/test/products/detail/<%= element.idproduct%>" method="GET">
             <article class="producto">
                 <div class="imagen-producto">
                     <img src="/images/<%= element.image%>" width="100px" height="140px">
                 </div>
                 <div class="datos-producto">
-                    <h3><%= element.title%></h3>
-                    <h4><%= element.author%></h4>
+                    <h3><%= element.name%></h3>
+                    <h4><%= element.author && element.author.name%></h4>
+                    <h4><%= element.genre && element.genre.name%></h4>
                     <h2>$ <%= element.price%></h2>
                 </div> 
             </article>
             </a>
-            <form action="/products/<%= element.id%>?_method=DELETE" method="POST">
-                <% if (locals.loggedUser && locals.loggedUser.rol=='admin') { %>
+            <form action="/test/products/delete/<%= element.idproduct%>?_method=DELETE" method="POST">
+               
                     <button style="background-color: red;color: white;">BORRAR PRODUCTO</button>
-                <% } %> 
+                
             </form>
         </div>
         <% }) %>
