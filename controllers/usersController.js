@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
+const db = require("../database/models");
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -14,7 +15,34 @@ const controller = {
         return res.render('./users/registerForm');
     },
 
-    registerUser: (req, res) =>{
+    registerUser: async function (req, res) {
+
+         //Encrypt password
+         let cryptedPass = bcrypt.hashSync(req.body.password, 10);
+    
+         let userToCreate = {
+           admin: "a",
+           email: req.body.email,
+           password: cryptedPass,
+           avatar: req.file.filename,
+           user_name: req.body.user_name,
+           name: req.body.name,
+           last_name: req.body.last_name,
+           birth_date: req.body.birth_date,
+           phone_number: req.body.phone_number
+         }
+   
+         //console.log(userToCreate);
+        try {
+          await db.User.create(userToCreate);
+          return  res.redirect('/users/login');
+    
+        } catch (err) {
+          console.log(err);
+        }
+      }, 
+
+    /*registerUser: (req, res) =>{
 
        //Obtengo la última posición del JSON para luego obtener el último ID
        const lastUser = users[users.length - 1];
@@ -46,9 +74,53 @@ const controller = {
        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 4));
 
        return  res.redirect('/users/login');
-    },
+    },*/
 
-    processLogin: (req, res) => {
+    processLogin: async function (req, res){
+
+        //const userReq = req.body;
+    
+        let error={msg:''}
+    
+        //Busca el usuario que se está logueando en la Base de Datos
+        try {
+          let userToLogin = await db.User.findOne({
+            where: {
+            email: req.body.email
+            }
+            });
+    
+        //Se procesa el logueo
+          if (userToLogin){
+            //Verifica que la contraseña sea la misma que la registrada
+            let check = bcrypt.compareSync(req.body.password, userToLogin.password);
+                    
+            if(check){
+                req.session.loggedUser=userToLogin
+                if(req.body.remember){
+                    res.cookie('userEmail', req.body.email, {
+                        maxAge: (1000 * 6) * 2
+                    })
+                }
+                return res.redirect('/')      
+            }else{
+                error.msg='Password incorrecto';
+            }
+        
+            //res.send(userToLogin);
+            }else{
+                error.msg='El usuario no existe';
+                
+            }
+            return res.render('./users/login',{error})
+            
+        } catch (err) {
+          console.log(err);      
+        }
+    
+      },
+
+    /*processLogin: (req, res) => {
 
         const userReq = req.body;
         let error={msg:''}
@@ -78,9 +150,8 @@ const controller = {
         }
         return res.render('./users/login',{error})
 
+    },*/
 
-
-    },
     logout:(req,res)=>{
         res.clearCookie('userEmail');
         req.session.destroy();
