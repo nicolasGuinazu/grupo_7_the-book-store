@@ -941,6 +941,9 @@ background-color: #3E60F7;
     background-color: #ffff;
 }
 
+.input-error{
+    border:red 1px solid;
+}
 .card-login input[type=email], .card-login input[type=password], input[type=number],  input[type=text], input[type=date],input[type=file] {
     width: 100%;
     padding: 12px 20px;
@@ -948,6 +951,7 @@ background-color: #3E60F7;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+
   }
 
 .container-button {
