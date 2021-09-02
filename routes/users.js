@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require('multer');
 const guestMiddleware=require('../middlewares/guestMiddleware')
 const authMiddleware=require('../middlewares/authMiddleware')
+const loginValidator=require('../middlewares/loginValidator')
 // ********** Manejo de archivos con Multer ***********
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -21,7 +22,7 @@ const usersController = require('../controllers/usersController');
 
 // ************ Login usuario ***********
 router.get('/login',  guestMiddleware,usersController.login);
-router.post('/login', usersController.processLogin);
+router.post('/login', loginValidator,usersController.processLogin);
 
 // ************ Registro usuario ***********
 router.get('/register',  guestMiddleware,usersController.register);
