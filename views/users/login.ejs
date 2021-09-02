@@ -4,9 +4,7 @@
 <body>
 <%-include('../partials/header')%>
     <main>
-        <% if (locals && locals.error) { %>
-            <p><%= error.msg %> </p>
-        <% } %>
+        
         <div class="card-login">   
             <form action="" method="POST">  
                 <div class="msg-login">
@@ -14,11 +12,15 @@
                 </div>
                     <div class="container-login">
                         <label for="mail">E-mail</label>
-                        <input type="email" name="email" placeholder="Ingrese su e-mail" required>
-
+                        <input type="email" name="email" id='email' placeholder="Ingrese su e-mail" >
+                        <% if (locals && locals.error && locals.error.email) { %>
+                            <p style="color:red"><%= locals.error.email.msg %> </p>
+                        <% } %>
                         <label for="password">Contraseña</label>
-                        <input type="password" name="password" placeholder="Ingrese contraseña" required>
-
+                        <input type="password" name="password" placeholder="Ingrese contraseña" >
+                        <% if (locals && locals.error && locals.error.password) { %>
+                            <p style="color:red" ><%= locals.error.password.msg %> </p>
+                        <% } %>
                         <div class="container-button">
                             <button type="submit">Ingresar</button>
                             <label>
@@ -37,5 +39,6 @@
 
     </main>
 <%-include('../partials/footer')%>
+<script src="/js/validations.js"></script>
 </body>
 </html>
