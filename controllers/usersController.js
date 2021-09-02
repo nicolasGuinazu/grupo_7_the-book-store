@@ -4,6 +4,7 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
 const db = require("../database/models");
 const bcrypt = require('bcryptjs');
+const { validationResult} = require('express-validator')
 
 
 const controller = {
@@ -79,8 +80,11 @@ const controller = {
     processLogin: async function (req, res){
 
         //const userReq = req.body;
-    
-        let error={msg:''}
+        let error = validationResult(req);
+        if (!error.isEmpty()){
+            error=error.mapped()
+           return res.render('./users/login',{error})
+        }
     
         //Busca el usuario que se está logueando en la Base de Datos
         try {
@@ -104,12 +108,12 @@ const controller = {
                 }
                 return res.redirect('/')      
             }else{
-                error.msg='Password incorrecto';
+                error={password:{msg:'Password incorrecto'}};
             }
         
             //res.send(userToLogin);
             }else{
-                error.msg='El usuario no existe';
+               error={email:{msg:'El usuario no existe'}};
                 
             }
             return res.render('./users/login',{error})
