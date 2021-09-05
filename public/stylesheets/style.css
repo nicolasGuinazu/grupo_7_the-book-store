@@ -942,7 +942,7 @@ background-color: #3E60F7;
 }
 
 .input-error{
-    border:red 1px solid;
+    border: 1px solid red;
 }
 .card-login input[type=email], .card-login input[type=password], input[type=number],  input[type=text], input[type=date],input[type=file] {
     width: 100%;
@@ -1012,6 +1012,11 @@ background-color: #3E60F7;
         top:23%;
         left: 5%;
     }
+}
+
+.validation-error {
+    color:red; 
+    background-color: #ffff;
 }
 
 /*********************************FORM PROFILE**************************************************/

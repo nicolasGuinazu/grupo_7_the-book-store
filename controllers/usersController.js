@@ -4,7 +4,7 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
 const db = require("../database/models");
 const bcrypt = require('bcryptjs');
-const { validationResult} = require('express-validator')
+const { validationResult} = require('express-validator');
 
 
 const controller = {
@@ -18,6 +18,12 @@ const controller = {
 
     registerUser: async function (req, res) {
 
+        let error = validationResult(req);
+
+        if (!error.isEmpty()){
+            error=error.mapped()
+           return res.render('./users/registerForm',{error, old: req.body})
+        }
          //Encrypt password
          let cryptedPass = bcrypt.hashSync(req.body.password, 10);
     
