@@ -12,11 +12,13 @@
                 </div>
                     <div class="container-login">
                         <label for="mail">E-mail</label>
+                        <p style="color: red;" id="error-mail"></p>
                         <input type="email" name="email" id='email' placeholder="Ingrese su e-mail" >
                         <% if (locals && locals.error && locals.error.email) { %>
                             <p style="color:red"><%= locals.error.email.msg %> </p>
                         <% } %>
                         <label for="password">Contraseña</label>
+                        <p style="color: red;" id="error-pass"></p>
                         <input type="password" name="password" id="password" placeholder="Ingrese contraseña" >
                         <% if (locals && locals.error && locals.error.password) { %>
                             <p style="color:red" ><%= locals.error.password.msg %> </p>
