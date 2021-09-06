@@ -1,5 +1,6 @@
 const db = require("../database/models");
 const bcrypt = require('bcryptjs');
+const { validationResult} = require('express-validator');
 
 const controller = {
   index: async (req, res) => {
@@ -24,12 +25,22 @@ const controller = {
     }
   },
   create: (req, res) => {
+
     return res.render("./products/createProduct");
   },
   store: async function (req, res) {
+    let error = validationResult(req);
+
+    if (!error.isEmpty()){
+        error=error.mapped()
+       return res.render('./products/createProduct',{error, old: req.body})
+    };
+
     try {
       await db.Product.create({
-        name:req.body.name,    
+        name:req.body.name,
+        author_id: 1,
+        genre_id: 1,     
         image:req.body.image,
         price:req.body.price,
         synopsis:req.body.synopsis,
