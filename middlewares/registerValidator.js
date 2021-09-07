@@ -7,7 +7,7 @@ module.exports=[
     body('password')
     .notEmpty().withMessage('Contraseña es un campo obligatorio')
     .isLength({min: 8}).withMessage('Contraseña debe contener al menos 8 caracteres'),
-    body('avatar').notEmpty().withMessage('Avatar es un campo obligatorio'),
+    //body('avatar').notEmpty().withMessage('Avatar es un campo obligatorio'),
     body('user_name')
     .notEmpty().withMessage('El nombre de usuario es un campo obligatorio')
     .isLength({min: 2}).withMessage('El Nombre de Usuario debe contener al menos 2 caracteres'),

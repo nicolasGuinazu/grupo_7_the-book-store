@@ -25,7 +25,7 @@ const productsController = require('../controllers/productsController');
 router.get('/', productsController.index);
 
 // ************ Crear Producto ***********
-router.get('/create', /*authMiddleware,adminMiddleware,*/productsController.create); //middlewares para checkear que este logeado y se admin
+router.get('/create', authMiddleware,adminMiddleware,productsController.create); //middlewares para checkear que este logeado y se admin
 router.post('/create', upload.single('image'), storeProductValidator, productsController.store);
 //router.post('/create', productsController.store);
 
