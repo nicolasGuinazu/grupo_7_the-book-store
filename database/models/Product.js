@@ -9,6 +9,12 @@ module.exports = (sequelize, dataTypes) => {
         name: {
             type: dataTypes.STRING
         },
+        author_id:{
+            type: dataTypes.INTEGER
+        },
+        genre_id:{
+            type: dataTypes.INTEGER
+        },
         image: {
             type: dataTypes.STRING  
         },
