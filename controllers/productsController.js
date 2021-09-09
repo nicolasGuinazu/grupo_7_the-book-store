@@ -24,23 +24,23 @@ const controller = {
       console.log(err);
     }
   },
-  create: (req, res) => {
-
-    return res.render("./products/createProduct");
+  create:async (req, res) => {
+    let genres = await db.Genre.findAll()
+    return res.render("./products/createProduct",{genres});
   },
   store: async function (req, res) {
+    
     let error = validationResult(req);
 
     if (!error.isEmpty()){
         error=error.mapped()
        return res.render('./products/createProduct',{error, old: req.body})
     };
-
+    
     try {
       await db.Product.create({
         name:req.body.name,
-        author_id: 1,
-        genre_id: 1,     
+        //genre_id:req.body.genre  //toma el valor como undefined,     
         image:req.body.image,
         price:req.body.price,
         synopsis:req.body.synopsis,
@@ -50,6 +50,7 @@ const controller = {
         release_date:req.body.release_date,
         image:req.file.filename
       });
+     
       return res.redirect('/')
     } catch (err) {
       console.log(err);
