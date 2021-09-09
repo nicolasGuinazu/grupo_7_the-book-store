@@ -41,28 +41,15 @@
                                 <p class="validation-error"><%= locals.error.synopsis.msg %> </p>
                             <% } %>
 
-                            <label for="category">Género</label>
+                            <label for="genre">Género</label>
                             <br>
-                            <select name="gender" id="gender">
-                                <option value="" selected disabled hidden>Elegir...</option>
-                                <option value="Art">Arte, Arquitectura y Diseño</option>
-                                <option value="autoayuda">Autoayuda</option>
-                                <option value="ciencias">Ciencias de la Salud, Naturales y Divulgación Científica</option>
-                                <option value="computacionsistemas">Computación y Sistemas</option>
-                                <option value="derechoSociales">Derecho y Ciencias Sociales</option>
-                                <option value="linguisticaEnciclopedias">Enciclopedias, Diccionarios, Lingüística</option>
-                                <option value="esoterismo">Esoterismo</option>
-                                <option value="ficcionyliteratura">Ficción y Literatura</option>
-                                <option value="gastronomiacostumbres">Gastronomía y Costumbres</option>
-                                <option value="hogar">Hogar</option>
-                                <option value="hoteleriaturismo">Hotelería y Turismo</option>
-                                <option value="humanidades">Humanidades</option>
-                                <option value="infantiljuvenil">Infantil y Juvenil</option>
-                                <option value="exactas">Ingeniería, Técnica y Ciencias Exactas</option>
-                                <option value="juegosdeportesrecreacion">Juegos, Deportes y Recreación</option>
-                                <option value="mapasyguiasturisticas">Mapas y Guías de Turismo</option>
-                                <option value="negocioseconomicas">Negocios y Ciencias Económicas</option>
-                                <option value="hogar">Visuales</option>
+                            <select name="genre" id="gender">
+                                <% for( let i = 0; i < genres.length; i++ ) { %>
+                                    <option value="<%=genres[i].idgenre%>">
+                                        <%= genres[i].name%>
+                                    </option>
+                                <% } %>
+                                
                             </select>
                             <% if (locals && locals.error && locals.error.gender) { %>
                                 <p class="validation-error"><%= locals.error.gender.msg %> </p>
