@@ -25,18 +25,18 @@ const productsController = require('../controllers/productsController');
 router.get('/', productsController.index);
 
 // ************ Crear Producto ***********
-router.get('/create', authMiddleware,adminMiddleware,productsController.create); //middlewares para checkear que este logeado y se admin
+router.get('/create', authMiddleware,productsController.create); //middlewares para checkear que este logeado y se admin
 router.post('/create', upload.single('image'), storeProductValidator, productsController.store);
 //router.post('/create', productsController.store);
 
 // ************ Modificar Producto ***********
 router.get('/modify/:id', authMiddleware,productsController.modify);
-router.put('/modify/:id',adminMiddleware,upload.single('image'), productsController.processModify);
+router.put('/modify/:id',upload.single('image'), productsController.processModify);
 
 // ************ Detalle de Producto ***********
 router.get('/detail/:id', productsController.detail);
 
 // ************ Elminar Producto ***********
-router.delete('/:id', adminMiddleware,productsController.destroy);
+router.delete('/:id',productsController.destroy);
 
 module.exports = router;
