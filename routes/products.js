@@ -23,7 +23,9 @@ const productsController = require('../controllers/productsController');
 
 // ************ Index Productos ***********
 router.get('/', productsController.index);
-
+router.get('/search', productsController.search);
+router.get('/ebooks', productsController.ebooks);
+router.get('/offers', productsController.offers);
 // ************ Crear Producto ***********
 router.get('/create', authMiddleware,productsController.create); //middlewares para checkear que este logeado y se admin
 router.post('/create', upload.single('image'), storeProductValidator, productsController.store);
