@@ -1,8 +1,58 @@
 const db = require("../database/models");
 const bcrypt = require('bcryptjs');
+const { Op } = require("sequelize");
 const { validationResult} = require('express-validator');
 
 const controller = {
+  search: async (req, res) => {
+    try {
+        let products = await db.Product.findAll({
+          where:{
+            name: {
+              [Op.like]: `%${req.query.search}%`
+            }
+          },
+          include: ["author", "genre"],
+        }); //Association with alias "author" does not exist on Product
+        if(products.length<1){
+          let searched=req.query.search
+          return res.render('./products/productNotFound', {searched}); 
+        }
+        return res.render('./products/indexProducts', {products}); 
+      } catch (err) {
+        console.log(err);
+      }
+    
+    },
+  offers: async (req, res) => {
+    try {
+        let products = await db.Product.findAll({
+          where:{
+            price:{[Op.lt]: 100}
+          },
+          include: ["author", "genre"],
+        }); //Association with alias "author" does not exist on Product
+        return res.render('./products/indexProducts', {products}); 
+      } catch (err) {
+        console.log(err);
+      }
+    
+    },
+  ebooks: async (req, res) => {
+    try {
+        let products = await db.Product.findAll({
+          where:{
+            format:'d'
+          },
+          include: ["author", "genre"],
+        }); //Association with alias "author" does not exist on Product
+        return res.render('./products/indexProducts', {products}); 
+      } catch (err) {
+        console.log(err);
+      }
+    
+    },
+
   index: async (req, res) => {
     try {
         let products = await db.Product.findAll({
