@@ -934,6 +934,7 @@ background-color: #3E60F7;
 
 .card-login button:hover{
     background-color: #ffc552;
+    cursor: pointer;
 }
 
 .container-login{
