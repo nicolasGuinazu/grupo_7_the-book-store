@@ -5,18 +5,18 @@
             <a href="/"> <img class="logoTBS" src="/images/Logo-tbs.png" alt="Logo The Book Store"></a>
             <a href="/carrito-compra"><i class="fas fa-shopping-cart carrito"></i></a>
         </div>
-        <div class="search">
-            <input type="search" id="searchbar" name="searchbar" placeholder="Buscar productos">
-            <button class="search-button"> <i class="fas fa-search"></i></button>
-        </div>
+       
     </div>
     <div class="head-laptop">
         <div class=logo-search-laptop>
             <a href="/"><img class="logoTBS" src="/images/Logo-tbs.png" alt="Logo The Book Store"></a>
-            <div class="search">
-                <input type="search" id="searchbar" name="searchbar" placeholder="Buscar productos">
-                <button class="search-button"> <i class="fas fa-search"></i></button>
+
+            <form action="/products/search" method="GET">
+                <div class="search">
+                <input type="search" id="searchbar" name="search" placeholder="Buscar productos">
+                <button class="search-button" type="submit"> buscar</button>
             </div>
+        </form>
             <div class="links-header">
                       
                 <ul type="none">
@@ -36,8 +36,8 @@
         <nav class="main-navbar-laptop">            
             <ul class="mainNav"type="none">
                 <li><a href="/products">Libros por Categoría</a></li>                
-                <li><a href="#">E-books</a></li>
-                <li><a href="#">Ofertas</a></li>
+                <li><a href="/products/ebooks">E-books</a></li>
+                <li><a href="/products/offers">Ofertas</a></li>
                 <li><a href="#">Los más Vendidos</a></li>
                 <li><a href="#">Novedades</a></li>                
             </ul>
