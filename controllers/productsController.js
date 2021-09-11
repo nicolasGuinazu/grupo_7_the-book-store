@@ -13,7 +13,7 @@ const controller = {
             }
           },
           include: ["author", "genre"],
-        }); //Association with alias "author" does not exist on Product
+        }); 
         if(products.length<1){
           let searched=req.query.search
           return res.render('./products/productNotFound', {searched}); 
