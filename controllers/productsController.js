@@ -25,22 +25,16 @@ const controller = {
     }
   },
   create:async (req, res) => {
-    let genres = await db.Genre.findAll()
-    return res.render("./products/createProduct",{genres});
+    let genres = await db.Genre.findAll();
+    let authors = await db.Author.findAll()
+    return res.render("./products/createProduct",{genres, authors});
   },
   store: async function (req, res) {
-    
-    let error = validationResult(req);
-
-    if (!error.isEmpty()){
-        error=error.mapped()
-       return res.render('./products/createProduct',{error, old: req.body})
-    };
-    
     try {
       await db.Product.create({
         name:req.body.name,
-        //genre_id:req.body.genre  //toma el valor como undefined,     
+        genre_id:req.body.genre,
+        author_id:req.body.author,
         image:req.body.image,
         price:req.body.price,
         synopsis:req.body.synopsis,
