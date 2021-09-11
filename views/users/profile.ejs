@@ -9,6 +9,7 @@
             <% if(locals.logged) { %>    
                 <h1>Hola <%= locals.loggedUser.name %>!</h1>
                 <img class="profile-image" src="/images/users/<%= locals.loggedUser.avatar%>">
+                <p><%= locals.loggedUser.email %></p>
                 <% } %>
         </div>
 
