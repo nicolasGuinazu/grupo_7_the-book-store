@@ -9,10 +9,10 @@ module.exports=[
     .notEmpty().withMessage('Este es un campo obligatorio'),
     body('isbn')
     .notEmpty().withMessage('Este es un campo obligatorio')
-    .isLength({min: 11}).withMessage('El ISBN debe contener al menos 11 caracteres'),
+    .isLength({min: 2}).withMessage('El ISBN debe contener al menos 11 caracteres'),
     body('synopsis')
     .notEmpty().withMessage('Este es un campo obligatorio'),
-    body('gender')
+    body('genre')
     .notEmpty().withMessage('Este es un campo obligatorio'),
     body('format')
     .notEmpty().withMessage('Este es un campo obligatorio'),
