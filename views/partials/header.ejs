@@ -22,7 +22,6 @@
                 <ul type="none">
                     <% if(locals.logged) { %>    
                     <li><a href="/users/profile"><%= locals.loggedUser.first_name %><img class="head-user-img" src="/images/users/<%= locals.loggedUser.avatar%>"></a></li>             
-                    <li><a href="#">Mis Favoritos</a></li>
                     <li><a href="/carrito-compra"><i class="fas fa-shopping-cart carrito"></i></a></li>
                     <li><a href="/users/logout">Logout</a></li>
                     <% }else{%>
