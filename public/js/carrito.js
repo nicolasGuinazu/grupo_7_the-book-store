@@ -13,11 +13,19 @@ boton.addEventListener('click',function(){
     let purchasedProduct={
         title:product[0].innerHTML,
         author:product[1].innerHTML,
-        price:product[2].innerHTML
+        price:product[3].innerHTML,
     }
-    cart.push(purchasedProduct)
+    
+    if(cart.find((el)=>el.title==product[0].innerHTML)){
+        console.log(cart.length)
+        console.log('ya esta')
+        
+    }else{
+        cart.push(purchasedProduct)
+    }
     localStorage.setItem('product',JSON.stringify(cart))
     
     
 })
+
 })
