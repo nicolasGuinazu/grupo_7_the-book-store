@@ -1051,9 +1051,10 @@ background-color: #3E60F7;
     margin-bottom: 3px;
     padding: 3px;
     border: 1px solid #000;
-    background-color: rgb(0, 140, 255);
+    background-color: rgb(42, 159, 255);
     color: #fff;
-    width: 30%;
+    width: 60%;
+    height: 20%;
     text-align: center;
     display: flex;
 }
@@ -1066,3 +1067,16 @@ background-color: #3E60F7;
     cursor: pointer;
 }
 
+.buy{
+    margin-left: 48%;
+    margin-bottom: 50%;
+    text-align: center;
+    background-color: green;
+    font-size: 1rem;
+    color: #ffff;
+    border: none;
+    cursor: pointer;
+}
+.buy:hover{
+    background-color: rgb(0, 182, 0);
+}
