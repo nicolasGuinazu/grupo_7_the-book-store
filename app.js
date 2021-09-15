@@ -33,6 +33,12 @@ app.set('view engine', 'ejs');
 
 
 /****************** RUTAS *************************/
+const productsApiRouter=require('./routes/api/products')
+app.use('/api/products', productsApiRouter);
+
+const usersApiRouter=require('./routes/api/users')
+app.use('/api/users', usersApiRouter);
+
 const testRouter=require('./routes/test')
 app.use('/test', testRouter);
 const productsRouter = require('./routes/products'); // Rutas /products
