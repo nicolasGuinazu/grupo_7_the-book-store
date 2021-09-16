@@ -1,5 +1,6 @@
 const db = require("../database/models");
 const bcrypt = require('bcryptjs');
+const { Sequelize } = require('sequelize')
 
 const controller = {
   addresses: async (req, res) => {
@@ -43,7 +44,11 @@ const controller = {
   genres: async (req, res) => {
     try {
       let genres = await db.Genre.findAll({
-        include: ["products"],
+        attributes: { 
+          include: [[Sequelize.fn("COUNT", Sequelize.col("genre_id")), "count"]] 
+      },
+      include: ["products"],
+      group: ['idgenre'],
       });
       res.send(genres);
     } catch (err) {
@@ -67,14 +72,14 @@ const controller = {
     }
   },
   products: async (req, res) => {
-    try {
+     try {
       let products = await db.Product.findAll({
         include: ["author", "genre"],
-      }); //Association with alias "author" does not exist on Product
+      }); 
       res.send(products);
     } catch (err) {
       console.log(err);
-    }
+    } 
   },
   users: async (req, res) => {
     try {
