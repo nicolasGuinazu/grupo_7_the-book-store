@@ -1,7 +1,6 @@
 const db = require("../database/models");
 const bcrypt = require('bcryptjs');
 const { Sequelize } = require('sequelize');
-const e = require("express");
 
 const controller = {
   addresses: async (req, res) => {

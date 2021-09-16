@@ -28,7 +28,7 @@ const controller={
             meta:{
               status:200,
               count:products.length,
-              countByCategory:genreList
+              countByGenre:genreList
             },
             data:{
               products,
