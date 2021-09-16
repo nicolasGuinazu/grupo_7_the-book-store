@@ -1,6 +1,7 @@
 const db = require("../database/models");
 const bcrypt = require('bcryptjs');
-const { Sequelize } = require('sequelize')
+const { Sequelize } = require('sequelize');
+const e = require("express");
 
 const controller = {
   addresses: async (req, res) => {
@@ -43,14 +44,21 @@ const controller = {
   },
   genres: async (req, res) => {
     try {
+      let newGenre=[]
       let genres = await db.Genre.findAll({
         attributes: { 
           include: [[Sequelize.fn("COUNT", Sequelize.col("genre_id")), "count"]] 
       },
       include: ["products"],
       group: ['idgenre'],
+      
       });
-      res.send(genres);
+      for(let i = 0; i < genres.length; i++){
+       
+        newGenre.push({name:genres[i].dataValues.name,count:genres[i].dataValues.count})
+     /*    newGenre.push({name:genres[i].name,count:genres[i].count}) */
+      }
+      res.send(newGenre);
     } catch (err) {
       console.log(err);
     }
