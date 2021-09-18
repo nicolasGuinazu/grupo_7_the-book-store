@@ -3,10 +3,18 @@ const { Sequelize } = require('sequelize');
 const controller={
     products: async (req, res) => {
         try {
-          let products = await db.Product.findAll({
+          let productsApi = await db.Product.findAll({
             include: ["author", "genre"],
             attributes: ['idproduct','name','synopsis'] //selecciona unicamente estas columnas de la base
           }); 
+          let products=productsApi.map((product)=>{ //por cada elemento del array productsApi se le agrega la propiedad urlDetail
+            
+            return{
+              ...product.dataValues,
+              urlDetail:`http://localhost:3000/api/products/${product.idproduct}`
+            } 
+          })
+
           let genreList=[] //array base para guardar generos con productos asociados
           let genres = await db.Genre.findAll({
             attributes: { 
@@ -38,6 +46,27 @@ const controller={
           console.log(err);
         }
       },
+      productsDetails: async (req, res) => {
+        try{
+          let singleProduct=await db.Product.findOne({
+            where:{idproduct:req.params.id},
+            include: ["author", "genre"],
+          })
+          res.json({
+            meta:{
+              status:200,
+            },
+            data:{
+              ...singleProduct.dataValues, //para usar el spread hay que acceder a esa propiedad
+              urlAvatar:`http://localhost:3000/images/products/${singleProduct.dataValues.image}`
+            }
+          });
+        }
+        catch(err){
+          console.log(err);
+        }
+
+      }
 }
 
 module.exports=controller
