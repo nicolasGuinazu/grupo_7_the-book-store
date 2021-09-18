@@ -20,10 +20,30 @@ const controller = {
 
         let error = validationResult(req);
 
+        //Si hay errores los muestra y no procesa el registro
         if (!error.isEmpty()){
             error=error.mapped()
            return res.render('./users/registerForm',{error, old: req.body})
         }
+
+        //Valida que el usuario a crear no exista en la base de datos
+        try {
+            let userCheck = await db.User.findOne({
+                where: {
+                email: req.body.email
+                }
+                });
+            
+            if (userCheck){
+                let errorRepeat = "Existe un usuario registrado con este Email"
+                return res.render('./users/registerForm',{errorRepeat, old: req.body})
+            }
+
+        }catch (err) {
+            console.log(err);      
+            }
+        
+
          //Encrypt password
          let cryptedPass = bcrypt.hashSync(req.body.password, 10);
     

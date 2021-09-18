@@ -15,6 +15,9 @@
                     <% if (locals && locals.error && locals.error.email) { %>
                         <p class="validation-error"><%= locals.error.email.msg %> </p>
                     <% } %>
+                    <% if (locals && locals.errorRepeat) { %>
+                        <p class="validation-error"><%= locals.errorRepeat %> </p>
+                    <% } %>
                     <label for="password">Contraseña</label>
                     <input type="password" name="password" id='password' placeholder="Ingrese contraseña">
                     <% if (locals && locals.error && locals.error.password) { %>
