@@ -5,12 +5,13 @@ const controller={
         try {
           let productsApi = await db.Product.findAll({
             include: ["author", "genre"],
-            attributes: ['idproduct','name','synopsis'] //selecciona unicamente estas columnas de la base
+            attributes: ['idproduct','name','synopsis','image'] //selecciona unicamente estas columnas de la base
           }); 
           let products=productsApi.map((product)=>{ //por cada elemento del array productsApi se le agrega la propiedad urlDetail
             
             return{
               ...product.dataValues,
+              image:`http://localhost:3000/images/products/${product.image}`,
               urlDetail:`http://localhost:3000/api/products/${product.idproduct}`
             } 
           })
