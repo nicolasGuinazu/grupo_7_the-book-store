@@ -3,13 +3,14 @@ const controller={
     users: async (req, res) => {
         try {
           let users = await db.User.findAll({
-            attributes: ['iduser','name','email']
+            attributes: ['iduser','name','email','avatar']
           });
           let usersApi=users.map((user)=>{  //por cada elemento del array usuario se le agrega la propiedad urlDetail
             
             return{
               ...user.dataValues, //la propiedad dataValues tiene todos los valores de ese user
-              urlDetail:`http://localhost:3000/api/users/${user.iduser}` //se agrega dinamicamente el id
+              urlDetail:`http://localhost:3000/api/users/${user.iduser}`, //se agrega dinamicamente el id
+              avatar:`http://localhost:3000/images/users/${user.avatar}`,
             } 
           })
           res.json({
