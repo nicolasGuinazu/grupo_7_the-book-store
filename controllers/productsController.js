@@ -8,9 +8,12 @@ const controller = {
     try {
         let products = await db.Product.findAll({
           where:{
-            name: {
+            [Op.or]:[ 
+              {name: {
               [Op.like]: `%${req.query.search}%`
-            }
+            }},{'$author.name$': {
+              [Op.like]: `%${req.query.search}%`
+            }}]
           },
           include: ["author", "genre"],
         }); 
