@@ -22,18 +22,18 @@ const upload = multer({storage});
 const usersController = require('../controllers/usersController');
 
 // ************ Login usuario ***********
-router.get('/login',  guestMiddleware,usersController.login);
+router.get('/login',  guestMiddleware,usersController.login); //acceso permitido solo para usuarios invitados (sin logearse) 
 router.post('/login', loginValidator,usersController.processLogin);
 
 // ************ Registro usuario ***********
-router.get('/register',  guestMiddleware,usersController.register);
+router.get('/register',  guestMiddleware,usersController.register); //acceso permitido solo para usuarios invitados (sin logearse) 
 router.post('/register', upload.single('avatar'), registerValidator,usersController.registerUser);
 
 // ************ User Logout ***********
 
-router.get('/logout',authMiddleware, usersController.logout);
+router.get('/logout',authMiddleware, usersController.logout);  //acceso permitido solo para usuarios logeados 
 
 // ************ Perfil de Usuario ***********
-router.get('/profile', authMiddleware,usersController.profile);
+router.get('/profile', authMiddleware,usersController.profile);  //acceso permitido solo para usuarios logeados 
 
 module.exports = router;
