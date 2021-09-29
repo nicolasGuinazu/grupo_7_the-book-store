@@ -9,40 +9,21 @@
         <li>
             <h5 class="section">OFERTAS</h5>
         </li>
-    </ul>    
-    <section class="LibrosOfertas">
-            <article class="libro">
-                <img src="/images/ID1_Shopenhauer.jpg" class="portadaLibro" alt="" width="80px" height="120px">
+    </ul>                  
+                                              
+        <% products.forEach(element => { %>
+            <section class="LibrosOfertas">
+                <article class="libro">
+                    <img src="/images/products/<%= element.image%>"class="portadaLibro" alt="" width="80px" height="120px">
                     <div class="Detalle">
-                        <a class="nombre-libro">Un año con Schopenhauer</a><br>
-                        <a class="autor-libro">Irvin D. Yalom</a><br>
-                        <a class="price">$99.99</a>
+                        <a class="nombre-libro"><%= element.name%></a><br>    
+                        <a class="autor-libro" name="author" id="author"><%= element.author && element.author.name%></a>
+                        <a class="price"><%= element.price%></a>
                     </div>
-            </article>    
-            <article class="libro1">
-                <img src="/images/ID2_Spinoza.jpg" class="portadaLibro" alt="" width="80px" height="120px">
-                    <div class="Detalle">
-                        <a class="nombre-libro">El enigma Spinoza</a><br>
-                        <a class="autor-libro">Irvin D. Yalom</a><br>
-                        <a class="price">$99.99</a>
-                    </div>
-            </article>
-            <article class="libro2">
-                <img src="/images/Libro3.jpg" class="portadaLibro" alt="" width="80px" height="120px">
-                    <div class="Detalle">
-                        <a class="nombre-libro">El dia que Nietzsche lloro</a><br>
-                        <a class="autor-libro">Irvin D. Yalom</a><br>
-                        <a class="price">$99.99</a>
-                    </div>
-            </article>
-            <article class="libro3">
-                <img src="/images/Libro4.jpg" class="portadaLibro" alt="" width="80px" height="120px">
-                <div class="Detalle">
-                    <a class="nombre-libro">La Psicoterapia y la condición Humana</a><br>
-                    <a class="autor-libro">Irvin D. Yalom</a><br>
-                    <a class="price">$99.99</a>
-                </div>        
-            </article>            
+                </article>    
+            </section>
+        <% }) %></a><br>                   
+           
  <!--           <article class="libro4">
                 <img src="/images/Libro5.jpg" class="portadaLibro" alt="" width="80px" height="120px">
                 <div class="Detalle">
@@ -59,7 +40,7 @@
                     <a class="price">$99.99</a>
                 </div>        
             </article>-->
-    </section>
+    
     <ul type="none">
         <li>
             <h5 class="section">LOS MAS BUSCADOS</h5>

@@ -3,6 +3,8 @@ module.exports={
     "username": process.env.DB_USER,
     "password": process.env.DB_PASS,
     "database": process.env.DB_NAME,
+    // Agregar Port y ponerlo en .env
+    "port": process.env.DB_PORT,
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

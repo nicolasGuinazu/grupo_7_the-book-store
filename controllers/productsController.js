@@ -141,6 +141,17 @@ const controller = {
     }
   },
 
+  indexProducts: async (req, res) => {
+    try {
+        let products = await db.Product.findAll({
+          include: ["author", "genre"],
+        }); //Association with alias "author" does not exist on Product
+        return res.render('index', {products}); 
+      } catch (err) {
+        console.log(err);
+      }
+    
+    },
 };
 
 module.exports = controller;
