@@ -1,8 +1,126 @@
 *{
-    background-color:rgba(204, 204, 204, 0.082);
     margin: auto;
     box-sizing: border-box;
     font-family: roboto, sans-serif;
+}
+
+
+/*--------------------------------------MAIN----------------------------------------------------*/
+main {
+    background-color: #ebebeb;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    padding: 0px;
+}
+
+.heart{
+    color: skyblue;
+    position: relative;
+    top: -77px;
+    left: -80px;
+}
+.heart:hover {
+    display: block;
+    color: rgb(14, 14, 204);
+}
+
+.section {
+    font-size: 24px;
+    color: #666666;
+    padding: 15px;
+    text-align: inherit;
+}
+
+.eachBook {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+article {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 10px;
+    background-color: white;
+    text-align: center;
+}
+article:hover {
+    box-shadow: 0px 0px 10px #646464;
+}
+
+
+.productDetail {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    display: flex;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.book {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-style: italic;
+}
+.description {
+    color: black;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: all 1s;
+}
+
+
+
+
+@media (min-width:720px){    
+
+    .eachBook {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    article  {
+        width: 42%;
+        margin: 25px;
+    }
+    article:hover {
+        box-shadow: 0px 0px 10px #646464;
+    }
+    .details {
+        margin: 0px;
+    }
+}  
+@media (min-width:1200px){
+
+    article {
+        width: 20%;
+        margin: 27px;
+    }
+
+    .eachBook {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    article:hover {
+        box-shadow: 0px 0px 10px #646464;
+    }
 }
 
 
@@ -474,138 +592,15 @@ title {
 
 /*------------------------------------FIN HEADER MOBILE--------------------------------------*/
 
-/*--------------------------------------MAIN----------------------------------------------------*/
-@media (min-width:320px){
-    .LibrosOfertas,
-    .merchandisingProducts {
-        display: flex;
-        padding: 0px;
-        margin: 0px;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-    }
-    
-    .libro,
-    .libro1,
-    .libro2,
-    .libro3,
-    .libroOferta,
-    .merchandising1,
-    .merchandising2,
-    .merchandising3 {
-        text-align: center;
-        margin: 0px;
-        width: 50%;
-        box-shadow: 0px 0px 10px #646464;
-        border: solid 2px #646464;
-        max-width: 35%;
-        margin: 30px;
-        padding-top: 15px;
-    }
-    .merchandising4 {
-        display: none;
-    }
-    .libro:hover,
-    .libro1:hover,
-    .libro2:hover,
-    .libro3:hover,
-    .libroOferta:hover,
-    .libroOferta3:hover,
-    .merchandising1:hover,
-    .merchandising2:hover,
-    .merchandising3:hover,
-    .merchandasing4:hover {
-        border: solid 2px #4c94ba;
-    }
-    .libro2,
-    .libro3,
-    .libroOferta3,
-    .libroOferta4 {
-        display: none;
-    }
-    
-    .Detalle {
-        margin: 0px;
-    }
-    .Detalle:hover {
-        background-color: #ffc552;
-    }
-    .nombre-libro {
-        font-size: 12px;
-        font-weight: bolder;
-    }
-    .autor-libro{
-        font-size: 11px;
-        font-weight: bolder;
-    }
-    .price {
-        font-size: 15px;
-        font-style: italic;
-        margin-bottom: 10px;
-    }
-    .section {
-        text-align: center;
-        font-weight: bolder;
-        font-size: 18px;
-        width: 100vw;
-        padding-bottom: 15px;
-        padding-top: 15px;
-    }
-    .section:hover {
-        font-size: 24;
-        color: #4c94ba;
-    }
-    ul {
-        padding: 0px;
-    }
-
-@media (min-width:768px){    
-    .libro,
-    .libro1,
-    .libro2,
-    .libro3,
-    .libroOferta,
-    .libroOferta3
-     {
-        text-align: center;
-        margin: 0px;
-        width: 50%;
-        box-shadow: 0px 0px 10px #646464;
-        border: solid 2px #646464;
-        max-width: 18%;
-        margin: 30px;
-        padding-top: 15px;
-    }
-    .libro:hover,
-    .libro1:hover,
-    .libro2:hover,
-    .libro3:hover,
-    .libroOferta:hover,
-    .libroOferta3:hover {
-        border: solid 2px #4c94ba;
-    }
-    .libro2,
-    .libroOferta3 {
-        display: block;
-    }
-    .libro3,
-    .libroOferta4 {
-        display: none;
-    }
-    
-@media (min-width:1200px){
-.LibrosOfertas {
-    justify-content: space-around;
-}
-.libro:hover,
-.libro1:hover,
-.libro2:hover,
-.libro3:hover {
-    border: solid 2px #4c94ba;
-}
-}
-
-/*                           DETALLE DEL PRODUCTO 
+/*           
+  "eachBook">                
+            
+              booksOffer
+                    <book"
+                      "bookImage" 
+                  detail"
+                      booksName">  
+                   price">      DETALLE DEL PRODUCTO 
 
 colores
 background-color: #3E60F7;
@@ -896,9 +891,9 @@ background-color: #3E60F7;
 
 .card-create-prod button:hover{
     background-color: #ffc552;
-}
-}
-}
+ }
+
+
 
 /*********************************FORM LOGIN**************************************************/
 .card-login{
@@ -1024,6 +1019,7 @@ background-color: #3E60F7;
     color:red; 
     background-color: #ffff;
 }
+
 
 /*********************************FORM PROFILE**************************************************/
 .card-profile{

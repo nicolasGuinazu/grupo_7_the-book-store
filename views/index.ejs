@@ -5,98 +5,48 @@
 <%-include('partials/header')%>
     <img class="banner" width = "90vw" height = "" src="/images/banner.jpg" alt="IMAGEN CARRUSEL"> <br>
 <main>
-    <ul type="none">
-        <li>
-            <h5 class="section">OFERTAS</h5>
-        </li>
-    </ul>                  
-                                              
-        <% products.forEach(element => { %>
-            <section class="LibrosOfertas">
-                <article class="libro">
-                    <img src="/images/products/<%= element.image%>"class="portadaLibro" alt="" width="80px" height="120px">
-                    <div class="Detalle">
-                        <a class="nombre-libro"><%= element.name%></a><br>    
-                        <a class="autor-libro" name="author" id="author"><%= element.author && element.author.name%></a>
-                        <a class="price"><%= element.price%></a>
-                    </div>
-                </article>    
-            </section>
-        <% }) %></a><br>                   
-           
- <!--           <article class="libro4">
-                <img src="/images/Libro5.jpg" class="portadaLibro" alt="" width="80px" height="120px">
-                <div class="Detalle">
-                    <a class="nombre-libro">Memorias de un Psiquiatra</a><br>
-                    <a class="autor-libro">Irvin D. Yalom</a><br>
-                    <a class="price">$99.99</a>
-                </div>        
-            </article>
-            <article class="libro5">
-                <img src="/images/Libro6.jpg" class="portadaLibro" alt="" width="80px" height="120px">
-                <div class="Detalle">
-                    <a class="nombre-libro">Verdugo del amor</a><br>
-                    <a class="autor-libro">Irvin D. Yalom</a><br>
-                    <a class="price">$99.99</a>
-                </div>        
-            </article>-->
-    
-    <ul type="none">
-        <li>
-            <h5 class="section">LOS MAS BUSCADOS</h5>
-        </li>
-    </ul>
-    <section class="LibrosOfertas">
-                <article class="libroOferta">
-                    <img src="/images/ID2_Spinoza.jpg" class="portadaLibro" alt="" width="80px" height="120px">
-                        <div class="Detalle">
-                            <a class="nombre-libro">Otro libro</a><br>
-                            <a class="autor-libro">Autor</a><br>
-                            <a class="price">$99.99</a>
-                        </div>
-                </article>
-                <article class="libroOferta">
-                    <img src="/images/ID1_Shopenhauer.jpg" class="portadaLibro" alt="" width="80px" height="120px">
-                    <div class="Detalle">
-                        <a class="nombre-libro">Otro libro diferente</a><br>
-                        <a class="autor-libro">Autor</a><br>
-                        <a class="price">$99.99</a>
-                    </div>
-                </article>
-                <article class="libroOferta3">
-                    <img src="/images/Libro4.jpg" class="portadaLibro" alt="" width="80px" height="120px">
-                    <div class="Detalle">
-                        <a class="nombre-libro">Un Libro mas</a><br>
-                        <a class="autor-libro">Autor</a><br>
-                        <a class="price">$99.99</a>
-                    
-                    </div>    
-                </article>
-                <article class="libroOferta4">
-                    <img src="/images/Libro3.jpg" class="portadaLibro" alt="" width="80px" height="120px">
-                    <div class="Detalle">
-                        <a class="nombre-libro">Librillo</a><br>
-                        <a class="autor-libro">Autor</a><br>
-                        <a class="price">$99.99</a>
-                    </div>
-                </article>
-<!--                <article class="libro">
-                    <img src="/images/Libro6.jpg" class="portadaLibro" alt="" width="80px" height="120px">
-                    <div class="Detalle">
-                        <a class="nombre-libro">Librote</a><br>
-                        <a class="autor-libro">Autor</a><br>
-                        <a class="price">$99.99</a>
-                    </div>
-                </article>
-                <article class="libro">
-                    <img src="/images/Libro5.jpg" class="portadaLibro" alt="" width="80px" height="120px">
-                    <div class="Detalle">
-                        <a class="nombre-libro">Libring la vida loca</a><br>
-                        <a class="autor-libro">Autor</a><br>
-                        <a class="price">$99.99</a>
-                    </div>
-                </article> -->
-    </section>
+    <div class=cuerpo>
+        <ul type="none">
+            <li>
+                <h5 class="section">OFERTAS</h5>
+            </li>          
+            <div onclick="" class="eachBook">  
+                <% products.forEach(element => { %>
+                
+                        <article class="book">
+                            <div class="details">
+                                <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220">
+                                <div class="productDetail">
+                                    <a class="price"><%= element.price%></a>
+                                 </div>                                
+                                    <h4 class="booksName"><%= element.name%></h4><br>        <p class="heart">&hearts;<p>
+                                    <h4 class="booksAuthor" name="author" id="author">Autor:  <%= element.author && element.author.name%></h4>
+                            </div>
+                        </article>    
+                <% }) %><br>   
+            </div>                  
+                
+            <li>
+                <h5 class="section">LOS MAS BUSCADOS</h5>
+            </li>
+
+            <div class="eachBook">                     
+                <% products.forEach(element => { %>
+                    <article>
+                            <div class="detail">
+                                <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220"> <br>
+                                <div clas="productDetail">
+                                    <a class="price"><%= element.price%></a>   
+                                </div>                     
+                                <h4 class="description"><%= element.name%></h4><br>    
+                                <h4 class="description" name="author" id="author"><%= element.author && element.author.name%></h4>
+                            </div>
+                        </article>    
+            
+                <% }) %></a><br>   
+            </div>          
+        </ul>    
+    </div> 
    
 </main>
 <%-include('partials/footer')%>
