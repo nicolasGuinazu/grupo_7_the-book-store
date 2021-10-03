@@ -5,6 +5,15 @@
 <%-include('partials/header')%>
     <img class="banner" width = "90vw" height = "" src="/images/banner.jpg" alt="IMAGEN CARRUSEL"> <br>
 <main>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" id="closebtn">&times;</a>
+        <a href="/">Inicio</a>
+        <a href="/products">Libros</a>
+        <a href="/products/ebooks">E-books</a>
+        <a href="/products/offers">Ofertas</a>
+        <a href="/users/login">Iniciar Sesión</a>
+        <a href="/users/register">Registrarse</a>        
+    </div>
     <div class=cuerpo>
         <ul type="none">
             <li>
@@ -49,6 +58,7 @@
     </div> 
    
 </main>
-<%-include('partials/footer')%>
+<script src="/js/indexScript.js"></script>
 </body>
+<%-include('partials/footer')%>
 </html>
