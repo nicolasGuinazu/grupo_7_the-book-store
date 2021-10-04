@@ -3,6 +3,17 @@
 <%-include('partials/head')%>
 <body>
 <%-include('partials/header')%>
+<script src="/js/carousel.js"></script>
+<!-- <div class="carousel-wrapper">
+    <div class="carousel">
+      <img class="carousel__photo initial" src="public/images/PremioCuentoInfantil.jpg">
+      <img class="carousel__photo" src="public/images/banner_libros.jpg">
+     
+        
+      <div class="carousel__button--next"></div>
+      <div class="carousel__button--prev"></div>
+    </div>
+  </div> -->
     <img class="banner" width = "90vw" height = "" src="/images/banner.jpg" alt="IMAGEN CARRUSEL"> <br>
 <main>
     <div class=cuerpo>
@@ -17,9 +28,9 @@
                             <div class="details">
                                 <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220">
                                 <div class="productDetail">
-                                    <a class="price"><%= element.price%></a>
-                                 </div>                                
-                                    <h4 class="booksName"><%= element.name%></h4><br>        <p class="heart">&hearts;<p>
+                                    <a class="price">$ <%= element.price%></a>
+                                </div>                                
+                                    <h4 class="booksName"><%= element.name%></h4><br>
                                     <h4 class="booksAuthor" name="author" id="author">Autor:  <%= element.author && element.author.name%></h4>
                             </div>
                         </article>    
@@ -27,24 +38,24 @@
             </div>                  
                 
             <li>
-                <h5 class="section">LOS MAS BUSCADOS</h5>
+                <h5 class="section">RECOMENDADOS</h5>
             </li>
 
-            <div class="eachBook">                     
+            <div onclick="" class="eachBook">  
                 <% products.forEach(element => { %>
-                    <article>
-                            <div class="detail">
-                                <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220"> <br>
-                                <div clas="productDetail">
-                                    <a class="price"><%= element.price%></a>   
-                                </div>                     
-                                <h4 class="description"><%= element.name%></h4><br>    
-                                <h4 class="description" name="author" id="author"><%= element.author && element.author.name%></h4>
+                
+                        <article class="book">
+                            <div class="details">
+                                <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220">
+                                <div class="productDetail">
+                                    <a class="price">$ <%= element.price%></a>
+                                 </div>                                
+                                    <h4 class="booksName"><%= element.name%></h4><br>
+                                    <h4 class="booksAuthor" name="author" id="author">Autor:  <%= element.author && element.author.name%></h4>
                             </div>
                         </article>    
-            
-                <% }) %></a><br>   
-            </div>          
+                <% }) %><br>   
+            </div>                       
         </ul>    
     </div> 
    
