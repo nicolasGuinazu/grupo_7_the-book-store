@@ -45,19 +45,15 @@
             
             <div onclick="" class="eachBook">  
                 <% products.forEach(element => { %>
-               
-               
-                   <a href="/products/detail/<%= element.idproduct%>" class="productLink" method="GET" > 
+                   <a href="/products/detail/<%= element.idproduct%>" class="productLink" method="GET"> 
                         <article class="book">
-                            
-                            <div class="details">
-                               
+                            <div class="details">                               
                                 <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220">
                                 <div class="productDetail">
                                     <a class="price">$ <%= element.price%></a>
                                 </div>                                
-                                    <h4 class="booksName"><%= element.name%></h4><br>
-                                    <h4 class="booksAuthor" name="author" id="author">Autor:  <%= element.author && element.author.name%></h4>
+                                <h4 class="booksName"><%= element.name%></h4><br>
+                                <h4 class="booksAuthor" name="author" id="author">Autor:  <%= element.author && element.author.name%></h4>
                             </div>
                         </article>  
                     </a>  
@@ -70,7 +66,7 @@
 
             <div onclick="" class="eachBook">  
                 <% products.forEach(element => { %>
-                
+                    <a href="/products/detail/<%= element.idproduct%>" class="productLink" method="GET"> 
                         <article class="book">
                             <div class="details">
                                 <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220">
@@ -80,7 +76,8 @@
                                     <h4 class="booksName"><%= element.name%></h4><br>
                                     <h4 class="booksAuthor" name="author" id="author">Autor:  <%= element.author && element.author.name%></h4>
                             </div>
-                        </article>    
+                        </article>  
+                    </a>  
                 <% }) %><br>   
             </div>                       
         </ul>    

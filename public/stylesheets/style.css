@@ -13,6 +13,10 @@ main {
     margin-right: auto;
 }
 
+.btn.btn-outline-primary {
+    background-color: #181c64;
+    color: white;
+}
 .productLink {
     position: relative;
     margin: 0px;
@@ -23,12 +27,7 @@ ul {
     padding: 0px;
 }
 
-.heart{
-    color: rgb(33, 30, 221);
-    position: relative;
-    top: -77px;
-    left: -80px;
-}
+
 
 .section {
     font-size: 24px;
