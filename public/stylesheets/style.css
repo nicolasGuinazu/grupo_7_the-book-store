@@ -13,6 +13,9 @@ main {
     margin-right: auto;
 }
 
+.d-block.w-100 {
+    max-height: 300.234px;
+}
 .btn.btn-outline-primary {
     background-color: #181c64;
     color: white;
