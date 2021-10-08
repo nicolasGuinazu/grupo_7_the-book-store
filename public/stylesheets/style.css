@@ -13,6 +13,8 @@ main {
     margin-right: auto;
 }
 
+
+
 .d-block.w-100 {
     max-height: 300.234px;
 }
@@ -706,6 +708,21 @@ Rosa línea #FA78E3
 
 background-color: #3E60F7;
 */
+.cuerpo {
+    background-color: #ebebeb;    
+}
+
+.burger-button {
+margin-left: 15px;
+}
+
+.logoTBSMovil {
+margin-right: 0px;
+}
+
+.carritoMovil {
+margin-right: 15px;
+}
 
 .main-detalle-producto {
     width: 97%;
@@ -713,14 +730,16 @@ background-color: #3E60F7;
     margin-top: 2vw;
 }
 .producto {
+    display: block;
     background-color: #fff;
     padding-top: 15px;
     box-shadow: 0px 0px 10px #646464;
     border: solid 2px #4c94ba;
-    min-width: 30vw;
+    min-width: 60vw;
 }
 .producto-principal {
     padding: 4vw 6vw;
+    text-align: -webkit-center;
 }
 
 .producto-principal a{
@@ -733,6 +752,7 @@ background-color: #3E60F7;
 .datos-producto {
     background-color: #fff;
     max-width: 80%;
+    max-height: 230px;
     box-sizing: border-box;
 }
 .datos-producto h3 {
@@ -873,6 +893,9 @@ background-color: #3E60F7;
     font-size: 1.4rem;
     padding-top: 3px;
 }
+.compartir-carrito-favs.tablet {
+    visibility: hidden;
+}
 
 
 @media(min-width:768px){
@@ -884,23 +907,30 @@ background-color: #3E60F7;
     .producto-principal .datos-producto {
         display: flex;
         flex-direction: column;
-        margin: 0;
+        margin-left: 6px;
+    }
+
+    .producto {
+        min-width: 70vw;
     }
     .compartir-carrito-favs {
         visibility: hidden;
     }
-    .tablet {
-        visibility: none;
+
+
+    .compartir-carrito-favs.tablet {
+        visibility: visible;
     }
     .propuestas article {
         max-width: 30%;
     }
+    .datos-producto {
+        max-height: 300px;
+    }
 }
 
 @media(min-width:1024px){
-    .producto-principal {
-    max-width: 80%;
-    }
+ 
 }
 
 /*********************************FORM CREATE PRODUCT**************************************************/

@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include('../partials/headProduct')%>
-<body>
-<%-include('../partials/header')%>
-    <main class="main-detalle-producto">
-        <% products.forEach(element => { %>
-            
-        <div class="producto-principal">
-            <a href="/products/detail/<%= element.idproduct%>" method="GET">
-            <article class="producto">
-                <div class="imagen-producto">
-                    <img src="/images/products/<%= element.image%>" width="100px" height="140px">
-                </div>
-                <div class="datos-producto">
-                    <h3><%= element.name%></h3>
-                    <h4><%= element.author && element.author.name%></h4>
-                    <h4><%= element.genre && element.genre.name%></h4>
-                    <h2>$ <%= element.price%></h2>
-                </div> 
-            </article>
-            </a>
-        </div>
-        <% }) %>
-        <br>
-        <br>
-    </main>
+    <%-include('../partials/head')%>
+
+    <body>
+       
+    <%-include('../partials/header')%>
+    <div class=cuerpo>
+        <ul type="none">
+            <li>
+                <h5 class="section">PRODUCTOS</h5>
+            </li>          
+            <div onclick="" class="eachBook">  
+                <% products.forEach(element => { %>
+                   <a href="/products/detail/<%= element.idproduct%>" class="productLink" method="GET"> 
+                        <article class="book">
+                            <div class="details">                               
+                                <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220">
+                                <div class="productDetail">
+                                    <a class="price">$ <%= element.price%></a>
+                                </div>                                
+                                <h4 class="booksName"><%= element.name%></h4><br>
+                                <h4 class="booksAuthor" name="author" id="author">Autor:  <%= element.author && element.author.name%></h4>
+                            </div>
+                        </article>  
+                    </a>  
+                <% }) %><br>   
+            </div>                          
+        </ul>    
+    </div> 
+</main>
 <%-include('../partials/footer')%>
 </body>
 </html>
