@@ -13,6 +13,11 @@ main {
     margin-right: auto;
 }
 
+.productLink {
+    position: relative;
+    margin: 0px;
+}
+
 ul {
     padding: 0px;
 }
@@ -1230,7 +1235,6 @@ background-color: #3E60F7;
     padding: .5rem 1rem;
     margin: .5rem;
     background: #fff;
-    /*-webkit-box-shadow: 0.1rem 0.1rem 0.2rem rgb(0 0 0 / 10%);*/
     box-shadow: 0.1rem 0.1rem 0.2rem rgb(0 0 0 / 10%);
     padding: 1.5rem;
     width: 100%;
@@ -1265,3 +1269,46 @@ background-color: #3E60F7;
 .content-cookies h1{
     background-color: #ffff;
 }
+
+/****************************** SIDEBAR MENU ***********************************************/
+.sidebar {
+    height: 100%; 
+    width: 0; 
+    position: fixed; /* Fijado */
+    z-index: 1; /* Arriba */
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  
+  /* Links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* Efecto al pasar sobre los links */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Para resoluciones mas chicas se ajusta el padding y tamaño de la fuente de los links */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
