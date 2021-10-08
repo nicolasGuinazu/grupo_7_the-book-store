@@ -209,6 +209,11 @@ h4 {
     color: rgb(7, 207, 7)
 }
 
+.btn.btn-outline-primary.subscribe {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 /*----------------------------------------------Carrito de compras (mobile)-----------------------------------------------------------*/
 .body-carrito{
     background-color: rgb(12, 171, 177);
