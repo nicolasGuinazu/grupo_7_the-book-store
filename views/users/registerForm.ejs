@@ -3,7 +3,7 @@
 <body>
     <%-include('../partials/header')%>
    <main>
-
+    <%-include('../partials/sidebar')%>
     <div class="card-login">   
         <form class="form-register" method="POST" action="/users/register" enctype="multipart/form-data">  
             <div class="container-register">
@@ -66,8 +66,9 @@
     </div>
     
     
-   </main>
+   </main>   
    <script src="/js/registerValidations.js"></script>
+   <script src="/js/sidebarScript.js"></script>
 </body>
 
 <!-----------------------------Footer------------------------------------------------>

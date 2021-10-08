@@ -425,7 +425,10 @@ title {
 @media(min-width:1024px){
 
 /*---------------------------------------------------Footer (Vista Escritorio)------------------------------------------------------*/
-    .footer-links-laptop{display: flex;}
+    .footer-links-laptop{
+        display: flex;
+        background-color: #ffc552;
+    }
 
     .footer-links-laptop ul{
         padding-top: 20px;
@@ -463,6 +466,8 @@ title {
     .copyright{
         color: black;
         font-size: 14px;
+        text-align: center;
+        margin: auto;
     }
 
 /*----------------------------------------------------------------------------------------------*/

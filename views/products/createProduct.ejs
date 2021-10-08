@@ -4,6 +4,7 @@
 <body>
 <%-include('../partials/header')%>
     <main>
+        <%-include('../partials/sidebar')%>
         <div class="card-create-prod">   
             <form action="/products/create" method="POST" class="inputform" enctype="multipart/form-data">   
                 <div class="msg-create-prod">
@@ -88,6 +89,7 @@
 
     </main>
     <script src="/js/storeProductValidations.js"></script>
+    <script src="/js/sidebarScript.js"></script>
 </body>
 
 <%-include('../partials/footer')%>

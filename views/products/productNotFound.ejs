@@ -3,9 +3,11 @@
 <%-include('../partials/headProduct')%>
 <body>
 <%-include('../partials/header')%>
+<%-include('../partials/sidebar')%>
     <main class="main-detalle-producto">
         <p>No se encontraron resultados con <%= locals.searched && searched %> Prueba nuevamente!</p>
     </main>
+    <script src="/js/sidebarScript.js"></script>
 <%-include('../partials/footer')%>
 </body>
 </html>
