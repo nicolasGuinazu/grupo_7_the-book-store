@@ -13,6 +13,9 @@ main {
     margin-right: auto;
 }
 
+body {
+    background-color: #ebebeb;
+}
 
 
 .d-block.w-100 {
@@ -204,6 +207,11 @@ h4 {
 .social-media .coment{
 
     color: rgb(7, 207, 7)
+}
+
+.btn.btn-outline-primary.subscribe {
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 /*----------------------------------------------Carrito de compras (mobile)-----------------------------------------------------------*/
@@ -620,7 +628,7 @@ margin-right: 15px;
 }
 
 .main-detalle-producto {
-    width: 97%;
+    padding: 10px;
     text-align: center;
     margin-top: 2vw;
 }
@@ -949,8 +957,6 @@ margin-right: 15px;
 .card-login button{
     background-color: #3e5f8a;
     font-size: 16px;
-    width: 100px;
-    height: 30px;
     color: white;
 }
 
