@@ -72,7 +72,7 @@ const controller = {
       let product = await db.Product.findByPk(req.params.id, {
         include: ["author", "genre"],
       }); //Association with alias "author" does not exist on Product
-      return res.render('./products/productDetail', {product});
+      return res.render('./products/productDetail2', {product});
     } catch (err) {
       console.log(err);
     }

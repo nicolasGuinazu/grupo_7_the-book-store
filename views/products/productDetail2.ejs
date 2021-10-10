@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head')%>
+
+
+    <body oncontextmenu="return false" class="snippet-body">
+        <%-include('../partials/header')%>
+        <%-include('../partials/sidebar')%>
+        <main>
+        <div class="container">
+            <div class="col-lg-8 border p-3 main-section bg-white">
+
+            <div class="row m-0">
+                <div class="col-lg-4 left-side-product-box pb-3">
+                    <img src="/images/products/<%= product.image%>" class="border p-3" id="book-image">
+                </div>
+                <div class="col-lg-8">
+                    <div class="right-side-pro-detail border p-3 m-0">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span id="prod-author"><%= product.author && product.author.name%></span>
+                                <p id="prod-title" class="m-0 p-0"><%= product.name%></p>
+                            </div>
+                            <div class="col-lg-12">
+                                <p id="prod-price" class="m-0 p-0 price-pro">$ <%= product.price%></p>
+                                <hr class="p-0 m-0">
+                            </div>
+                            <div class="col-lg-12 pt-2">
+                                <h5>Sinópsis</h5>
+                                <span><%= product.synopsis%></span>
+                                <hr class="m-0 pt-2 mt-2">
+                            </div>
+                            <p class="tag-section"><strong>Género : </strong><%= product.genre && product.genre.name%></p>
+                            <% if(locals.logged) { %> 
+                            <div class="col-lg-12">
+                                <h6>Cantidad :</h6>
+                                <input type="number" class="form-control text-center w-100" value="1">
+                            </div>
+                            <div class="col-lg-12 mt-3">
+                                <div class="row">
+                                    <div class="col-lg-6 pb-2">
+                                        <button id='agregarcarrito' class="btn btn-outline-primary">Agregar al Carrito</button>
+                                    </div>
+                                    <!--<div class="col-lg-6">
+                                        <a href="#" class="btn btn-success w-100">Shop Now</a>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row">
+                <div class="col-lg-12 text-center pt-3">
+                    <h4>Más Productos</h4>
+                </div>
+            </div>
+            <div class="row mt-3 p-0 text-center pro-box-section">
+            <div class="col-lg-3 pb-2">
+                <div class="pro-box border p-0 m-0">
+                    <img src="http://nicesnippets.com/demo/pd-b-image1.jpg">
+                </div>
+            </div>
+            <div class="col-lg-3 pb-2">
+                <div class="pro-box border p-0 m-0">
+                    <img src="http://nicesnippets.com/demo/pd-b-images2.jpg">
+                </div>
+            </div>
+            <div class="col-lg-3 pb-2">
+                <div class="pro-box border p-0 m-0">
+                    <img src="http://nicesnippets.com/demo/pd-b-images3.jpg">
+                </div>
+            </div>
+            <div class="col-lg-3 pb-2">
+                <div class="pro-box border p-0 m-0">
+                    <img src="http://nicesnippets.com/demo/pd-b-images4.jpg">
+                </div>
+            </div>
+            </div>-->
+        </div>
+        </main>
+        <!--</div>-->
+        <script type="text/javascript"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+        <script src="/js/sidebarScript.js"></script>        
+        <script src="/js/cart.js"></script>
+        <%-include('../partials/footer')%>
+    </body>
+</html>
