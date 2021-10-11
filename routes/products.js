@@ -22,7 +22,7 @@ const upload = multer({storage});
 const productsController = require('../controllers/productsController');
 
 // ************ Index Productos ***********
-router.get('/', productsController.index);
+router.get('/', productsController.list);
 router.get('/search', productsController.search);
 router.get('/ebooks', productsController.ebooks);
 router.get('/offers', productsController.offers);
