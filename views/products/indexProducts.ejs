@@ -21,7 +21,7 @@
                                     <a class="price">$ <%= element.price%></a>
                                 </div>                                
                                 <h4 class="booksName"><%= element.name%></h4><br>
-                                <h4 class="booksAuthor" name="author" id="author">Autor:  <%= element.author && element.author.name%></h4>
+                                <h4 class="booksAuthor" name="author" id="author"> <%= element.author && element.author.last_name%>, <%= element.author && element.author.name%></h4>
                             </div>
                         </article>  
                     </a>  
