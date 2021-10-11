@@ -96,7 +96,7 @@ h4 {
 
 
 
-@media (min-width:720px){    
+@media (min-width:720px){
 
     .eachBook {
         display: flex;
@@ -114,7 +114,7 @@ h4 {
     .details {
         margin: 0px;
     }
-}  
+}
 @media (min-width:1200px){
 
     article {
@@ -167,7 +167,7 @@ h4 {
 .footer-links-content{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    font-size: 14px;    
+    font-size: 14px;
 }
 
 .footer-links{
@@ -382,12 +382,12 @@ title {
         justify-content: space-between;
         align-items: flex-start;
     }
-    
+
     #cart-section .product {
         width: calc(33.3% - 20px);
         margin-bottom: 30px;
     }
-    
+
     .metodos-pago {
         position: absolute;
         top: 100%;
@@ -395,13 +395,13 @@ title {
         padding: 10px;
         margin-top: 0;
     }
-    
+
     .metodos-pago p {
         position: relative;
         display: inline-block;
         margin-right: 15px;
     }
-    
+
     }
     .other-products {
         display: flex;
@@ -429,7 +429,7 @@ title {
     .comprar-buttom a {
         text-decoration: none;
     }
-    
+
 @media(min-width:1024px){
 
 /*---------------------------------------------------Footer (Vista Escritorio)------------------------------------------------------*/
@@ -441,15 +441,15 @@ title {
     .footer-links-laptop ul{
         padding-top: 20px;
         padding-bottom: 20px;
-        background-color: none;        
-    }   
+        background-color: none;
+    }
 
     .footer-links-laptop li{
         display: inline-block;
         padding-inline-start: 0px;
         margin: 5px;
-        background-color: none;    
-        font-size: 14px;    
+        background-color: none;
+        font-size: 14px;
     }
 
 
@@ -458,7 +458,7 @@ title {
         color: black;
         font-size: 14px;
     }
-    
+
     .button-footer{
         background-color: #3e5f8a;
         font-size: 14px;
@@ -466,7 +466,7 @@ title {
         height: 25px;
         color: white;
     }
-    
+
     .button-footer:hover{
         background-color: #ffc552;
     }
@@ -490,7 +490,7 @@ title {
     }
 
     .links-header ul{
-        background-color: #ffc552; 
+        background-color: #ffc552;
     }
 
     .links-header li{
@@ -516,13 +516,13 @@ title {
     .logo-search-laptop a{
         background-color: transparent;
         }
-        
+
     .mainNav {
         display: flex;
         padding: 10px;
         justify-content: space-between;
-        flex-wrap: wrap;   
-        background-color: white;  
+        flex-wrap: wrap;
+        background-color: white;
     }
 
     .mainNav a{
@@ -549,10 +549,10 @@ title {
     .head-laptop{
         display: none;
         }
-    
+
     .footer-links-laptop{display: none;}
 
-    .search {        
+    .search {
         padding-bottom: 10px;
     }
 }
@@ -612,7 +612,7 @@ title {
 }
 /*******************    PRODUCT DETAIL     *******************/
 .cuerpo {
-    background-color: #ebebeb;    
+    background-color: #ebebeb;
 }
 
 .burger-button {
@@ -834,7 +834,7 @@ margin-right: 15px;
 }
 
 @media(min-width:1024px){
- 
+
 }
 
 /*********************************FORM CREATE PRODUCT**************************************************/
@@ -844,7 +844,7 @@ margin-right: 15px;
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
     background-color:#ffff;
     width: 50vw;
-    height:100%; 
+    height:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -886,7 +886,7 @@ margin-right: 15px;
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
-  
+
 .card-create-prod textarea {
     width: 100%;
     padding: 12px 20px;
@@ -896,7 +896,7 @@ margin-right: 15px;
     box-sizing: border-box;
   }
 
-  .card-create-prod select {    
+  .card-create-prod select {
     width: 100%;
     padding: 10px 10px;
     margin: 8px 0;
@@ -1011,7 +1011,7 @@ margin-right: 15px;
 .container-links-psw a:visited{
     color: blue;
     font-weight: bold;}
-    
+
 
 
 /*********************************FIN FORM LOGIN**************************************************/
@@ -1044,7 +1044,7 @@ margin-right: 15px;
 }
 
 .validation-error {
-    color:red; 
+    color:red;
     background-color: #ffff;
 }
 
@@ -1056,7 +1056,7 @@ margin-right: 15px;
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
     background-color:#ffff;
     width: 50vw;
-    height:100%; 
+    height:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1080,12 +1080,15 @@ margin-right: 15px;
     margin-bottom: 3px;
     padding: 3px;
     border: 1px solid #000;
-    background-color: rgb(42, 159, 255);
+    border-radius: 3px;
+    background-color: rgb(213, 215, 218);
     color: #fff;
     width: 60%;
-    height: 20%;
+    height: 10%;
     text-align: center;
     display: flex;
+    justify-content: center;
+
 }
 
 .erase{
@@ -1207,18 +1210,18 @@ margin-right: 15px;
 
 /****************************** SIDEBAR MENU ***********************************************/
 .sidebar {
-    height: 100%; 
-    width: 0; 
+    height: 100%;
+    width: 0;
     position: fixed; /* Fijado */
     z-index: 1; /* Arriba */
     top: 0;
     left: 0;
-    background-color: #111; 
+    background-color: #111;
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; 
-    transition: 0.5s; 
+    padding-top: 60px;
+    transition: 0.5s;
   }
-  
+
   /* Links */
   .sidebar a {
     padding: 8px 8px 8px 32px;
@@ -1228,7 +1231,7 @@ margin-right: 15px;
     display: block;
     transition: 0.3s;
   }
-  
+
   /* Efecto al pasar sobre los links */
   .sidebar a:hover {
     color: #f1f1f1;
@@ -1241,7 +1244,7 @@ margin-right: 15px;
     font-size: 36px;
     margin-left: 50px;
   }
-  
+
   /* Para resoluciones mas chicas se ajusta el padding y tamaño de la fuente de los links */
 @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
