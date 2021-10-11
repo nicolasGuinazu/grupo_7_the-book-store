@@ -3,7 +3,7 @@
 <%-include('partials/head')%>
 
 <body>
-   
+
 <%-include('partials/header')%>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -33,48 +33,49 @@
         <ul type="none">
             <li>
                 <h5 class="section">OFERTAS</h5>
-            </li>          
-            
-            <div onclick="" class="eachBook">  
-                <% products.forEach(element => { %>
-                   <a href="/products/detail/<%= element.idproduct%>" class="productLink" method="GET"> 
-                        <article class="book">
-                            <div class="details">                               
-                                <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220">
-                                <div class="productDetail">
-                                    <a class="price">$ <%= element.price%></a>
-                                </div>                                
-                                <h4 class="booksName"><%= element.name%></h4><br>
-                                <h4 class="booksAuthor" name="author" id="author">Autor:  <%= element.author && element.author.name%></h4>
-                            </div>
-                        </article>  
-                    </a>  
-                <% }) %><br>   
-            </div>                  
-                
-            <li>
-                <h5 class="section">RECOMENDADOS</h5>
             </li>
 
-            <div onclick="" class="eachBook">  
+            <div onclick="" class="eachBook">
                 <% products.forEach(element => { %>
-                    <a href="/products/detail/<%= element.idproduct%>" class="productLink" method="GET"> 
+                   <a href="/products/detail/<%= element.idproduct%>" class="productLink" method="GET">
                         <article class="book">
                             <div class="details">
                                 <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220">
                                 <div class="productDetail">
                                     <a class="price">$ <%= element.price%></a>
-                                 </div>                                
-                                    <h4 class="booksName"><%= element.name%></h4><br>
-                                    <h4 class="booksAuthor" name="author" id="author">Autor:  <%= element.author && element.author.name%></h4>
+                                </div>
+                                <h4 class="booksName"><%= element.name%></h4><br>
+                                <h4 class="booksAuthor" name="author" id="author"> <%= element.author && element.author.last_name%>, <%= element.author && element.author.name%></h4>
                             </div>
-                        </article>  
-                    </a>  
-                <% }) %><br>   
-            </div>                       
-        </ul>    
-    </div> 
-   
+                        </article>
+                    </a>
+                <% }) %><br>
+            </div>
+
+            <li>
+                <h5 class="section">RECOMENDADOS</h5>
+            </li>
+
+            <div onclick="" class="eachBook">
+                <% products.forEach(element => { %>
+                    <a href="/products/detail/<%= element.idproduct%>" class="productLink" method="GET">
+                        <article class="book">
+                            <div class="details">
+                                <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220">
+                                <div class="productDetail">
+                                    <a class="price">$ <%= element.price%></a>
+
+                                 </div>
+                                    <h4 class="booksName"><%= element.name%></h4><br>
+                                    <h4 class="booksAuthor" name="author" id="author"><%= element.author && element.author.last_name%>, <%= element.author && element.author.name%></h4>
+                            </div>
+                        </article>
+                    </a>
+                <% }) %><br>
+            </div>
+        </ul>
+    </div>
+
 </main>
 <script src="/js/sidebarScript.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script> -->
