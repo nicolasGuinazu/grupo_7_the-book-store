@@ -31,7 +31,7 @@ const controller = {
     try {
         let products = await db.Product.findAll({
           where:{
-            price:{[Op.lt]: 100}
+            price:{[Op.lt]: 1500}
           },
           include: ["author", "genre"],
         }); //Association with alias "author" does not exist on Product
