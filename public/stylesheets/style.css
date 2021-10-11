@@ -576,8 +576,8 @@ title {
 }
 
 .logoTBS {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-color: transparent;
 }
 
@@ -589,7 +589,7 @@ title {
     background-color: white;
     border: 0;
     height: 30px;
-    width: 230px;
+    width: 340px;
     padding: 5px;
     border-radius: 5px;
 }
