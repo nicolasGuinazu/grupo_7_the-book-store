@@ -8,7 +8,7 @@ const controller = {
     try {
         let products = await db.Product.findAll({
           where:{
-            [Op.or]:[ 
+            [Op.or]:[
               {name: {
               [Op.like]: `%${req.query.search}%`
             }},{'$author.name$': {
@@ -16,16 +16,16 @@ const controller = {
             }}]
           },
           include: ["author", "genre"],
-        }); 
+        });
         if(products.length<1){
           let searched=req.query.search
-          return res.render('./products/productNotFound', {searched}); 
+          return res.render('./products/productNotFound', {searched});
         }
-        return res.render('./products/indexProducts', {products}); 
+        return res.render('./products/indexProducts', {products});
       } catch (err) {
         console.log(err);
       }
-    
+
     },
   offers: async (req, res) => {
     try {
@@ -35,11 +35,11 @@ const controller = {
           },
           include: ["author", "genre"],
         }); //Association with alias "author" does not exist on Product
-        return res.render('./products/indexProducts', {products}); 
+        return res.render('./products/indexProducts', {products});
       } catch (err) {
         console.log(err);
       }
-    
+
     },
   ebooks: async (req, res) => {
     try {
@@ -49,23 +49,24 @@ const controller = {
           },
           include: ["author", "genre"],
         }); //Association with alias "author" does not exist on Product
-        return res.render('./products/indexProducts', {products}); 
+        return res.render('./products/indexProducts', {products});
       } catch (err) {
         console.log(err);
       }
-    
+
     },
 
   index: async (req, res) => {
     try {
         let products = await db.Product.findAll({
           include: ["author", "genre"],
-        }); //Association with alias "author" does not exist on Product
-        return res.render('./products/indexProducts', {products}); 
+          limit: 8
+        });
+        return res.render('./products/indexProducts', {products});
       } catch (err) {
         console.log(err);
       }
-    
+
     },
   detail: async (req, res) => {
     try {
@@ -93,11 +94,11 @@ const controller = {
         synopsis:req.body.synopsis,
         format:req.body.format,
         isbn:req.body.isbn,
-        pages:req.body.pages, 
+        pages:req.body.pages,
         release_date:req.body.release_date,
         image:req.file.filename
       });
-     
+
       return res.redirect('/')
     } catch (err) {
       console.log(err);
@@ -123,12 +124,12 @@ const controller = {
         }else{
             return res.redirect('/')
         }
-        
+
       } catch (err) {
         console.log(err);
       }
 
-    
+
   },
   processModify: async function (req, res) {
     try {
@@ -146,11 +147,11 @@ const controller = {
         let products = await db.Product.findAll({
           include: ["author", "genre"],
         }); //Association with alias "author" does not exist on Product
-        return res.render('index', {products}); 
+        return res.render('index', {products});
       } catch (err) {
         console.log(err);
       }
-    
+
     },
 };
 
@@ -203,7 +204,7 @@ module.exports = controller;
 
 
 
-/* 
+/*
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
@@ -213,8 +214,8 @@ const Genres = db.Genre
 
 const controller = {
     index: (req, res) => {
-      
-        return res.render('./products/indexProducts', {products}); 
+
+        return res.render('./products/indexProducts', {products});
     },
 
     create: (req, res) =>{
@@ -244,9 +245,9 @@ const controller = {
             type: "wanted",
             image: imageName
         }
-        
+
         console.log(objToPush);
-        
+
         //Actualizo la base de datos
         products.push(objToPush);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
@@ -293,7 +294,7 @@ const controller = {
         const idLibro = req.params.id;
 
         const product = products.find( elem => elem.id == idLibro);
-        
+
         return res.render('./products/productDetail', {product});
     },
     destroy:(req,res)=>{
