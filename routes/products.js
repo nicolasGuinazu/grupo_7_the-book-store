@@ -27,7 +27,7 @@ router.get('/search', productsController.search);
 router.get('/ebooks', productsController.ebooks);
 router.get('/offers', productsController.offers);
 // ************ Crear Producto ***********
-router.get('/create', authMiddleware,productsController.create); //middlewares para checkear que este logeado y sea admin
+router.get('/create', adminMiddleware,productsController.create); //middlewares para checkear que este logeado y sea admin
 router.post('/create', upload.single('image'), storeProductValidator, productsController.store);
 //router.post('/create', productsController.store);
 
