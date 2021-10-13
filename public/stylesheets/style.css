@@ -1102,18 +1102,11 @@ margin-right: 15px;
 }
 
 .buy{
-    margin-left: 48%;
-    margin-bottom: 50%;
+    margin-bottom: 30%;
     text-align: center;
-    background-color: green;
-    font-size: 1rem;
-    color: #ffff;
-    border: none;
-    cursor: pointer;
+
 }
-.buy:hover{
-    background-color: rgb(0, 182, 0);
-}
+
 
 /******************************* PRIVACY *****************************************************/
 .content-privacy{
