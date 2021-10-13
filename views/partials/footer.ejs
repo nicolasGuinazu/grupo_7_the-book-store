@@ -27,28 +27,37 @@
 
     <div class="footer-links-content show-only-mobile">
         <div class="footer-links">
+
             <ul type="none">
                 <li><a href="/users/login" class="footer-sign-in-link"> Iniciar sesión</a></li>
                 <li><a href="/users/register"> Crear cuenta</a></li>
                 <li><a href="mailto:contact@thebookstore.com"> Contacto</a></li>
                 <li><a href="/legal/privacy"> Política de privacidad</a></li>
-                <li><a href="/legal/cookies"> Cookies</a></li>                
+                <li><a href="/legal/cookies"> Cookies</a></li>
               </ul>
         </div>
     </div>
     <div class="footer-links-laptop">
-        <ul type="none">          
+
+        <ul type="none">
             <li><a href="mailto:contact@thebookstore.com"> Contacto</a></li>
             <li>|</li>
             <li><a href="/legal/privacy"> Política de privacidad</a></li>
             <li>|</li>
             <li><a href="/legal/cookies"> Cookies</a></li>
             <li>|</li>
-            <li>Newsletter</li>     
+            <li>Newsletter</li>
             <li><input type="email" id="mail" name="mail" placeholder="ejemplo@email.com"></li>
-            <li><button type="submit" class="btn btn-outline-primary subscribe">Suscribirse</button></li>
+            <li><button id='send' type="submit" class="btn btn-outline-primary subscribe">Suscribirse</button></li>
+
         </ul>
+
+            <div class="alert alert-success"  id="newsletter" style="display: none;" role="alert">
+
+              </div>
+
+
         <p class="copyright">© 2021 The Book Store</p>
     </div>
-    
+    <script src="/js/newsletter.js"></script>
 </footer>
