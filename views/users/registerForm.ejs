@@ -4,8 +4,8 @@
     <%-include('../partials/header')%>
    <main>
     <%-include('../partials/sidebar')%>
-    <div class="card-login">   
-        <form class="form-register" method="POST" action="/users/register" enctype="multipart/form-data">  
+    <div class="card-login">
+        <form class="form-register" method="POST" action="/users/register" enctype="multipart/form-data">
             <div class="container-register">
                 <h4>Ingresa tus datos!</h4>
             </div>
@@ -24,7 +24,7 @@
                         <p class="validation-error"><%= locals.error.password.msg %> </p>
                     <% } %>
                     <label for="avatar">Elige tu avatar</label><br>
-                    <input class="input-register" type="file" name="avatar" id="avatar" accept=".jpg, .png" style="margin-bottom: 20px;"><br>
+                    <input class="input-register" type="file" name="avatar" id="avatar" accept=".jpg, .png" style="margin-bottom: 20px;" required><br>
                     <% if (locals && locals.error && locals.error.avatar) { %>
                         <p class="validation-error"><%= locals.error.avatar.msg %> </p>
                     <% } %>
@@ -61,12 +61,12 @@
                             <li>Ya estas registrado?<a href="/users/login">Login</a></li>
                         </ul>
                     </div>
-                </div>                
+                </div>
         </form>
     </div>
-    
-    
-   </main>   
+
+
+   </main>
    <script src="/js/registerValidations.js"></script>
    <script src="/js/sidebarScript.js"></script>
 </body>
