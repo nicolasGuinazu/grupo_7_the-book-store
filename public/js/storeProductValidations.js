@@ -1,5 +1,3 @@
-const { is } = require("sequelize/types/lib/operators");
-
 window.addEventListener('load',function(){
 
     let notSubmit = false;
@@ -18,8 +16,8 @@ window.addEventListener('load',function(){
 
         let inputValue=this.value;
         if(inputValue.trim() == ""){
-            this.style.border="red 1px solid";       
-            this.innerHTML += '<p class="validation-error">Error</p>'     
+            this.style.border="red 1px solid";
+            this.innerHTML += '<p class="validation-error">Error</p>'
             notSubmit=true
             button.style.backgroundColor="grey";
             button.style.disabled;
@@ -27,7 +25,7 @@ window.addEventListener('load',function(){
         }else{
             name.style.border="black 1px solid";
             notSubmit=false;
-            
+
         }
     })
 
@@ -35,8 +33,8 @@ window.addEventListener('load',function(){
 
         let inputValue=this.value;
         if(inputValue.trim() == ""){
-            this.style.border="red 1px solid";       
-            this.innerHTML += '<p class="validation-error">Error</p>'     
+            this.style.border="red 1px solid";
+            this.innerHTML += '<p class="validation-error">Error</p>'
             notSubmit=true
             button.style.backgroundColor="grey";
             button.style.disabled;
@@ -44,7 +42,7 @@ window.addEventListener('load',function(){
         }else{
             author.style.border="black 1px solid";
             notSubmit=false;
-            
+
         }
     })
 
@@ -52,8 +50,8 @@ window.addEventListener('load',function(){
 
         let inputValue=this.value;
         if(inputValue.trim() == ""){
-            this.style.border="red 1px solid";       
-            this.innerHTML += '<p class="validation-error">Error</p>'     
+            this.style.border="red 1px solid";
+            this.innerHTML += '<p class="validation-error">Error</p>'
             notSubmit=true
             button.style.backgroundColor="grey";
             button.style.disabled;
@@ -61,7 +59,7 @@ window.addEventListener('load',function(){
         }else{
             editorial.style.border="black 1px solid";
             notSubmit=false;
-            
+
         }
     })
 
@@ -69,8 +67,8 @@ window.addEventListener('load',function(){
 
         let inputValue=this.value;
         if(inputValue.trim() == ""){
-            this.style.border="red 1px solid";       
-            this.innerHTML += '<p class="validation-error">Error</p>'     
+            this.style.border="red 1px solid";
+            this.innerHTML += '<p class="validation-error">Error</p>'
             notSubmit=true
             button.style.backgroundColor="grey";
             button.style.disabled;
@@ -78,7 +76,7 @@ window.addEventListener('load',function(){
         }else{
             isbn.style.border="black 1px solid";
             notSubmit=false;
-            
+
         }
     })
 
@@ -86,8 +84,7 @@ window.addEventListener('load',function(){
 
         let inputValue=this.value;
         if(inputValue.trim() == ""){
-            this.style.border="red 1px solid";       
-            this.innerHTML += '<p class="validation-error">Error</p>'     
+            this.style.border="red 1px solid";
             notSubmit=true
             button.style.backgroundColor="grey";
             button.style.disabled;
@@ -95,7 +92,7 @@ window.addEventListener('load',function(){
         }else{
             synopsis.style.border="black 1px solid";
             notSubmit=false;
-            
+
         }
     })
 
@@ -103,8 +100,8 @@ window.addEventListener('load',function(){
 
         let inputValue=this.value;
         if(inputValue.trim() == ""){
-            this.style.border="red 1px solid";       
-            this.innerHTML += '<p class="validation-error">Error</p>'     
+            this.style.border="red 1px solid";
+            this.innerHTML += '<p class="validation-error">Error</p>'
             notSubmit=true
             button.style.backgroundColor="grey";
             button.style.disabled;
@@ -112,7 +109,7 @@ window.addEventListener('load',function(){
         }else{
             gender.style.border="black 1px solid";
             notSubmit=false;
-            
+
         }
     })
 
@@ -120,8 +117,8 @@ window.addEventListener('load',function(){
 
         let inputValue=this.value;
         if(inputValue.trim() == ""){
-            this.style.border="red 1px solid";       
-            this.innerHTML += '<p class="validation-error">Error</p>'     
+            this.style.border="red 1px solid";
+            this.innerHTML += '<p class="validation-error">Error</p>'
             notSubmit=true
             button.style.backgroundColor="grey";
             button.style.disabled;
@@ -129,7 +126,7 @@ window.addEventListener('load',function(){
         }else{
             gender.style.border="black 1px solid";
             notSubmit=false;
-            
+
         }
     })
 
@@ -137,8 +134,8 @@ window.addEventListener('load',function(){
 
         let inputValue=this.value;
         if(inputValue.trim() == ""){
-            this.style.border="red 1px solid";       
-            this.innerHTML += '<p class="validation-error">Error</p>'     
+            this.style.border="red 1px solid";
+            this.innerHTML += '<p class="validation-error">Error</p>'
             notSubmit=true
             button.style.backgroundColor="grey";
             button.style.disabled;
@@ -146,7 +143,7 @@ window.addEventListener('load',function(){
         }else{
             format.style.border="black 1px solid";
             notSubmit=false;
-            
+
         }
     })
 
@@ -154,8 +151,8 @@ window.addEventListener('load',function(){
 
         let inputValue=this.value;
         if(inputValue.trim() == ""){
-            this.style.border="red 1px solid";       
-            this.innerHTML += '<p class="validation-error">Error</p>'     
+            this.style.border="red 1px solid";
+            this.innerHTML += '<p class="validation-error">Error</p>'
             notSubmit=true
             button.style.backgroundColor="grey";
             button.style.disabled;
@@ -163,15 +160,16 @@ window.addEventListener('load',function(){
         }else{
             price.style.border="black 1px solid";
             notSubmit=false;
-            
+
         }
     })
 
-    form.addEventListener('submit',function(event){
-        if(notSubmit){
+    button.addEventListener('click',function(event){
+        if(!notSubmit){
             event.preventDefault();
-        }    
-        
+        }
+
+
     })
 
 })
