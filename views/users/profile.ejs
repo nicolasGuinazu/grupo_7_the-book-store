@@ -5,8 +5,8 @@
 <%-include('../partials/header')%>
     <main>
         <%-include('../partials/sidebar')%>
-        <div class="card-profile">   
-            <% if(locals.logged) { %>    
+        <div class="card-profile">
+            <% if(locals.logged) { %>
                 <h1>Hola <%= locals.loggedUser.name %>!</h1>
                 <img class="profile-image" src="/images/users/<%= locals.loggedUser.avatar%>">
                 <p><%= locals.loggedUser.email %></p>
@@ -14,11 +14,8 @@
         </div>
 
     </main>
-<<<<<<< HEAD
     <script src="/js/sidebarScript.js"></script>
 <%-include('../partials/footer')%>
-=======
->>>>>>> 9b80909c8d9c32c01058e03a08c2d71b53be34ad
 </body>
 <%-include('../partials/footer')%>
 </html>
