@@ -32,7 +32,7 @@
     <div class=cuerpo>
         <ul type="none">
             <li>
-                <h5 class="section">OFERTAS</h5>
+                <h5 class="section">RECOMENDADOS</h5>
             </li>
 
             <div onclick="" class="eachBook">
@@ -52,28 +52,6 @@
                 <% }) %><br>
             </div>
 
-            <li>
-                <h5 class="section">RECOMENDADOS</h5>
-            </li>
-
-            <div onclick="" class="eachBook">
-                <% products.forEach(element => { %>
-                    <a href="/products/detail/<%= element.idproduct%>" class="productLink" method="GET">
-                        <article class="book">
-                            <div class="details">
-                                <img src="/images/products/<%= element.image%>"class="bookImage" alt="" width="220" height="220">
-                                <div class="productDetail">
-                                    <a class="price">$ <%= element.price%></a>
-
-                                 </div>
-                                    <h4 class="booksName"><%= element.name%></h4><br>
-                                    <h4 class="booksAuthor" name="author" id="author"><%= element.author && element.author.last_name%>, <%= element.author && element.author.name%></h4>
-                            </div>
-                        </article>
-                    </a>
-                <% }) %><br>
-            </div>
-        </ul>
     </div>
 
 </main>
