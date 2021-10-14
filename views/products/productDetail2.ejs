@@ -31,11 +31,11 @@
                                 <hr class="m-0 pt-2 mt-2">
                             </div>
                             <p class="tag-section"><strong>Género : </strong><%= product.genre && product.genre.name%></p>
-                            <% if(locals.logged) { %> 
-                            <div class="col-lg-12">
+                            <% if(locals.logged) { %>
+                           <!--  <div class="col-lg-12">
                                 <h6>Cantidad :</h6>
                                 <input type="number" class="form-control text-center w-100" value="1">
-                            </div>
+                            </div> -->
                             <div class="col-lg-12 mt-3">
                                 <div class="row">
                                     <div class="col-lg-6 pb-2">
@@ -87,7 +87,7 @@
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 
-        <script src="/js/sidebarScript.js"></script>        
+        <script src="/js/sidebarScript.js"></script>
         <script src="/js/cart.js"></script>
         <%-include('../partials/footer')%>
     </body>
