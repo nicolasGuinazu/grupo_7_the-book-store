@@ -23,7 +23,7 @@
                             <select name="author" id="author">
                                 <% for( let i = 0; i < authors.length; i++ ) { %>
                                     <option value="<%=authors[i].idauthor%>">
-                                        <%= authors[i].name%>
+                                        <%=authors[i].name %> <%= authors[i].last_name%>
                                     </option>
                                 <% } %>
 
