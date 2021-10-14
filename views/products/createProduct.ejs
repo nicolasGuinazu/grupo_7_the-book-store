@@ -5,15 +5,15 @@
 <%-include('../partials/header')%>
     <main>
         <%-include('../partials/sidebar')%>
-        <div class="card-create-prod">   
-            <form action="/products/create" method="POST" class="inputform" enctype="multipart/form-data">   
+        <div class="card-create-prod">
+            <form action="/products/create" method="POST" class="inputform" enctype="multipart/form-data">
                 <div class="msg-create-prod">
                     <h4>Formulario de Alta de Productos</h4>
                 </div>
                     <div class="container-create-prod">
-                        <!-- <form action=""  method="POST"> --> 
+                        <!-- <form action=""  method="POST"> -->
                             <label for="name">Nombre del producto</label>
-                            <input type="text" name="name" id= "name" placeholder="Ingresar nombre" required>
+                            <input type="text" name="name" id= "name" placeholder="Ingresar nombre" >
                             <% if (locals && locals.error && locals.error.name) { %>
                                 <p class="validation-error"><%= locals.error.name.msg %> </p>
                             <% } %>
@@ -25,27 +25,27 @@
                                         <%= authors[i].name%>
                                     </option>
                                 <% } %>
-                                
+
                             </select>
-                            
+
                             <% if (locals && locals.error && locals.error.author) { %>
                             <p class="validation-error"><%= locals.error.author.msg %> </p>
                             <% } %>
 
                             <label for="editorial">Editorial</label>
-                            <input type="text" name="editorial" id="editorial" placeholder="Nombre editorial" required>
+                            <input type="text" name="editorial" id="editorial" placeholder="Nombre editorial" >
                             <% if (locals && locals.error && locals.error.editorial) { %>
                                 <p class="validation-error"><%= locals.error.editorial.msg %> </p>
-                            <% } %>    
+                            <% } %>
 
                             <label for="isbn">ISBN</label>
-                            <input name="isbn" id="isbn" type="number" required>
+                            <input name="isbn" id="isbn" type="number" >
                             <% if (locals && locals.error && locals.error.isbn) { %>
                                 <p class="validation-error"><%= locals.error.isbn.msg %> </p>
                             <% } %>
-                            
+
                             <label for="synopsis">Sinopsis</label>
-                            <textarea type= "text" name="synopsis" id="synopsis" placeholder="Escribir sinopsis" required></textarea>
+                            <textarea type= "text" name="synopsis" id="synopsis" placeholder="Escribir sinopsis" ></textarea>
                             <% if (locals && locals.error && locals.error.synopsis) { %>
                                 <p class="validation-error"><%= locals.error.synopsis.msg %> </p>
                             <% } %>
@@ -57,33 +57,33 @@
                                     <option value="<%=genres[i].idgenre%>">
                                         <%= genres[i].name%>
                                     </option>
-                                <% } %>    
+                                <% } %>
                             </select>
                             <br>
                             <label for="format">Formato</label>
                             <input name="format" id="format" type="text">
-                            <br>    
+                            <br>
                             <label for="pages">Cantidad de páginas</label>
-                            <input name="pages" id="pages" type="number" min="1.00" max="10000.00" required>
+                            <input name="pages" id="pages" type="number" min="1.00" max="10000.00" >
                             <br>
                             <br>
                             <label for="release_date">Fecha de lanzamiento</label>
-                            <input name="release_date" id="release_date" type="date" required>
+                            <input name="release_date" id="release_date" type="date" >
                             <br>
                             <label for="price">Precio</label>
                             <br>
-                            <input name="price" id="price" type="number" min="0.00" max="10000.00" step="0.01" required>
+                            <input name="price" id="price" type="number" min="0.00" max="10000.00" step="0.01" >
                             <% if (locals && locals.error && locals.error.price) { %>
                                 <p class="validation-error"><%= locals.error.price.msg %> </p>
                             <% } %>
                             <br>
                             <label for="image">Tapa del libro</label><br>
-                            <input type="file" name="image" id="image" accept=".jpg, .png" required><br>
-                       <!-- </form> --> 
+                            <input type="file" name="image" id="image" accept=".jpg, .png" required ><br>
+                       <!-- </form> -->
                         <div class="container-button">
                             <button type="submit" id='button-submit'>Crear</button>
                         </div>
-                    </div>                
+                    </div>
             </form>
         </div>
 
