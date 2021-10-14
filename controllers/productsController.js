@@ -144,7 +144,7 @@ const controller = {
     try {
         let products = await db.Product.findAll({
           include: ["author", "genre"],
-          limit: 8
+          limit: 16
         }); //Association with alias "author" does not exist on Product
         return res.render('index', {products});
       } catch (err) {
