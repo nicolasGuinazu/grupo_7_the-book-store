@@ -12,7 +12,8 @@
                 </div>
                     <div class="container-create-prod">
                         <!-- <form action=""  method="POST"> -->
-                            <label for="name">Nombre del producto</label>
+                            <label for="name" >Nombre del producto</label>
+                            <div id="name-label"></div>
                             <input type="text" name="name" id= "name" placeholder="Ingresar nombre" >
                             <% if (locals && locals.error && locals.error.name) { %>
                                 <p class="validation-error"><%= locals.error.name.msg %> </p>
@@ -32,25 +33,29 @@
                             <p class="validation-error"><%= locals.error.author.msg %> </p>
                             <% } %>
 
-                            <label for="editorial">Editorial</label>
+                            <label for="editorial" >Editorial</label>
+                            <div id="editorial-label"></div>
                             <input type="text" name="editorial" id="editorial" placeholder="Nombre editorial" >
                             <% if (locals && locals.error && locals.error.editorial) { %>
                                 <p class="validation-error"><%= locals.error.editorial.msg %> </p>
                             <% } %>
 
-                            <label for="isbn">ISBN</label>
+                            <label for="isbn" >ISBN</label>
+                            <div id="isbn-label"></div>
                             <input name="isbn" id="isbn" type="number" >
                             <% if (locals && locals.error && locals.error.isbn) { %>
                                 <p class="validation-error"><%= locals.error.isbn.msg %> </p>
                             <% } %>
 
-                            <label for="synopsis">Sinopsis</label>
+                            <label for="synopsis" >Sinopsis</label>
+                            <div id="synopsis-label"></div>
                             <textarea type= "text" name="synopsis" id="synopsis" placeholder="Escribir sinopsis" ></textarea>
                             <% if (locals && locals.error && locals.error.synopsis) { %>
                                 <p class="validation-error"><%= locals.error.synopsis.msg %> </p>
                             <% } %>
 
-                            <label for="genre">Género</label>
+                            <label for="genre"  >Género</label>
+                            <div id="gender-label"></div>
                             <br>
                             <select name="genre" id="gender">
                                 <% for( let i = 0; i < genres.length; i++ ) { %>
@@ -60,17 +65,19 @@
                                 <% } %>
                             </select>
                             <br>
-                            <label for="format">Formato</label>
+                            <label for="format"  >Formato</label>
+                            <div id="format-label"></div>
                             <input name="format" id="format" type="text">
                             <br>
-                            <label for="pages">Cantidad de páginas</label>
+                            <label for="pages" >Cantidad de páginas</label>
                             <input name="pages" id="pages" type="number" min="1.00" max="10000.00" >
                             <br>
                             <br>
                             <label for="release_date">Fecha de lanzamiento</label>
                             <input name="release_date" id="release_date" type="date" >
                             <br>
-                            <label for="price">Precio</label>
+                            <label for="price"  >Precio</label>
+                            <div id="price-label"></div>
                             <br>
                             <input name="price" id="price" type="number" min="0.00" max="10000.00" step="0.01" >
                             <% if (locals && locals.error && locals.error.price) { %>
