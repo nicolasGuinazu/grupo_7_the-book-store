@@ -1,6 +1,20 @@
 window.addEventListener('load',function(){
 
-    let notSubmit = false;
+    let nameOk=false
+    let authorOk=false
+    let editorialOk=false
+    let isbnOk=false
+    let genderOk=false
+    let formatOk=false
+    let priceOk=false
+    let synopsisOk=false
+    let nameLabel=document.querySelector('#name-label');
+    let editorialLabel = document.querySelector('#editorial-label');
+    let isbnLabel = document.querySelector('#isbn-label');
+    let synopsisLabel = document.querySelector('#synopsis-label');
+    let genderLabel = document.querySelector('#gender-label');
+    let formatLabel = document.querySelector('#format-label');
+    let priceLabel = document.querySelector('#price-label');
     let name = document.querySelector('#name');
     let author = document.querySelector('#author');
     let editorial = document.querySelector('#editorial');
@@ -10,21 +24,18 @@ window.addEventListener('load',function(){
     let format = document.querySelector('#format');
     let price = document.querySelector('#price');
     let button = document.querySelector('#button-submit');
-    let form = document.querySelector('form');
 
     name.addEventListener('blur', function(){
 
         let inputValue=this.value;
         if(inputValue.trim() == ""){
             this.style.border="red 1px solid";
-            this.innerHTML += '<p class="validation-error">Error</p>'
-            notSubmit=true
-            button.style.backgroundColor="grey";
-            button.style.disabled;
-            button.style.cursor='not-allowed';
+            nameLabel.innerHTML = '<p style="color:red">Debes escribir el nombre del libro</p>'
+            nameOk=false;
         }else{
+            nameLabel.innerHTML = ''
             name.style.border="black 1px solid";
-            notSubmit=false;
+            nameOk=true;
 
         }
     })
@@ -34,14 +45,11 @@ window.addEventListener('load',function(){
         let inputValue=this.value;
         if(inputValue.trim() == ""){
             this.style.border="red 1px solid";
-            this.innerHTML += '<p class="validation-error">Error</p>'
-            notSubmit=true
-            button.style.backgroundColor="grey";
-            button.style.disabled;
-            button.style.cursor='not-allowed';
+            authorOk=false;
+
         }else{
             author.style.border="black 1px solid";
-            notSubmit=false;
+            authorOk=true;
 
         }
     })
@@ -51,14 +59,12 @@ window.addEventListener('load',function(){
         let inputValue=this.value;
         if(inputValue.trim() == ""){
             this.style.border="red 1px solid";
-            this.innerHTML += '<p class="validation-error">Error</p>'
-            notSubmit=true
-            button.style.backgroundColor="grey";
-            button.style.disabled;
-            button.style.cursor='not-allowed';
+            editorialLabel.innerHTML = '<p style="color:red">Debes escribir el nombre de la editorial</p>'
+            editorialOk=false;
         }else{
+            editorialLabel.innerHTML = ''
             editorial.style.border="black 1px solid";
-            notSubmit=false;
+            editorialOk=true;
 
         }
     })
@@ -68,14 +74,12 @@ window.addEventListener('load',function(){
         let inputValue=this.value;
         if(inputValue.trim() == ""){
             this.style.border="red 1px solid";
-            this.innerHTML += '<p class="validation-error">Error</p>'
-            notSubmit=true
-            button.style.backgroundColor="grey";
-            button.style.disabled;
-            button.style.cursor='not-allowed';
+            isbnLabel.innerHTML = '<p style="color:red">Debes escribir el isbn</p>'
+            isbnOk=false;
         }else{
+            isbnLabel.innerHTML = ''
             isbn.style.border="black 1px solid";
-            notSubmit=false;
+            isbnOk=true;
 
         }
     })
@@ -85,13 +89,12 @@ window.addEventListener('load',function(){
         let inputValue=this.value;
         if(inputValue.trim() == ""){
             this.style.border="red 1px solid";
-            notSubmit=true
-            button.style.backgroundColor="grey";
-            button.style.disabled;
-            button.style.cursor='not-allowed';
+            synopsisLabel.innerHTML = '<p style="color:red">Debes escribir la synopsis</p>'
+            synopsisOk=false;
         }else{
+            synopsisLabel.innerHTML = ''
             synopsis.style.border="black 1px solid";
-            notSubmit=false;
+            synopsisOk=true;
 
         }
     })
@@ -101,48 +104,28 @@ window.addEventListener('load',function(){
         let inputValue=this.value;
         if(inputValue.trim() == ""){
             this.style.border="red 1px solid";
-            this.innerHTML += '<p class="validation-error">Error</p>'
-            notSubmit=true
-            button.style.backgroundColor="grey";
-            button.style.disabled;
-            button.style.cursor='not-allowed';
+            genderLabel.innerHTML = '<p style="color:red">Debes elegir el genero</p>'
+            genderOk=false;
         }else{
+            genderLabel.innerHTML = ''
             gender.style.border="black 1px solid";
-            notSubmit=false;
+            genderOk=true;
 
         }
     })
 
-    gender.addEventListener('blur', function(){
-
-        let inputValue=this.value;
-        if(inputValue.trim() == ""){
-            this.style.border="red 1px solid";
-            this.innerHTML += '<p class="validation-error">Error</p>'
-            notSubmit=true
-            button.style.backgroundColor="grey";
-            button.style.disabled;
-            button.style.cursor='not-allowed';
-        }else{
-            gender.style.border="black 1px solid";
-            notSubmit=false;
-
-        }
-    })
 
     format.addEventListener('blur', function(){
 
         let inputValue=this.value;
         if(inputValue.trim() == ""){
             this.style.border="red 1px solid";
-            this.innerHTML += '<p class="validation-error">Error</p>'
-            notSubmit=true
-            button.style.backgroundColor="grey";
-            button.style.disabled;
-            button.style.cursor='not-allowed';
+            formatLabel.innerHTML = '<p style="color:red">Debes elegir el formato</p>'
+            formatOk=false;
         }else{
+            formatLabel.innerHTML = ''
             format.style.border="black 1px solid";
-            notSubmit=false;
+            formatOk=true;
 
         }
     })
@@ -152,22 +135,29 @@ window.addEventListener('load',function(){
         let inputValue=this.value;
         if(inputValue.trim() == ""){
             this.style.border="red 1px solid";
-            this.innerHTML += '<p class="validation-error">Error</p>'
-            notSubmit=true
-            button.style.backgroundColor="grey";
-            button.style.disabled;
-            button.style.cursor='not-allowed';
+            priceLabel.innerHTML = '<p style="color:red">Debes darle un precio</p>'
+            priceOk=false;
         }else{
+            priceLabel.innerHTML = ''
             price.style.border="black 1px solid";
-            notSubmit=false;
+            priceOk=true;
 
         }
     })
 
+
     button.addEventListener('click',function(event){
-        if(!notSubmit){
+
+        if(!nameOk || !authorOk || !editorialOk || !isbnOk || !genderOk || !formatOk || !priceOk || !synopsisOk){
             event.preventDefault();
+            button.style.backgroundColor="grey";
+            button.style.disabled;
+            button.style.cursor='not-allowed';
+        }else{
+            button.style.cursor='pointer';
+            button.style.backgroundColor="green";
         }
+
 
 
     })
