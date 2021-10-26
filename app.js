@@ -10,7 +10,7 @@ const userLoggedMiddleware=require('./middlewares/userLoggedMiddleware')
 const router = express.Router();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors()) //cross origin resource sharing (permite conusmir api del mismo origen)
+app.use(cors())
 /****************** COOKIE PARSER *************************/
 app.use(cookieParser())
 /****************** PUBLIC PATH *************************/
@@ -21,7 +21,7 @@ app.use( express.static(publicPath) );
 
 /****************** SESSION *************************/
 app.use(session({
-  secret: 'shhh secret!', 
+  secret: 'shhh secret!',
   resave: false,
   saveUninitialized: false
 }));
